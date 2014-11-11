@@ -121,7 +121,7 @@ array('controller' => 'users', 'action' => 'login')); ?>
                             </button>
                             </div>
                           
-                          </li>
+                  </li>
 
          
 
@@ -366,6 +366,7 @@ veterinarios y personal calificado, todos apasionados amantes de los animales y 
 
     });
     $('#playButton').click(function () {
+     
         $('#myCarousel').carousel('cycle');
     });
     $('#pauseButton').click(function () {

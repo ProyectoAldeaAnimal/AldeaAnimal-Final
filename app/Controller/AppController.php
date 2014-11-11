@@ -33,26 +33,12 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 
-		function inicializarAuth(){
+            public function inicializarAuth(){
 
-				$this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
-				$this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
+                        $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
+                        $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
 
-				$this->Session->write('Auth.redirect', null);
-		} // fin de function inicializarAuth
-		 public $components = array(
-        'Session',
-        /* add Auth component and set  the urls that will be loaded after the login and logout actions is performed */
-        'Auth' => array(
-            'loginRedirect' => array('controller' => 'pages', 'action' => 'PaginaPrincipalClientes'),
-            'logoutRedirect' => array('controller' => 'pages', 'action' => 'home'),
-            'authorize' => array('Controller') // Added this line
+                        $this->Session->write('Auth.redirect', null);
+                } // fin de function inicializarAuth
 
-        )
-    );
-
-    public function beforeFilter() {
-        /* set actions that will not require login */
-        $this->Auth->allow('index','display', 'view', 'home');
-    }
 }

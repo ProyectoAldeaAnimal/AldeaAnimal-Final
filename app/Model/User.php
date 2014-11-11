@@ -20,12 +20,17 @@ public $validate = array(
 		);
 
 	public function beforeSave($options = array()) {
+            // hash our password
+        echo "Hhice un hash reculiao!!!!";
+        if (isset($this->data[$this->alias]['password'])) {
+            $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
+        }
         
-    /* password hashing */    
-    if (isset($this->data[$this->alias]['password'])) {
-        $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
-    }
-    return true;
-}
+        // if we get a new password, hash it
+        if (isset($this->data[$this->alias]['password_update'])) {
+            $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password_update']);
+        }
+            return parent::beforeSave($options);
+        }
 	}
 ?>

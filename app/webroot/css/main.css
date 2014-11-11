@@ -11,6 +11,7 @@ textarea {
 html {
     font-size: 1em;
     line-height: 1.4;
+    
 }
 
 ::-moz-selection {
@@ -335,12 +336,19 @@ img.grayscale {
 }
 .color11{
     background-color: #0080FF;
+
+    
 }
 
 .color12{
     background-color: green;
 }
+.color13{
 
+          -webkit-box-shadow: 10px 10px 10px rgba(0,0,0,10);
+  -moz-box-shadow: 10px 10px 10px rgba(0,0,0,10);
+  box-shadow: 10px 10px 10px rgba(0,0,0,10);
+}
 
 
 
