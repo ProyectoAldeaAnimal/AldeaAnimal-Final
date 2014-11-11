@@ -65,7 +65,7 @@ array('controller' => 'users', 'action' => 'home'));?></FONT></li>
               </nav>
 
     <div class="callout3">
-      <form class="form-signin login-box" role="form">
+      <div class="form-signin login-box" role="form">
         <div id= "ex4">
         <?php
             echo $this->Html->image('logo.png', array('alt' => 'Logo', 'class'=>"img-responsive"));
@@ -86,17 +86,25 @@ array('controller' => 'users', 'action' => 'home'));?></FONT></li>
           <div class="users form">
               <?php echo $this->Session->flash('auth'); ?>
               <?php echo $this->Form->create('User', array('action'=>'login', 'type'=>'post')); ?>
-                  <fieldset>
-                     
-                      <?php echo $this->Form->input('User.rut',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'name'=>"rut", 'id'=>"rut", 'required autofocus' )); 
-                      echo $this->Form->input('User.password',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required')); ?>
+              <fieldset>
+                   
+                    <?php echo $this->Form->input('rut',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus' ));
+                    echo $this->Form->input('password',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required')); ?>
                       <?php echo $this->Form->input('Entrar',array('label'=>"",'type'=>'submit','class'=>"btn btn-lg btn-primary btn-block"));?>
-                      <?php echo $this->Form->end();?>
+                      <?php echo $this->Form->end();
+                    ?>
+              </fieldset>
+            
+            <?php
+                      /*echo $this->Form->input('username',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'name'=>"rut", 'id'=>"rut", 'required autofocus' )); 
+                      echo $this->Form->input('password',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required')); ?>
+                      <?php echo $this->Form->input('Entrar',array('label'=>"",'type'=>'submit','class'=>"btn btn-lg btn-primary btn-block"));?>
+                      <?php echo $this->Form->end();*/?>
         
                   </fieldset>
 
           </div>
-      </form>
+      </div>
 
     </div> <!-- /container -->
 

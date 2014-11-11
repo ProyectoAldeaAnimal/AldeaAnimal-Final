@@ -15,7 +15,15 @@ class UsersController extends AppController{
 		            'loginRedirect' => array('controller' => 'users', 'action' => 'homeCliente'),
 		            'logoutRedirect' => array('controller' => 'users', 'action' => 'home'),
 		            'authorize' => array('Controller'), // Added this line
-		            'fields' => array('username'=>'rut', 'password'=> 'password')
+		            
+			        'authenticate' => array(
+			            'Form' => array(
+			                'fields' => array(
+			                    'username' => 'rut'
+			                )
+			            )
+			        ),
+
 
 		        )
 		    );
@@ -29,10 +37,6 @@ class UsersController extends AppController{
 		    public function beforeFilter() {
 		    	parent::beforeFilter();
 		        /* set actions that will not require login */
-		        $this->Auth->fields = array(
-		            'username' => 'rut',
-		            'password' => 'password'
-		            );
 		         $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
                  $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
 
@@ -54,14 +58,21 @@ class UsersController extends AppController{
 				if($this->Session->check('Auth.User')){
 							$this->redirect(array('action' => 'homeCliente'));		
 						}
-				if ($this->request->is('post')) {
+					//debug($this->Auth->request->data['User']);
 
-			        if ($this->Auth->login($this->request->data['User'])){
-			        	$this->Session->setFlash(__('Welcome, '. $this->Auth->user('rut')));
-			            $this->redirect($this->Auth->redirectUrl());
-			        }
-			        else $this->Session->setFlash(__('Nombre de usuario o contraseña inválida'));
-			    }
+				    if ($this->request->is('post')) {
+					        if ($this->Auth->login()) {
+					            return $this->redirect($this->Auth->redirect());
+					        } else {
+
+					            $this->Session->setFlash(
+					                __('Rut o contraseña incorrecta'),
+					                'default',
+					                array(),
+					                'auth'
+					            );
+					        }
+					    }
 			}
 
 			public function logout() {
