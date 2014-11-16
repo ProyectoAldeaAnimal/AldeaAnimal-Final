@@ -68,9 +68,9 @@ array('controller' => 'users', 'action' => 'logout')); ?>
 
   <div class="container well ">
     <br>
-    <div id= "ex5">
+    <div id= "ex2">
           <?php
-            echo $this->Html->image('PP-Clientes.png', array('alt' => 'clientes', 'class'=>"img-responsive"));
+            echo $this->Html->image('PP-Clientes.png', array('alt' => 'clientes', 'class'=>"img-responsive center-block"));
           ?>
         </div>
     <br>

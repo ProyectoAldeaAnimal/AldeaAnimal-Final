@@ -5,7 +5,8 @@
     <fieldset>
         <legend><?php echo __('Add User'); ?></legend>
         <?php 
-        echo $this->Form->input('RUT_CLI');
+        echo $this->Form->input('RUT_CLI',array(
+    'type' => 'text'));
         echo $this->Form->input('NOMBRE_CLI');
         echo $this->Form->input('APELLIDO_PCLI');
         echo $this->Form->input('APELLIDO_MCLI');

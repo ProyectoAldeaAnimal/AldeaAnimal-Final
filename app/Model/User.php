@@ -3,6 +3,7 @@ App::uses('AuthComponent', 'Controller/Component');
 class User extends AppModel {
 
 public $useTable = 'cli';
+public $primaryKey= 'RUT_CLI';
 
 public $displayField = 'NOMBRE_CLI';
 public $validate = array(

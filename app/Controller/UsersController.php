@@ -55,7 +55,7 @@ class UsersController extends AppController{
 		         $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
                  $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
 
-		        $this->Auth->allow('index','display', 'view', 'home','add', 'logout','login');
+		        $this->Auth->allow('display', 'view', 'home','add', 'logout','login');
 		 
 		    }
 		        public function index() {
