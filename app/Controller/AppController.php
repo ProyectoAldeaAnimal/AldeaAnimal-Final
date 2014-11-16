@@ -33,12 +33,4 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 
-            public function inicializarAuth(){
-
-                        $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
-                        $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
-
-                        $this->Session->write('Auth.redirect', null);
-                } // fin de function inicializarAuth
-
 }

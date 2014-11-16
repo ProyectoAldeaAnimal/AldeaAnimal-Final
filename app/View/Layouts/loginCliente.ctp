@@ -88,8 +88,9 @@ array('controller' => 'users', 'action' => 'home'));?></FONT></li>
               <?php echo $this->Form->create('User', array('action'=>'login', 'type'=>'post')); ?>
               <fieldset>
                    
-                    <?php echo $this->Form->input('rut',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus' ));
-                    echo $this->Form->input('password',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required')); ?>
+                    <?php echo $this->Form->input('RUT_CLI',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus' ));
+                   
+                    echo $this->Form->input('PASSWORD_CLI',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required')); ?>
                       <?php echo $this->Form->input('Entrar',array('label'=>"",'type'=>'submit','class'=>"btn btn-lg btn-primary btn-block"));?>
                       <?php echo $this->Form->end();
                     ?>
@@ -101,10 +102,10 @@ array('controller' => 'users', 'action' => 'home'));?></FONT></li>
                       <?php echo $this->Form->input('Entrar',array('label'=>"",'type'=>'submit','class'=>"btn btn-lg btn-primary btn-block"));?>
                       <?php echo $this->Form->end();*/?>
         
-                  </fieldset>
+                 
 
           </div>
-      </div>
+      
 
     </div> <!-- /container -->
 
@@ -121,7 +122,9 @@ array('controller' => 'users', 'action' => 'home'));?></FONT></li>
     </div>
     <script>
           $('#rut').Rut({
-            on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");}
+            on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");
+            
+          }
           });
     </script>
   </body>

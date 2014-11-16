@@ -4,8 +4,17 @@
 <?php echo $this->Form->create('User');?>
     <fieldset>
         <legend><?php echo __('Add User'); ?></legend>
-        <?php echo $this->Form->input('rut');
-        echo $this->Form->input('password');
+        <?php 
+        echo $this->Form->input('RUT_CLI');
+        echo $this->Form->input('NOMBRE_CLI');
+        echo $this->Form->input('APELLIDO_PCLI');
+        echo $this->Form->input('APELLIDO_MCLI');
+        echo $this->Form->input('MAIL_CLI');
+        echo $this->Form->input('TEL_CLI');
+        echo $this->Form->input('FECHA_REGISTRO_CLI');
+        echo $this->Form->input('DIR_CLI');
+        echo $this->Form->input('HABILITADO_CLI');
+        echo $this->Form->input('PASSWORD_CLI');
 		echo $this->Form->input('password_confirm', array('label' => 'Confirm Password *', 'maxLength' => 255, 'title' => 'Confirm password', 'type'=>'password'));
 
 		

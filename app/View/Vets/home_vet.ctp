@@ -1,31 +1,7 @@
-<?php echo $this->Html->docType('html5');?>
-<html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		Aldea Animal
-	</title>
-	<?php
+<?php 
+ $this->layout = 'headVets';
+?>
 
-		echo $this->Html->meta('favicon.ico','img/favicon.ico',array('type' => 'icon'));
-		
-		echo $this->Html->css (array('reset','style','fonts','http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700'));
-		echo $this->Html -> css(array("bootstrap.css"));
-		echo $this->Html -> css(array("font-awesome.css"));
-		echo $this->Html -> css(array("main.css"));
-		echo $this->Html -> css(array("style.css"));
-		echo $this->Html -> css(array("style2.css"));
-		echo $this->Html -> css(array("full-slider.css"));
-		echo $this->Html-> script(array("jquery-1.8.3.min.js"));
-		echo $this->Html-> script(array("jquery.mobile.customized.min.js"));
-		echo $this->Html-> script(array("jquery.easing.1.3.js"));
-		echo $this->Html-> script(array("bootstrap.min.js"));
-		echo $this->Html-> script(array("scrolling-nav.js"));
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
 <body id="home" data-spy="scroll" data-target=".navbar-fixed-top" class= "callout3">
   
 
@@ -54,7 +30,7 @@
                   <ul class="nav navbar-nav navbar-right">
 
                           <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Usuario",
-array('controller' => 'users', 'action' => 'logout')); ?>
+array('controller' => 'vets', 'action' => 'logout')); ?>
   </FONT></li>
 
 
@@ -75,26 +51,39 @@ array('controller' => 'users', 'action' => 'logout')); ?>
         </div>
     <br>
     
-    <FONT COLOR="#000000"> <h3>Dueño: <?php
-    $usuario = AuthComponent::user();
-    echo ($usuario[0]['User']['NOMBRE_CLI']. ' '. $usuario[0]['User']['APELLIDO_PCLI']. ' '. $usuario[0]['User']['APELLIDO_MCLI']);?></h3></FONT>
+    <FONT COLOR="#000000"> <h3>Dueño: <?php echo AuthComponent::user('rut_vet');?></h3></FONT>
 
     <br>
 
     <div class="row">
       <div class="col-md-9">
-             <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Datos</h3>
-              Revise sus datos personales - Modifique sus Datos
+             <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mi agenda</h3>
+             Comprobar horario de trabajo, Solicitudes de hora de clientes, Solicitudes Aceptadas
                </button>
                 <br>
-               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Mascotas</h3>
-              Revise atenciones, vacunas y desparacitaciones sobre tus queridas mascotas
+               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Generar Atención</h3>
                </button>
+               <br>
+
+               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nuevo Cliente</h3>
+               </button>
+               <br>
+
+             	<button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nueva Mascota</h3>
+             	A un cliente registrado previamente
+               </button>
+               <br>
+
+               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Administración</h3>
+               Modificar Datos Personales, Ingresar Patoligías, Ingresar Medicamentos, Ingresar tipo de vacunas
+               </button>
+              
+
         
       </div>
       <div id="ex5"class="col-md-3">
         <?php
-            echo $this->Html->image('huella2.png', array('alt' => 'clientes', 'class'=>"img-responsive"));
+            echo $this->Html->image('esteto.png', array('alt' => 'clientes', 'class'=>"img-responsive"));
           ?>
       </div>
     </div>
@@ -125,4 +114,3 @@ array('controller' => 'users', 'action' => 'logout')); ?>
 
 	<?php echo $this->element('sql_dump'); ?>
 </body>
-</html>
