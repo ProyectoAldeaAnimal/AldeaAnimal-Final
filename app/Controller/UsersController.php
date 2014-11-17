@@ -95,7 +95,7 @@ class UsersController extends AppController{
 							return $this->redirect($this->Auth->redirect());
 						}
 						else{
-							debug($this->Auth->authenticate);
+							
 					            $this->Session->setFlash(
 					                __('Rut o contraseña incorrecta'),
 					                'default',

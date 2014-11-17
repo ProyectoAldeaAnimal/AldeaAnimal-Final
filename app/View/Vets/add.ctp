@@ -1,25 +1,28 @@
-<!-- app/View/Users/add.ctp -->
-<div class="users form">
-
-<?php echo $this->Form->create('Vet');?>
-    <fieldset>
-        <legend><?php echo __('Add Vet'); ?></legend>
-        <?php echo $this->Form->input('rut_vet');
-        echo $this->Form->input('password_vet');
-		echo $this->Form->input('password_confirm', array('label' => 'Confirm Password *', 'maxLength' => 255, 'title' => 'Confirm password', 'type'=>'password'));
-
-		
-		echo $this->Form->submit('Add Vet', array('class' => 'form-submit',  'title' => 'Click here to add the user') ); 
-?>
-    </fieldset>
-<?php echo $this->Form->end(); ?>
+<div class="vets form">
+<?php echo $this->Form->create('Vet'); ?>
+	<fieldset>
+		<legend><?php echo __('Add Vet'); ?></legend>
+	<?php
+		echo $this->Form->input('RUT_VET');
+		echo $this->Form->input('NOMBRE_VET');
+		echo $this->Form->input('APELLIDO_PVET');
+		echo $this->Form->input('APELLIDO_MVET');
+		echo $this->Form->input('TEL_VET');
+		echo $this->Form->input('DIR_VET');
+		echo $this->Form->input('MAIL_VET');
+		echo $this->Form->input('FECHA_REGISTRO_VET');
+		echo $this->Form->input('ADMIN');
+		echo $this->Form->input('HABILITADO');
+		echo $this->Form->input('AUDITOR');
+		echo $this->Form->input('PASSWORD_VET');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit')); ?>
 </div>
-<?php /*
-if($this->Session->check('Auth.User')){
-echo $this->Html->link( "Return to Dashboard",   array('action'=>'index') ); 
-echo "<br>";
-echo $this->Html->link( "Logout",   array('action'=>'logout') ); 
-}else{
-echo $this->Html->link( "Return to Login Screen",   array('action'=>'login') ); 
-}*/
-?>	
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Vets'), array('action' => 'index')); ?></li>
+	</ul>
+</div>

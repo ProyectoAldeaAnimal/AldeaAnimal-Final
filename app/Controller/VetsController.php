@@ -1,14 +1,24 @@
-<?php 
+<?php
+App::uses('AppController', 'Controller');
+/**
+ * Vets Controller
+ *
+ * @property Vet $Vet
+ * @property PaginatorComponent $Paginator
+ */
+class VetsController extends AppController {
 
-class VetsController extends AppController{
-
-	
-	
+/**
+ * Components
+ *
+ * @var array
+ */
 	var $name='Vets';
 	var $helpers = array('Form', 'Html', 'Js', 'Time');
 	var $uses=array('Vet');
 	var $admin = false;
-	public $components = array('Email',
+	
+	public $components = array('Email', 'Paginator',
 	        'Session',
 	        /* add Auth component and set  the urls that will be loaded after the login and logout actions is performed */
 	        'Auth' => array(
@@ -31,9 +41,6 @@ class VetsController extends AppController{
 	        )
 	    );
 
-	public function index(){
-		$this->redirect(array('action' => 'login'));
-	}
     public function inicializarAuth(){
 
                         $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
@@ -106,20 +113,94 @@ class VetsController extends AppController{
 			    return $this->redirect($this->Auth->logout());
 			}
 
-	public function add() {
-	        if ($this->request->is('post')) {
-					
-				$this->Vet->create();
-				debug($this->request->data);
-				if ($this->Vet->save($this->request->data)) {
-					$this->Session->setFlash(__('The user has been created'));
-					$this->redirect(array('action' => 'add'));
-				} else {
-					$this->Session->setFlash(__('The user could not be created. Please, try again.'));
-				}	
-	        }
-	    }
 
 
+
+
+/**
+ * index method
+ *
+ * @return void
+ */
+	public function index() {
+		$this->Vet->recursive = 0;
+		$this->set('vets', $this->Paginator->paginate());
 	}
-?>
+
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		if (!$this->Vet->exists($id)) {
+			throw new NotFoundException(__('Invalid vet'));
+		}
+		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+		$this->set('vet', $this->Vet->find('first', $options));
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$this->Vet->create();
+			if ($this->Vet->save($this->request->data)) {
+				$this->Session->setFlash(__('The vet has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
+			}
+		}
+	}
+
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function edit($id = null) {
+		if (!$this->Vet->exists($id)) {
+			throw new NotFoundException(__('Invalid vet'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->Vet->save($this->request->data)) {
+				$this->Session->setFlash(__('The vet has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+			$this->request->data = $this->Vet->find('first', $options);
+		}
+	}
+
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function delete($id = null) {
+		$this->Vet->id = $id;
+		if (!$this->Vet->exists()) {
+			throw new NotFoundException(__('Invalid vet'));
+		}
+		$this->request->allowMethod('post', 'delete');
+		if ($this->Vet->delete()) {
+			$this->Session->setFlash(__('The vet has been deleted.'));
+		} else {
+			$this->Session->setFlash(__('The vet could not be deleted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
+}

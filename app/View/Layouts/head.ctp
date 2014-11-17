@@ -16,6 +16,8 @@
         echo $this->Html -> css(array("style.css"));
         echo $this->Html -> css(array("style2.css"));
         echo $this->Html -> css(array("signin.css"));
+        echo $this->Html -> css(array("cake.generic.css"));
+        
         echo $this->Html-> script(array("jquery-1.8.3.min.js"));
         echo $this->Html-> script(array("ie-emulation-modes-warning.js"));
         echo $this->Html-> script(array("jquery.Rut.js"));

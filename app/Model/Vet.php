@@ -1,7 +1,7 @@
 <?php
 App::uses('AuthComponent', 'Controller/Component');
 class Vet extends AppModel {
-public $useTable = 'VET ';
+public $useTable = 'vet';
 public $validate = array(
 		'rut_vet' => array(
             'required' => array(
