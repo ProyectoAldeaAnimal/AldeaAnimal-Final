@@ -1,11 +1,11 @@
 <?php
-App::uses('Cal', 'Model');
+App::uses('Par', 'Model');
 
 /**
- * Cal Test Case
+ * Par Test Case
  *
  */
-class CalTest extends CakeTestCase {
+class ParTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,8 +13,7 @@ class CalTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.cal',
-		'app.oferta_hors'
+		'app.par'
 	);
 
 /**
@@ -24,7 +23,7 @@ class CalTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Cal = ClassRegistry::init('Cal');
+		$this->Par = ClassRegistry::init('Par');
 	}
 
 /**
@@ -33,7 +32,7 @@ class CalTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Cal);
+		unset($this->Par);
 
 		parent::tearDown();
 	}

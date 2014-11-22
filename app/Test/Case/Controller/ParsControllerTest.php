@@ -1,11 +1,11 @@
 <?php
-App::uses('VetsController', 'Controller');
+App::uses('ParsController', 'Controller');
 
 /**
- * VetsController Test Case
+ * ParsController Test Case
  *
  */
-class VetsControllerTest extends ControllerTestCase {
+class ParsControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,9 +13,7 @@ class VetsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.vet',
-		'app.oferta_hor',
-		'app.cal'
+		'app.par'
 	);
 
 /**

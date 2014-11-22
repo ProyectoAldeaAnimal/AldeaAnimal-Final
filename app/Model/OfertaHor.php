@@ -1,32 +1,33 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Cal Model
+ * OfertaHor Model
  *
- * @property oferta_hors $oferta_hors
+ * @property vet $vet
+ * @property cal $cal
  */
-class Cal extends AppModel {
+class OfertaHor extends AppModel {
 
 /**
  * Use table
  *
  * @var mixed False or table name
  */
-	public $useTable = 'cal';
-
+	public $useTable = 'oferta_hor';
+	public $name = 'OfertaHor';
 /**
  * Primary key field
  *
  * @var string
  */
-	public $primaryKey = 'ID_CAL';
+	public $primaryKey = 'ID_OFERTA_HOR';
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'FECHA_CAL';
+	public $displayField = 'HORA_INICIO';
 
 /**
  * Validation rules
@@ -34,7 +35,7 @@ class Cal extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'ID_CAL' => array(
+		'ID_OFERTA_HOR' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -48,25 +49,22 @@ class Cal extends AppModel {
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'OfertaHor' => array(
-			'className' => 'OfertaHor',
-			'foreignKey' => 'ID_OFERTA_HOR',
-			'dependent' => false,
+
+ 
+	public $belongsTo = array(
+		'Vet' => array(
+			'className' => 'Vet',
+			'foreignKey' => 'RUT_VET',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
+			'order' => ''
+		),
+		'Cal' => array(
+			'className' => 'Cal',
+			'foreignKey' => 'ID_CAL',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
-
 }

@@ -3,7 +3,8 @@
 	<fieldset>
 		<legend><?php echo __('Add Vet'); ?></legend>
 	<?php
-		echo $this->Form->input('RUT_VET');
+		echo $this->Form->input('RUT_VET', array(
+    'type' => 'text'));
 		echo $this->Form->input('NOMBRE_VET');
 		echo $this->Form->input('APELLIDO_PVET');
 		echo $this->Form->input('APELLIDO_MVET');

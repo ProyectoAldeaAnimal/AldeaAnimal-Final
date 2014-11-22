@@ -36,7 +36,7 @@ class CalFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'ID_CAL' => 1,
-			'FECHA_CAL' => '2014-11-17',
+			'FECHA_CAL' => '2014-11-20',
 			'DIA_TRABAJADO' => 1,
 			'NOMBRE_DIA' => ''
 		),

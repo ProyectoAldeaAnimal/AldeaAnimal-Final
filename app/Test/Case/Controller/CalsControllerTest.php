@@ -13,7 +13,9 @@ class CalsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.cal'
+		'app.cal',
+		'app.oferta_hor',
+		'app.vet'
 	);
 
 /**

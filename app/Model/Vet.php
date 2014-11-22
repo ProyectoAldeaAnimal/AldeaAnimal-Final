@@ -2,6 +2,8 @@
 App::uses('AuthComponent', 'Controller/Component');
 class Vet extends AppModel {
 public $useTable = 'vet';
+public $primaryKey = 'RUT_VET';
+public $name = 'Vet';
 public $validate = array(
 		'rut_vet' => array(
             'required' => array(
@@ -17,6 +19,22 @@ public $validate = array(
         )
 
 		);
+
+    public $hasMany = array(
+        'OfertaHor' => array(
+            'className' => 'OfertaHor',
+            'foreignKey' => 'ID_OFERTA_HOR',
+            'dependent' => false,
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'exclusive' => '',
+            'finderQuery' => '',
+            'counterQuery' => ''
+        )
+    );
 
 	public function beforeSave($options = array()) {
             // hash our password
