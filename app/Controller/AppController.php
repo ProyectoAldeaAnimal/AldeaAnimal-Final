@@ -22,4 +22,35 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-}
+	 public $components = array(
+        'Acl',
+        'Auth' => array(
+            'authorize' => array(
+                'Actions' => array('actionPath' => 'controllers')
+            )
+        ),
+        'Session'
+    );
+    public $helpers = array('Html', 'Form', 'Session');
+    public function beforeFilter() {
+    //Configure AuthComponent
+	    $this->Auth->loginAction = array(
+	      'controller' => 'users',
+	      'action' => 'login'
+	    );
+	    $this->Auth->logoutRedirect = array(
+	      'controller' => 'users',
+	      'action' => 'login'
+	    );
+	    $this->Auth->loginRedirect = array(
+	      'controller' => 'users',
+	      'action' => 'homeClientes'
+	    );
+	   
+	     $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
+         $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
+         $this->Auth->allowedActions = array('display','login');
+	}
+}	
+
+?>

@@ -11,8 +11,8 @@ class UsersController extends AppController{
 			
 
 			public $components = array('Email',
-		        'Session',
-		        /* add Auth component and set  the urls that will be loaded after the login and logout actions is performed */
+		        'Session', 'Acl', 'Paginator',
+		       
 		        'Auth' => array(
 		            'loginRedirect' => array('controller' => 'users', 'action' => 'homeCliente'),
 		            'logoutRedirect' => array('controller' => 'users', 'action' => 'home'),
@@ -32,42 +32,35 @@ class UsersController extends AppController{
 
 		        )
 		    );
-		     public function isAuthorized($user) {
-                // Here is where we should verify the role and give access based on role
-                
-                return true;
-            }
 
-		    
-            public function inicializarAuth(){
+		   
+		    public function  isAuthorized(){
 
-                        $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
-                        $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
+                      
+                        
+                        return true;
+                } // fin de function inicializarAuth
+       /*   public function inicializarAuth(){
 
+                      
+                        
                         $this->Session->write('Auth.redirect', null);
                 } // fin de function inicializarAuth
 
+*/
+			public function beforeFilter() {
+			    parent::beforeFilter();
+                 $this->Auth->userModel = 'User';
+     
+			    // For CakePHP 2.1 and up
+			  
+			}
 
-				
-		    public function beforeFilter() {
-		    	parent::beforeFilter();
-		        /* set actions that will not require login */
-		         $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
-                 $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
 
-		        $this->Auth->allow('display', 'view', 'home','add', 'logout','login');
-		 
-		    }
 		        public function index() {
-						$this->paginate = array(
-							'limit' => 6,
-							'order' => array('User.username' => 'asc' )
-						);
-						$users = $this->paginate('User');
-						$this->set(compact('users'));
-				    }
+					$this->redirect(array('action' => 'homeCliente'));				    
 
-
+}
 			public function login() {
 
 
@@ -83,7 +76,7 @@ class UsersController extends AppController{
 									'User.RUT_CLI' => $this->request->data['User']['RUT_CLI'])
 								)
 						);
-					
+						
 
 
 				    	if(($usuario[0]['User']['RUT_CLI'] == $this->request->data['User']['RUT_CLI']) &&
@@ -124,7 +117,18 @@ class UsersController extends AppController{
 			    return $this->redirect($this->Auth->logout());
 			}
 
-
+			public function add() {
+		        if ($this->request->is('post')) {
+					
+					$this->User->create();
+					if ($this->User->save($this->request->data)) {
+						$this->Session->setFlash(__('The user has been created'));
+						$this->redirect(array('action' => 'index'));
+					} else {
+						$this->Session->setFlash(__('The user could not be created. Please, try again.'));
+					}	
+		        }
+		    }
 		
 			public function home(){
 				$this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
@@ -135,19 +139,80 @@ class UsersController extends AppController{
 				
 
 			}
+			public function misDatos(){
+				$this->set('title_for_layout', 'Mis Datos');
+				$usuario = AuthComponent::user();
+				$id = $usuario[0]['User']['ID'];
+				if (!$this->User->exists($id)) {
+					throw new NotFoundException(__('Invalid User'));
+				}
+				$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+				$this->set('User', $this->User->find('first', $options));
 
-			public function add() {
-		        if ($this->request->is('post')) {
-					debug($this->request->data);
-					$this->User->create();
+			}
+			public function edit($id = null) {
+				if (!$this->User->exists($id)) {
+					throw new NotFoundException(__('Invalid cli'));
+				}
+				if ($this->request->is(array('post', 'put'))) {
 					if ($this->User->save($this->request->data)) {
-						$this->Session->setFlash(__('The user has been created'));
-						$this->redirect(array('action' => 'index'));
+						$this->Session->setFlash(__('The User has been saved.'));
+						return $this->redirect(array('action' => 'index'));
 					} else {
-						$this->Session->setFlash(__('The user could not be created. Please, try again.'));
-					}	
-		        }
-		    }
+						$this->Session->setFlash(__('The User could not be saved. Please, try again.'));
+					}
+				} else {
+					$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+					$this->request->data = $this->User->find('first', $options);
+				}
+				$groups = $this->User->Group->find('list');
+				$this->set(compact('groups'));
+			}
+
+			public function misMascotas(){
+				$this->set('title_for_layout', 'Mis Mascotas');
+
+			}
+			public function verDatosMascotas(){
+				$this->set('title_for_layout', 'Ver Datos Mascotas');
+				$this->loadModel('Ma');
+				$usuario = AuthComponent::user();
+				$id = $usuario[0]['User']['ID'];
+				$mascotasCli= $this->Ma->query("SELECT * FROM mas WHERE ID =".$usuario[0]['User']['ID']);
+
+				$this->loadModel('TipoMa');
+				$sql = "SELECT * FROM tipo_mas WHERE ID_TIPO_MAS =".$mascotasCli[0]['mas']['ID_TIPO_MAS'];
+				for($i=1;$i< count($mascotasCli);$i++){
+					$sql = $sql." OR ID_TIPO_MAS =".$mascotasCli[$i]['mas']['ID_TIPO_MAS'];
+
+				}
+				
+				$tipos= $this->TipoMa->query($sql);
+				
+				$this->set(compact('mascotasCli','tipos'));
+			}
+			/*
+				$usuario = AuthComponent::user();
+				$id = $usuario[0]['User']['ID'];
+				if (!$this->User->exists($id)) {
+					throw new NotFoundException(__('Invalid cli'));
+				}
+				if ($this->request->is(array('post', 'put'))) {
+					if ($this->User->save($this->request->data)) {
+						$this->Session->setFlash(__('The User has been saved.'));
+						return $this->redirect(array('action' => 'index'));
+					} else {
+						$this->Session->setFlash(__('The User could not be saved. Please, try again.'));
+					}
+				} else {
+					$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+					$this->request->data = $this->User->find('first', $options);
+				}
+				$groups = $this->User->Group->find('list');
+				$this->set(compact('groups'));
+			*/
+
+
 
 
 }

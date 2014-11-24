@@ -20,6 +20,16 @@ class VetsController extends AppController {
  *
  * @return void
  */
+/*public function beforeFilter() {
+			    parent::beforeFilter();
+			     $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
+                 $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
+
+
+			    // For CakePHP 2.1 and up
+			    $this->Auth->allow();
+			}	
+*/
 	public function index() {
 		$this->Vet->recursive = 0;
 		$this->set('vets', $this->Paginator->paginate());
@@ -64,6 +74,10 @@ class VetsController extends AppController {
  * @param string $id
  * @return void
  */
+public function login(){
+	
+}
+
 	public function edit($id = null) {
 		if (!$this->Vet->exists($id)) {
 			throw new NotFoundException(__('Invalid vet'));

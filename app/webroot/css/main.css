@@ -236,6 +236,22 @@ textarea {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.callout6 {
+  
+  color: #229b0d;
+  padding-top:3%;
+  height: 120%;
+  width: 100%;
+  background: url(../img/image4.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
 .vert {
   vertical-align: middle;
   width:100%;

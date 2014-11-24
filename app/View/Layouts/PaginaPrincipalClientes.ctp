@@ -10,6 +10,7 @@
 		echo $this->Html->meta('favicon.ico','img/favicon.ico',array('type' => 'icon'));
 		
 		echo $this->Html->css (array('reset','style','fonts','http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700'));
+    echo $this->Html -> css(array("cake.generic.css"));
 		echo $this->Html -> css(array("bootstrap.css"));
 		echo $this->Html -> css(array("font-awesome.css"));
 		echo $this->Html -> css(array("main.css"));
@@ -25,6 +26,12 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+  <style type="text/css">   
+a:link   
+{   
+ text-decoration:none;   
+}   
+</style>
 </head>
 <body id="home" data-spy="scroll" data-target=".navbar-fixed-top" class= "callout3">
   
@@ -43,9 +50,9 @@
             <div class="container m1 menu">
               <div class= "collapse navbar-collapse navbar-ex1-collapse">
                   <ul  class ="nav navbar-nav subMenu" >
-                      <li><a class= "page-scroll"href="#home"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
-                      <li><a class= "page-scroll" href="#servicios"><FONT COLOR="#FFFFFF">Mis Datos</FONT></a></li>
-                      <li><a class= "page-scroll" href="#about"><FONT COLOR="#FFFFFF">Mis Mascotas</FONT></a>
+                      <li><a class= "page-scroll"href="/AldeaAnimal/users/homeCliente"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
+                      <li><a class= "page-scroll" href="/AldeaAnimal/users/misDatos"><FONT COLOR="#FFFFFF">Mis Datos</FONT></a></li>
+                      <li><a class= "page-scroll" href="/AldeaAnimal/users/misMascotas"><FONT COLOR="#FFFFFF">Mis Mascotas</FONT></a>
                       
                       <!--li><a href="#features">Features</a></li-->
                       
@@ -75,7 +82,7 @@ array('controller' => 'users', 'action' => 'logout')); ?>
         </div>
     <br>
     
-    <FONT COLOR="#000000"> <h3>Dueño: <?php
+    <FONT COLOR="#229b0d"> <h3>Dueño: <?php
     $usuario = AuthComponent::user();
     echo ($usuario[0]['User']['NOMBRE_CLI']. ' '. $usuario[0]['User']['APELLIDO_PCLI']. ' '. $usuario[0]['User']['APELLIDO_MCLI']);?></h3></FONT>
 
@@ -83,13 +90,13 @@ array('controller' => 'users', 'action' => 'logout')); ?>
 
     <div class="row">
       <div class="col-md-9">
-             <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Datos</h3>
+              <a href="/AldeaAnimal/users/misDatos"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Datos</h3>
               Revise sus datos personales - Modifique sus Datos
                </button>
                 <br>
-               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Mascotas</h3>
+               <a href="/AldeaAnimal/users/misMascotas"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Mascotas</h3>
               Revise atenciones, vacunas y desparacitaciones sobre tus queridas mascotas
-               </button>
+               </button></a>
         
       </div>
       <div id="ex5"class="col-md-3">
@@ -109,20 +116,13 @@ array('controller' => 'users', 'action' => 'logout')); ?>
           <div class="col-md-6 text-left copy">
             <p>Copyright &copy; 2014 Aldea Animal.</p>
           </div>
-          <div class="col-md-6 text-right dm">
-            <ul id="downMenu">
-              <li class="active"><a href="#home">Principal</a></li>
-              <li><a href="#servicios">Mis Datos</a></li>
-              <li><a href="#about">Mis Mascotas</a></li>
-
-            </ul>
-          </div>
+          
         </div>
       </div>
     </div>
     </div>    
 
 
-	<?php echo $this->element('sql_dump'); ?>
+	<?//php echo $this->element('sql_dump'); ?>
 </body>
 </html>
