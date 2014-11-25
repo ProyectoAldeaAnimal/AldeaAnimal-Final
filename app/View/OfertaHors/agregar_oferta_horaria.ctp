@@ -41,7 +41,7 @@
 	<?php echo $this->Form->create('OfertaHor', array('action' => 'agregarOfertaHoraria')); ?>
 			<table>
 				<tr>
-					<?php echo $this->Form->input('RUT_VET', array('label' => 'Ingrese su Rut:', 'class' => 'form-control','options' => $vets)); ?>
+					<?php echo $this->Form->input('ID_VET', array('label' => 'Ingrese su Rut:', 'class' => 'form-control','options' => $vets)); ?>
 					
 				</tr>
 			</table>

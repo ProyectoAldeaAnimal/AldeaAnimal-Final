@@ -19,16 +19,16 @@ echo $mascotasCli[0]['mas']['FECHA_DEFUNCION'];
 	<thead>
 	<tr>
 			
-			<th>Tipo de Mascota</th>
-			<th>Nombre Mascota</th>
-			<th>Raza Mascota</th>
-			<th>Fecha Nacimiento</th>
+			<th>Tipo</th>
+			<th>Nombre</th>
+			<th>Raza</th>
+			<th>Nacimiento</th>
 			<th>Sexo</th>
 			<th>Color</th>
 			<th>Catacterísticas</th>
-			<th>Fecha Defunción</th>
+			<th>Defunción</th>
 			
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Acciones'); ?></th>
 
 	</tr>
 	</thead>
@@ -53,14 +53,13 @@ echo $mascotasCli[0]['mas']['FECHA_DEFUNCION'];
 		<td><?php echo h($mascotasCli['mas']['CARACTERISTICA']); ?>&nbsp;</td>
 		<td><?php echo h($mascotasCli['mas']['FECHA_DEFUNCION']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $mascotasCli['mas']['ID_MAS'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $mascotasCli['mas']['ID_MAS'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $mascotasCli['mas']['ID_MAS']), array(), __('Are you sure you want to delete # %s?', $mascotasCli['mas']['ID_MAS'])); ?>
+			
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'editMascota', $mascotasCli['mas']['ID_MAS'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
 	</tbody>
-	</table>
+	</table>	
 
 </div>
 

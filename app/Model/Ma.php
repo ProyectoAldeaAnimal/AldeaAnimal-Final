@@ -38,8 +38,8 @@ class Ma extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'TipoMas' => array(
-			'className' => 'TipoMas',
+		'TipoMa' => array(
+			'className' => 'TipoMa',
 			'foreignKey' => 'ID_TIPO_MAS',
 			'conditions' => '',
 			'fields' => '',

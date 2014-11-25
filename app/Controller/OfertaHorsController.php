@@ -64,7 +64,7 @@ class OfertaHorsController extends AppController {
 
 	public function agregarOfertaHoraria() {
 
-		
+		debug($this->request->data);	
 
 		if ($this->request->is('post')) {
 			// Se obtiene los datos del formulario
@@ -93,7 +93,7 @@ class OfertaHorsController extends AppController {
 				}
 				else{
 					$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-					$datos['OfertaHor']['RUT_VET'] = $requesData['OfertaHor']['RUT_VET'];
+					$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 					$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
 					$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['LUN'];
 					
@@ -140,7 +140,7 @@ class OfertaHorsController extends AppController {
 					}
 					else{
 						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['RUT_VET'] = $requesData['OfertaHor']['RUT_VET'];
+						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
 						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['MAR'];
 						
@@ -187,7 +187,7 @@ class OfertaHorsController extends AppController {
 					}
 					else{
 						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['RUT_VET'] = $requesData['OfertaHor']['RUT_VET'];
+						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
 						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['MIER'];
 						
@@ -235,7 +235,7 @@ class OfertaHorsController extends AppController {
 					}
 					else{
 						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['RUT_VET'] = $requesData['OfertaHor']['RUT_VET'];
+						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
 						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['JUE'];
 						
@@ -282,7 +282,7 @@ class OfertaHorsController extends AppController {
 					}
 					else{
 						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['RUT_VET'] = $requesData['OfertaHor']['RUT_VET'];
+						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
 						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['VI'];
 						
@@ -330,7 +330,7 @@ class OfertaHorsController extends AppController {
 					}
 					else{
 						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['RUT_VET'] = $requesData['OfertaHor']['RUT_VET'];
+						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
 						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['SAB'];
 						

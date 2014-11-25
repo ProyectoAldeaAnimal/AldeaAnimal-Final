@@ -54,7 +54,7 @@ class OfertaHor extends AppModel {
 	public $belongsTo = array(
 		'Vet' => array(
 			'className' => 'Vet',
-			'foreignKey' => 'RUT_VET',
+			'foreignKey' => 'ID_VET',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -1,5 +1,5 @@
 <div class="mas index">
-	<h2><?php echo __('Mas'); ?></h2>
+	<h2><?php echo __('Mas');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -14,6 +14,7 @@
 			<th><?php echo $this->Paginator->sort('CARACTERISTICA'); ?></th>
 			<th><?php echo $this->Paginator->sort('FECHA_DEFUNCION'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
+
 	</tr>
 	</thead>
 	<tbody>
@@ -21,7 +22,7 @@
 	<tr>
 		<td><?php echo h($ma['Ma']['ID_MAS']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($ma['TipoMas'][''], array('controller' => 'tipo_mas', 'action' => 'view', $ma['TipoMas']['id'])); ?>
+			<?php echo $this->Html->link($ma['TipoMa']['CLASE'], array('controller' => 'tipo_mas', 'action' => 'view', $ma['TipoMa']['ID_TIPO_MAS'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($ma['User']['NOMBRE_CLI'], array('controller' => 'users', 'action' => 'view', $ma['User']['ID'])); ?>

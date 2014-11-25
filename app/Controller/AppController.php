@@ -24,14 +24,31 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	 public $components = array(
         'Acl',
-        'Auth' => array(
-            'authorize' => array(
-                'Actions' => array('actionPath' => 'controllers')
-            )
-        ),
+        'Auth',
         'Session'
     );
     public $helpers = array('Html', 'Form', 'Session');
+
+    public function isAuthorized() {
+
+			$userId = $this->Auth->user();
+			$params =$this->request->params;
+			$controller = $params['controller'];
+			$controller = ucwords($controller);
+			
+			$permisoUsuario= $this->Acl->check(array(
+				    'model' => 'Group',
+					    'foreign_key' => $userId[0]['User']['ID_GROUP']
+					), 'controllers/'.$controller);
+			/*if($permisoUsuario){
+				return true;
+			}
+			else{
+				return false;
+			}*/
+			return true;
+			
+	}
     public function beforeFilter() {
     //Configure AuthComponent
 	    $this->Auth->loginAction = array(
@@ -44,12 +61,14 @@ class AppController extends Controller {
 	    );
 	    $this->Auth->loginRedirect = array(
 	      'controller' => 'users',
-	      'action' => 'homeClientes'
+	      'action' => 'homeCliente'
 	    );
+
 	   
 	     $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
          $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
-         $this->Auth->allowedActions = array('display','login');
+         $this->Auth->allow('display');
+         $this->Auth->authorize = 'controller';
 	}
 }	
 

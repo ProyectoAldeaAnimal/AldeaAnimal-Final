@@ -37,7 +37,11 @@
 <body class= "callout4">
 	<div id="container">
 		<div id="header">
-			
+			<div id="ex5"class="col-md-3">
+		        <?php
+		            echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+		          ?>
+		      </div>
 		</div>
 		<div id="content">
 

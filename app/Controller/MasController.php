@@ -73,8 +73,8 @@ class MasController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Ma->save($this->request->data)) {
-				$this->Session->setFlash(__('The ma has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Los datos de la masctoa han sido actualizados.'));
+				return $this->redirect(array('controller' => 'users', 'action' => 'misMascotas'));
 			} else {
 				$this->Session->setFlash(__('The ma could not be saved. Please, try again.'));
 			}

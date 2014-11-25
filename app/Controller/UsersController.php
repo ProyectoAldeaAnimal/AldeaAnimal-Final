@@ -11,7 +11,7 @@ class UsersController extends AppController{
 			
 
 			public $components = array('Email',
-		        'Session', 'Acl', 'Paginator',
+		        'Session','Paginator',
 		       
 		        'Auth' => array(
 		            'loginRedirect' => array('controller' => 'users', 'action' => 'homeCliente'),
@@ -34,12 +34,7 @@ class UsersController extends AppController{
 		    );
 
 		   
-		    public function  isAuthorized(){
-
-                      
-                        
-                        return true;
-                } // fin de function inicializarAuth
+		
        /*   public function inicializarAuth(){
 
                       
@@ -51,7 +46,7 @@ class UsersController extends AppController{
 			public function beforeFilter() {
 			    parent::beforeFilter();
                  $this->Auth->userModel = 'User';
-     
+     			 $this->Auth->allow('index', 'view');
 			    // For CakePHP 2.1 and up
 			  
 			}
@@ -136,7 +131,16 @@ class UsersController extends AppController{
 			}
 			public function homeCliente(){
 				
-				
+			    $aro = $this->Auth->user();
+			    //Si deseamos verificar la acción 'index', hija de 'Productos', a su vez hijo de 'controllers'.
+			    $aco = 'Mas';
+			  	
+			    //Se chequean si el usuario tiene acceso a al ACO definido (se obtiene 1 si tiene permiso; 0 en caso que no lo tenga).
+			    $permisoUsuario= $this->Acl->check(array(
+					    'model' => 'Group',
+					    'foreign_key' => $aro[0]['User']['ID_GROUP']
+					), 'controllers/Mas');
+			   
 
 			}
 			public function misDatos(){
@@ -190,6 +194,10 @@ class UsersController extends AppController{
 				$tipos= $this->TipoMa->query($sql);
 				
 				$this->set(compact('mascotasCli','tipos'));
+			}
+			public function editMascota($id){
+				$this->redirect(array('controller' => 'mas', 'action' => 'edit',$id));
+
 			}
 			/*
 				$usuario = AuthComponent::user();

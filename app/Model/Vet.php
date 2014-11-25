@@ -2,10 +2,15 @@
 App::uses('AuthComponent', 'Controller/Component');
 class Vet extends AppModel {
 public $useTable = 'vet';
-public $primaryKey = 'RUT_VET';
+public $primaryKey = 'ID_VET';
 public $name = 'Vet';
+public $virtualFields = array(
+    'name' => 'CONCAT(Vet.NOMBRE_VET, " ", Vet.APELLIDO_PVET, " ",Vet.APELLIDO_MVET)'
+);
+public $displayField = 'name';
+
 public $validate = array(
-		'rut_vet' => array(
+		'RUT_VET' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
                 'message' => 'A username is required'
