@@ -183,17 +183,22 @@ class UsersController extends AppController{
 				$usuario = AuthComponent::user();
 				$id = $usuario[0]['User']['ID'];
 				$mascotasCli= $this->Ma->query("SELECT * FROM mas WHERE ID =".$usuario[0]['User']['ID']);
+				if($mascotasCli){
+					$this->loadModel('TipoMa');
+					$sql = "SELECT * FROM tipo_mas WHERE ID_TIPO_MAS =".$mascotasCli[0]['mas']['ID_TIPO_MAS'];
+					for($i=1;$i< count($mascotasCli);$i++){
+						$sql = $sql." OR ID_TIPO_MAS =".$mascotasCli[$i]['mas']['ID_TIPO_MAS'];
 
-				$this->loadModel('TipoMa');
-				$sql = "SELECT * FROM tipo_mas WHERE ID_TIPO_MAS =".$mascotasCli[0]['mas']['ID_TIPO_MAS'];
-				for($i=1;$i< count($mascotasCli);$i++){
-					$sql = $sql." OR ID_TIPO_MAS =".$mascotasCli[$i]['mas']['ID_TIPO_MAS'];
-
+					}
+					
+					$tipos= $this->TipoMa->query($sql);
+					
+					$this->set(compact('mascotasCli','tipos'));
+				}	
+				else {
+					$this->Session->setFlash(__('Usted no tiene mascotas inscritas en el sistema comuniquese con su veterinario.'));
+					return $this->redirect(array('action' => 'misMascotas'));
 				}
-				
-				$tipos= $this->TipoMa->query($sql);
-				
-				$this->set(compact('mascotasCli','tipos'));
 			}
 			public function editMascota($id){
 				$this->redirect(array('controller' => 'mas', 'action' => 'edit',$id));

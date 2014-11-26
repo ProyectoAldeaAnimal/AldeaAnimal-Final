@@ -22,3 +22,10 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
+<div class="actions">
+	<div id="ex5">
+		        <?php
+		            echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+		          ?>
+		      </div>
+</div>

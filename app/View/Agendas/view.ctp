@@ -13,12 +13,12 @@
 		</dd>
 		<dt><?php echo __('Vet'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($agenda['Vet']['NOMBRE_VET'], array('controller' => 'vets', 'action' => 'view', $agenda['Vet']['ID_vET'])); ?>
+			<?php echo $this->Html->link($agenda['Vet']['name'], array('controller' => 'vets', 'action' => 'view', $agenda['Vet']['ID_VET'])); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('ID PRES'); ?></dt>
+		<dt><?php echo __('Pre'); ?></dt>
 		<dd>
-			<?php echo h($agenda['Agenda']['ID_PRES']); ?>
+			<?php echo $this->Html->link($agenda['Pre']['NOMBRE_PRES'], array('controller' => 'pres', 'action' => 'view', $agenda['Pre']['ID_PRES'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('ESTADO AGENDA'); ?></dt>
@@ -39,6 +39,8 @@
 		<li><?php echo $this->Html->link(__('New Vet'), array('controller' => 'vets', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Mas'), array('controller' => 'mas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Ma'), array('controller' => 'mas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Pres'), array('controller' => 'pres', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Pre'), array('controller' => 'pres', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Oferta Hors'), array('controller' => 'oferta_hors', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Oferta Hor'), array('controller' => 'oferta_hors', 'action' => 'add')); ?> </li>
 	</ul>

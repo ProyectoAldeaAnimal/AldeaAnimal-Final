@@ -1,27 +1,41 @@
+<?php 
+  $this->layout = 'headClientes';
+?>
 <div class="agendas form">
 <?php echo $this->Form->create('Agenda'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Agenda'); ?></legend>
+		<h3><?php echo __('Solicitar Agendamiento'); ?></h3>
+		<br>
 	<?php
-		echo $this->Form->input('ID_MAS');
-		echo $this->Form->input('ID_VET');
-		echo $this->Form->input('ID_PRES');
-		echo $this->Form->input('ESTADO_AGENDA');
-		echo $this->Form->input('OfertaHor');
+		echo $this->Form->input('ID_MAS', array(
+			'label' => 'Seleccione la mascota que desea atender en la clínica : <br>',
+			'options' => $mas
+			));
+		echo $this->Form->input('ID_VET', array(
+			'label' => 'Seleccione profesional con el cual desea atender a su mascota : <br>',
+			'options' => $vets
+			));
+		echo $this->Form->input('ID_PRES', array(
+			'label' => 'Seleccione la prestación con la cual desea solicitar hora : <br>',
+			'options' => $pres
+			));
+		
+		echo $this->Form->input('ESTADO_AGENDA', array(
+			'type' => 'hidden'
+			));
+		echo $this->Form->input('OfertaHor', array(
+			'label' => 'Seleccione oferta Horaria de su veterinario : <br>',
+			'options' => $ofertaHors
+			));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Solicitar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Agendas'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Vets'), array('controller' => 'vets', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Vet'), array('controller' => 'vets', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Mas'), array('controller' => 'mas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Ma'), array('controller' => 'mas', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Oferta Hors'), array('controller' => 'oferta_hors', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Oferta Hor'), array('controller' => 'oferta_hors', 'action' => 'add')); ?> </li>
-	</ul>
+	<div id="ex5">
+		        <?php
+		            echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+		          ?>
+		      </div>
 </div>
+

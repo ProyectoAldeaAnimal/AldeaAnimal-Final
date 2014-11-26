@@ -44,6 +44,13 @@
 
 </div>
 <div class="actions">
+
+	<div id="ex5">
+		        <?php
+		            echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+		          ?>
+		      </div>
+
 	<h3><?php echo __('Acciones'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Editar Mis Datos'), array('action' => 'edit', $User['User']['ID'])); ?> </li>

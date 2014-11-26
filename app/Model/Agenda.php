@@ -52,6 +52,13 @@ class Agenda extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Pre' => array(
+			'className' => 'Pre',
+			'foreignKey' => 'ID_PRES',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 
@@ -65,7 +72,7 @@ class Agenda extends AppModel {
 			'className' => 'OfertaHor',
 			'joinTable' => 'bloq_agen',
 			'foreignKey' => 'ID_OFERTA_HOR',
-			'associationForeignKey' => 'agenda_id',
+			'associationForeignKey' => 'ID_AGENDA',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

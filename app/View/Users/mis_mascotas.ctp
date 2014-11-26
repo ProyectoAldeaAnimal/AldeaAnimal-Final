@@ -23,19 +23,22 @@
               Revisa los datos de tus mascotas
              </button></a>
              <br>
-             <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Solicitudes de Hora</h3>
+              <a href="/AldeaAnimal/agendas/index"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Solicitudes de Hora</h3>
             Revise todas las solicitudes de hora que ha hecho
-             </button>
-              <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Solicitar Hora</h3>
+             </button></a>
+             <br>
+              <a href="/AldeaAnimal/agendas/add"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Solicitar Hora</h3>
             Para algun servicio, con alguno de nuestros profesionales
-             </button>
-
+             </button></a>
+              <br>
               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Recetas</h3>
             Para alguna de sus mascotas
              </button>
+             <br>
              <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Próximas fechas de control</h3>
             Consulta de fechas sugeridas para las prestaciones de la clínica
              </button>
+             <br>
              <button type="button" class="btn btn-lg btn-primary btn-block color13" > <h3>Historial Mascota</h3>
              </button>
       

@@ -27,7 +27,11 @@ class OfertaHor extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'HORA_INICIO';
+	public $virtualFields = array(
+	    'name' => 'CONCAT(OfertaHor.HORA_INICIO, " - ", OfertaHor.HORA_TERMINO)'
+	);
+	public $displayField = 'name';
+
 
 /**
  * Validation rules
