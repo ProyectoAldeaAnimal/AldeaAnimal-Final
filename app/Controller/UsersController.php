@@ -33,16 +33,6 @@ class UsersController extends AppController{
 		        )
 		    );
 
-		   
-		
-       /*   public function inicializarAuth(){
-
-                      
-                        
-                        $this->Session->write('Auth.redirect', null);
-                } // fin de function inicializarAuth
-
-*/
 			public function beforeFilter() {
 			    parent::beforeFilter();
                  $this->Auth->userModel = 'User';
@@ -93,18 +83,6 @@ class UsersController extends AppController{
 
 						}
 				
-					       /* if ($this->Auth->login()) {
-
-					            return $this->redirect($this->Auth->redirect());
-					        } else {
-					        	debug($this->Auth->authenticate);
-					            $this->Session->setFlash(
-					                __('Rut o contraseña incorrecta'),
-					                'default',
-					                array(),
-					                'auth'
-					            );
-					        }*/
 					 }
 			}
 
@@ -204,26 +182,7 @@ class UsersController extends AppController{
 				$this->redirect(array('controller' => 'mas', 'action' => 'edit',$id));
 
 			}
-			/*
-				$usuario = AuthComponent::user();
-				$id = $usuario[0]['User']['ID'];
-				if (!$this->User->exists($id)) {
-					throw new NotFoundException(__('Invalid cli'));
-				}
-				if ($this->request->is(array('post', 'put'))) {
-					if ($this->User->save($this->request->data)) {
-						$this->Session->setFlash(__('The User has been saved.'));
-						return $this->redirect(array('action' => 'index'));
-					} else {
-						$this->Session->setFlash(__('The User could not be saved. Please, try again.'));
-					}
-				} else {
-					$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-					$this->request->data = $this->User->find('first', $options);
-				}
-				$groups = $this->User->Group->find('list');
-				$this->set(compact('groups'));
-			*/
+
 
 
 

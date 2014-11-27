@@ -40,6 +40,32 @@ public $validate = array(
             'counterQuery' => ''
         )
     );
+       public $belongsTo = array(
+        'Group' => array(
+            'className' => 'Group',
+            'foreignKey' => 'ID_GROUP',
+            'conditions' => '',
+            'fields' => '',
+            'order' => ''
+        )
+    );
+    public $actsAs = array('Acl' => array('type' => 'requester', 'enabled' => false));
+
+    public function parentNode() {
+        if (!$this->id && empty($this->data)) {
+            return null;
+        }
+        if (isset($this->data['Vet']['ID_GROUP'])) {
+            $groupId = $this->data['Vet ']['ID_GROUP'];
+        } else {
+            $groupId = $this->field('ID_GROUP');
+        }
+        if (!$groupId) {
+            return null;
+        } else {
+            return array('Group' => array('ID_GROUP' => $groupId));
+        }
+    }
 
 	public function beforeSave($options = array()) {
             // hash our password

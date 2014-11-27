@@ -27,6 +27,9 @@ class AgendasController extends AppController {
 		$mas = $this->Agenda->Ma->find('all', array(
 		'conditions' => array('Ma.ID' => $usuario[0]['User']['ID'])
 		));
+		$this->loadModel('BloqAgen');
+
+		$bloques =$this->BloqAgen->find('all');
 	
 		$esta = false;
 		$i=0;
@@ -35,15 +38,51 @@ class AgendasController extends AppController {
 				if($agenda['Ma']['ID_MAS'] == $ma['Ma']['ID_MAS']) $esta = true;
 			}
 			if(!$esta){
+			foreach ($bloques as $key =>$bloque){
+			
+					if($bloque['BloqAgen']['ID_AGENDA'] == $agendas[$i]['Agenda']['ID_AGENDA']){
+						unset($bloques[$key]);
+					}
+				}
 				unset($agendas[$i]);
-				$esta= false;
+
+				
 			}
+			$esta= false;
 			$i++;
 		}
+		$blocks;
+		foreach ($bloques as $bloque) {
+			$blocks[$bloque['BloqAgen']['ID_AGENDA']]=$bloque['BloqAgen'];
+		}
 
-
+		$ofertaHors;
+		$this->loadModel('OfertaHor');
+		$this->loadModel('Cal');
 		
-		$this->set('agendas', $this->Paginator->paginate());
+    		
+		foreach ($blocks as $block) {
+			$options = array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR']));
+			$ofertaHors[$block['ID_AGENDA']]= $this->OfertaHor->find('list',$options);
+
+			$idCal= $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR'])));
+			$cals=$this->Cal->find('all', array(
+			'conditions' => array('Cal.ID_CAL' => $idCal[0]['Cal']['ID_CAL'])
+			));
+			$i= (int)$block['ID_AGENDA'];
+			$j= (int)$block['ID_OFERTA_HOR'];
+
+			if($cals[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+			if($cals[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+			if($cals[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+			if($cals[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+			if($cals[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+			if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+		
+			$ofertaHor['OfertaHor']['name'] = $dia." : ".$cals[0]['Cal']['FECHA_CAL'] . " Bloque Horario:  ".$ofertaHors[$i][$j]; 
+			$ofertaHors[$block['ID_AGENDA']] =$ofertaHor['OfertaHor']['name'];
+		}
+		$this->set(compact('agendas','ofertaHors'));
 	}
 
 /**

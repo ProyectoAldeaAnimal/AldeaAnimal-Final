@@ -15341,3 +15341,815 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-11-26 06:32:45 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 54]
+2014-11-26 06:32:45 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 54, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 54, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:47:05 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 47]
+2014-11-26 06:47:05 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING)
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:47:17 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 50]
+2014-11-26 06:47:17 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 50, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 50, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:47:27 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 45]
+2014-11-26 06:47:27 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 45, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 45, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:47:45 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 50]
+2014-11-26 06:47:45 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 50, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 50, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:48:24 Error: Fatal Error (4): syntax error, unexpected 's' (T_STRING), expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 45]
+2014-11-26 06:48:24 Error: [FatalErrorException] syntax error, unexpected 's' (T_STRING), expecting ']'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 45, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 45, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:53:37 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 48]
+2014-11-26 06:53:37 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 06:55:43 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 47]
+2014-11-26 06:55:43 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 07:19:21 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 63]
+2014-11-26 07:19:21 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 07:33:33 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 71]
+2014-11-26 07:33:33 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 07:34:44 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 71]
+2014-11-26 07:34:44 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 07:37:48 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 71]
+2014-11-26 07:37:48 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 71, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 07:49:57 Error: Fatal Error (4): syntax error, unexpected '$ofertaHor' (T_VARIABLE) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 74]
+2014-11-26 07:49:57 Error: [FatalErrorException] syntax error, unexpected '$ofertaHor' (T_VARIABLE)
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 74)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 74, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 74, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 08:18:08 Error: [MissingActionException] Action AuditorController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'AuditorController',
+  'action' => 'login',
+)
+Request URL: /AldeaAnimal/auditor/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AuditorController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-26 19:32:36 Error: [MissingComponentException] Component class loginRedirectComponent could not be found.
+Exception Attributes: array (
+  'class' => 'loginRedirectComponent',
+  'plugin' => false,
+)
+Request URL: /AldeaAnimal/vets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('loginRedirect', Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(VetsController))
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-26 20:18:55 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-11-26 20:25:13 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 79]
+2014-11-26 20:25:13 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 20:25:56 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 79]
+2014-11-26 20:25:56 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 20:34:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 79]
+2014-11-26 20:34:25 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 79, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-26 20:36:25 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:37:36 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(142): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-26 20:37:41 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(142): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-26 20:37:48 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(142): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-26 20:38:47 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:39:11 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:40:13 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:40:38 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:47:28 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:49:28 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:49:43 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/vets/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Vet...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Vet...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Vet...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(VetsController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:53:14 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/vets/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Vet...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Vet...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Vet...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(VetsController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:55:27 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/vets/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Vet...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Vet...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Vet...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(VetsController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:56:05 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(142): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-26 20:56:07 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(142): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-26 20:56:31 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:56:46 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:57:53 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-26 20:58:04 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-27 00:07:28 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-27 00:07:35 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(42): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-27 00:09:19 Error: [MissingControllerException] Controller class MaController could not be found.
+Exception Attributes: array (
+  'class' => 'MaController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/ma
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 01:32:51 Error: [MissingActionException] Action UsersController::loginVvet() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginVvet',
+)
+Request URL: /AldeaAnimal/users/loginVvet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-27 01:33:26 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 01:37:08 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 01:40:56 Error: [MissingActionException] Action VetsController::l() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'l',
+)
+Request URL: /AldeaAnimal/vets/l
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-27 01:41:14 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-11-27 01:44:23 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 79]
+2014-11-27 01:44:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 04:59:45 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(44): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-27 05:02:05 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/home
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Use...', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php(45): AclComponent->check(Array, 'controllers/Use...')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(63): AppController->isAuthorized(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(467): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(310): AuthComponent->isAuthorized(Array)
+#7 [internal function]: AuthComponent->startup(Object(UsersController))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-11-27 05:04:28 Error: Fatal Error (4): syntax error, unexpected '$permisoUsuario' (T_VARIABLE), expecting ',' or ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 43]
+2014-11-27 05:04:28 Error: [FatalErrorException] syntax error, unexpected '$permisoUsuario' (T_VARIABLE), expecting ',' or ';'
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 43, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 43, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 05:10:56 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/user
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

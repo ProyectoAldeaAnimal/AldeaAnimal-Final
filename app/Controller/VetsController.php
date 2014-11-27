@@ -13,27 +13,51 @@ class VetsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	var $name='Vets';
+	
+			var $uses=array('Vets');
+			
+			var $helpers = array('Form', 'Html', 'Js', 'Time');
+			
+
+			public $components = array('Email',
+		        'Session','Paginator',
+		        
+		        'Auth' => array(
+		            'loginRedirect' => array('controller' => 'vets', 'action' => 'homeVet'),
+	            	'logoutRedirect' => array('controller' => 'vets', 'action' => 'login'),
+		            'authorize' => array('Controller'), // Added this line
+		            
+			        'authenticate' => array(
+			        	
+			            'Form' => array(
+			                'fields' => array(
+			                    'username' => 'RUT_VET',
+			                   	'password' => 'PASSWORD_VET'
+			                ),
+			            'userModel' => 'Vet'
+
+			            ),
+		            	'Basic' =>array('userModel' => 'Vet')
+			        ),
+
+
+		        )
+		    );
+
 
 /**
  * index method
  *
  * @return void
  */
-/*public function beforeFilter() {
-			    parent::beforeFilter();
-			     $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
-                 $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
-
-
-			    // For CakePHP 2.1 and up
-			    $this->Auth->allow();
-			}	
-*/
-	public function index() {
+	public function index(){
+		$this->redirect(array('action' => 'login'));
+	}
+	/*public function index() {
 		$this->Vet->recursive = 0;
 		$this->set('vets', $this->Paginator->paginate());
-	}
+	}*/
 
 /**
  * view method
@@ -41,7 +65,89 @@ class VetsController extends AppController {
  * @throws NotFoundException
  * @param string $id
  * @return void
- */
+ */public function beforeFilter() {
+			    parent::beforeFilter();
+                 $this->Auth->userModel = 'User';
+     			 $this->Auth->allow('index', 'view');
+			    // For CakePHP 2.1 and up
+			  
+			}
+
+	public function login() {
+				$this->set('title_for_layout', 'Login Veterinarios');
+				if($this->Session->check('Auth.User')){
+							if ($admin){
+								$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeAdministrador');
+								$this->redirect($this->Auth->redirect());
+
+							}
+							else 
+								{
+									$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeVet');
+									$this->redirect($this->Auth->redirect());
+
+								}
+							}
+					
+
+				    if ($this->request->is('post')) {
+
+    					$this->loadModel('Vet');
+						$vet= $this->Vet->find('all',array(
+									'conditions' => array(
+											'VET.RUT_VET' => $this->request->data['Vet']['RUT_VET'])
+										)
+								);
+								
+				
+
+						    if(($vet[0]['Vet']['RUT_VET'] == $this->request->data['Vet']['RUT_VET']) &&
+									($vet[0]['Vet']['PASSWORD_VET'] == Security::hash($this->request->data['Vet']['PASSWORD_VET']))
+
+								){
+						    		$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeVet');
+									$this->Auth->login($vet);
+									return $this->redirect($this->Auth->redirect());
+
+								}
+
+				    		
+					     /*   if ($this->Auth->login()) {
+					        	if($this->request->data['Vet']['rol']=='Administrador'){
+					        		$admin = true;
+					        		$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeAdministrador');
+									$this->redirect($this->Auth->redirect());
+								}
+				    	
+
+					           else return $this->redirect($this->Auth->redirect());}*/ 
+							else {
+
+					            $this->Session->setFlash(
+					                __('Rut o contraseña incorrecta'),
+					                'default',
+					                array(),
+					                'auth'
+					            );
+					        }
+					    }
+			}
+	public function homeVet(){
+					$this->Auth->user('rut_vet');
+					$this->set('title_for_layout', 'Home Veterinarios');
+
+	}
+	public function homeAdministrador(){
+					$this->Auth->user('rut_vet');
+					$this->set('title_for_layout', 'Home Administrador');
+
+	}
+	public function logout() {
+			    return $this->redirect($this->Auth->logout());
+			}
+
+
+
 	public function view($id = null) {
 		if (!$this->Vet->exists($id)) {
 			throw new NotFoundException(__('Invalid vet'));
@@ -65,6 +171,8 @@ class VetsController extends AppController {
 				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
 			}
 		}
+		$groups = $this->Vet->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
 /**
@@ -74,10 +182,6 @@ class VetsController extends AppController {
  * @param string $id
  * @return void
  */
-public function login(){
-	
-}
-
 	public function edit($id = null) {
 		if (!$this->Vet->exists($id)) {
 			throw new NotFoundException(__('Invalid vet'));
@@ -93,6 +197,8 @@ public function login(){
 			$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
 			$this->request->data = $this->Vet->find('first', $options);
 		}
+		$groups = $this->Vet->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
 /**

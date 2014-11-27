@@ -14,6 +14,7 @@ class VetsControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.vet',
+		'app.group',
 		'app.oferta_hor',
 		'app.cal'
 	);

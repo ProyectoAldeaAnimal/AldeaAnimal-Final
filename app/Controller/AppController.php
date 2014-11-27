@@ -31,23 +31,35 @@ class AppController extends Controller {
 
     public function isAuthorized() {
 
+
 			$userId = $this->Auth->user();
 			$params =$this->request->params;
 			$controller = $params['controller'];
 			$controller = ucwords($controller);
-			
-			$permisoUsuario= $this->Acl->check(array(
+		
+			if(key($userId[0])=='Vet'){
+				$permisoUsuario= $this->Acl->check(array(
+					    'model' => 'Group',
+						    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
+						), 'controllers/'.$controller);
+				}
+			else if(key($userId[0])=='User'){
+						$permisoUsuario= $this->Acl->check(array(
 				    'model' => 'Group',
 					    'foreign_key' => $userId[0]['User']['ID_GROUP']
 					), 'controllers/'.$controller);
-			/*if($permisoUsuario){
+				}
+
+			
+
+
+			if($permisoUsuario){
 				return true;
 			}
 			else{
 				return false;
-			}*/
-			return true;
-			
+			}
+						
 	}
     public function beforeFilter() {
     //Configure AuthComponent
@@ -55,19 +67,10 @@ class AppController extends Controller {
 	      'controller' => 'users',
 	      'action' => 'login'
 	    );
-	    $this->Auth->logoutRedirect = array(
-	      'controller' => 'users',
-	      'action' => 'login'
-	    );
-	    $this->Auth->loginRedirect = array(
-	      'controller' => 'users',
-	      'action' => 'homeCliente'
-	    );
-
 	   
 	     $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
          $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
-         $this->Auth->allow('display');
+         $this->Auth->allow(array('display','login'));
          $this->Auth->authorize = 'controller';
 	}
 }	

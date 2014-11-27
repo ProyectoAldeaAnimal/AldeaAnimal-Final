@@ -29,7 +29,7 @@
 
                   <ul class="nav navbar-nav navbar-right">
 
-                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Usuario",
+                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Veterinario",
 array('controller' => 'vets', 'action' => 'logout')); ?>
   </FONT></li>
 
@@ -44,14 +44,17 @@ array('controller' => 'vets', 'action' => 'logout')); ?>
 
   <div class="container well ">
     <br>
-    <div id= "ex5">
+    <div id= "ex2">
           <?php
-            echo $this->Html->image('PP-Clientes.png', array('alt' => 'clientes', 'class'=>"img-responsive"));
+            echo $this->Html->image('PP-Clientes.png', array('alt' => 'clientes', 'class'=>"img-responsive center-block"));
           ?>
         </div>
     <br>
     
-    <FONT COLOR="#000000"> <h3>Dueño: <?php echo AuthComponent::user('rut_vet');?></h3></FONT>
+    <FONT COLOR="#229b0d"> <h3>Dueño: <?php
+    $usuario = AuthComponent::user();
+    
+    echo ("Doctor: ".$usuario[0]['Vet']['name']);?></h3></FONT>
 
     <br>
 
@@ -112,5 +115,5 @@ array('controller' => 'vets', 'action' => 'logout')); ?>
     </div>    
 
 
-	<?php echo $this->element('sql_dump'); ?>
+	
 </body>

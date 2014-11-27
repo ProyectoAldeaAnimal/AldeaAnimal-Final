@@ -23,8 +23,8 @@
               <?php echo $this->Form->create('Vet', array('action'=>'login', 'type'=>'post')); ?>
               <fieldset>
                    
-                    <?php echo $this->Form->input('rut_vet',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus' ));
-                    echo $this->Form->input('password_vet',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required'));
+                    <?php echo $this->Form->input('RUT_VET',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus' ));
+                    echo $this->Form->input('PASSWORD_VET',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required'));
 
                     $langs = array('Administrador' => 'Administrador', 'Veterinario' => 'Veterinario');
                     ?>
@@ -35,7 +35,7 @@
                                       'type' => 'select',
                                       'options' => $langs,
                                       'class'=> 'form-control',
-                                      'selected' => 'Veterinario' // suppose default select Kannada
+                                      'selected' => 'Veterinario'
                                   )
                       );
                     ?>
