@@ -16153,3 +16153,709 @@ Request URL: /AldeaAnimal/user
 Stack Trace:
 #0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-11-27 05:18:47 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:18:52 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:19:21 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:33:56 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:34:05 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:36:30 Error: [MissingLayoutException] Layout file "C:\xampp\htdocs\AldeaAnimal\app\View\Layouts\headVet.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Layouts\\headVet.ctp',
+)
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(510): View->_getLayoutFileName('headVet')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(479): View->renderLayout('', 'headVet')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-11-27 05:50:18 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 47]
+2014-11-27 05:50:18 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /AldeaAnimal/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 47, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 05:56:24 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:56:32 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:56:46 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:58:18 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:58:24 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 05:59:30 Error: Fatal Error (1): Call to undefined function fam_close() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 81]
+2014-11-27 05:59:30 Error: [FatalErrorException] Call to undefined function fam_close()
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 05:59:42 Error: Fatal Error (1): Call to undefined function fam_close() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 81]
+2014-11-27 05:59:42 Error: [FatalErrorException] Call to undefined function fam_close()
+Request URL: /AldeaAnimal/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 06:00:47 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:00:59 Error: Fatal Error (1): Call to undefined function fam_close() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 81]
+2014-11-27 06:00:59 Error: [FatalErrorException] Call to undefined function fam_close()
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 06:01:16 Error: Fatal Error (1): Call to undefined function fam_close() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 81]
+2014-11-27 06:01:16 Error: [FatalErrorException] Call to undefined function fam_close()
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 06:01:24 Error: Fatal Error (1): Call to undefined function fam_close() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 81]
+2014-11-27 06:01:24 Error: [FatalErrorException] Call to undefined function fam_close()
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 06:01:41 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:02:40 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:03:01 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:03:41 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:03:45 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:04:14 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:04:30 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:04:40 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:05:24 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:05:31 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:06:49 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:11:09 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:11:17 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:13:46 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:13:52 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:14:07 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:14:13 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:14:13 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:15:21 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:15:21 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:15:36 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:15:36 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:15:53 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:15:54 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:16:12 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:16:12 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:16:29 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:16:29 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:16:50 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:16:50 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:17:28 Error: [MissingControllerException] Controller class VetController could not be found.
+Exception Attributes: array (
+  'class' => 'VetController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:18:53 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(121): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-27 06:19:09 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:19:40 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:19:51 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:20:13 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:20:20 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:20:31 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:20:35 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:21:07 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:21:13 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 06:26:34 Error: Fatal Error (4): syntax error, unexpected '$params' (T_VARIABLE) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 57]
+2014-11-27 06:26:34 Error: [FatalErrorException] syntax error, unexpected '$params' (T_VARIABLE)
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 57, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 57, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-27 07:17:40 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-27 07:20:49 Error: [MissingActionException] Action OfertaHorsController::solicitudesHora() could not be found.
+Exception Attributes: array (
+  'controller' => 'OfertaHorsController',
+  'action' => 'solicitudesHora',
+)
+Request URL: /AldeaAnimal/ofertahors/solicitudesHora
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

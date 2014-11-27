@@ -52,7 +52,7 @@ class VetsController extends AppController {
  * @return void
  */
 	public function index(){
-		$this->redirect(array('action' => 'login'));
+		$this->redirect(array('controller' => 'vets','action' => 'login'));
 	}
 	/*public function index() {
 		$this->Vet->recursive = 0;
@@ -77,17 +77,16 @@ class VetsController extends AppController {
 				$this->set('title_for_layout', 'Login Veterinarios');
 				if($this->Session->check('Auth.User')){
 							if ($admin){
-								$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeAdministrador');
-								$this->redirect($this->Auth->redirect());
+				
+								$this->redirect( array('controller' => 'vets', 'action' => 'homeAdministrador'));
 
 							}
 							else 
 								{
-									$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeVet');
-									$this->redirect($this->Auth->redirect());
+									$this->redirect( array('controller' => 'vets', 'action' => 'homeVet'));
 
 								}
-							}
+					}
 					
 
 				    if ($this->request->is('post')) {
@@ -111,16 +110,6 @@ class VetsController extends AppController {
 
 								}
 
-				    		
-					     /*   if ($this->Auth->login()) {
-					        	if($this->request->data['Vet']['rol']=='Administrador'){
-					        		$admin = true;
-					        		$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeAdministrador');
-									$this->redirect($this->Auth->redirect());
-								}
-				    	
-
-					           else return $this->redirect($this->Auth->redirect());}*/ 
 							else {
 
 					            $this->Session->setFlash(
@@ -133,12 +122,12 @@ class VetsController extends AppController {
 					    }
 			}
 	public function homeVet(){
-					$this->Auth->user('rut_vet');
+					
 					$this->set('title_for_layout', 'Home Veterinarios');
 
 	}
 	public function homeAdministrador(){
-					$this->Auth->user('rut_vet');
+					
 					$this->set('title_for_layout', 'Home Administrador');
 
 	}
@@ -148,6 +137,15 @@ class VetsController extends AppController {
 
 
 
+	public function miAgenda(){
+
+		$this->set('title_for_layout', 'Mi Agenda');
+	}
+
+	public function solicitudesHora(){
+
+		$this->set('title_for_layout', 'Solicitudes de Hora');
+	}
 	public function view($id = null) {
 		if (!$this->Vet->exists($id)) {
 			throw new NotFoundException(__('Invalid vet'));

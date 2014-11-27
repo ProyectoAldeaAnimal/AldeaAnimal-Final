@@ -1,5 +1,5 @@
 <?php 
- $this->layout = 'head';
+ $this->layout = 'headVets';
 ?>
 
     <div class="callout4">

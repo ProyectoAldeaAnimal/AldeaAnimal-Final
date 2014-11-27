@@ -50,7 +50,8 @@ class UsersController extends AppController{
 
 
 					if($this->Session->check('Auth.User')){
-							$this->redirect(array('action' => 'homeCliente'));		
+						
+							$this->redirect($this->Auth->redirect());		
 						}
 				
 
@@ -91,14 +92,15 @@ class UsersController extends AppController{
 			}
 
 			public function add() {
+				$this->set('title_for_layout', 'Agregar Cliente');
 		        if ($this->request->is('post')) {
 					
 					$this->User->create();
 					if ($this->User->save($this->request->data)) {
-						$this->Session->setFlash(__('The user has been created'));
-						$this->redirect(array('action' => 'index'));
+						$this->Session->setFlash(__('El cliente ha sido creado'));
+						$this->redirect(array('controller'=>'vets','action' => 'homeVet'));
 					} else {
-						$this->Session->setFlash(__('The user could not be created. Please, try again.'));
+						$this->Session->setFlash(__('El cliente no puede ser creado!'));
 					}	
 		        }
 		    }

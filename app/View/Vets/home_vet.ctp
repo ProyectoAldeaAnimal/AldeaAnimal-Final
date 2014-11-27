@@ -3,45 +3,6 @@
 ?>
 
 <body id="home" data-spy="scroll" data-target=".navbar-fixed-top" class= "callout3">
-  
-
-    <nav class = "navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class ="navbar-header">
-                <button type= "button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class= "sr-only">Cambiar Navegacion</span>
-                        <span class= "icon-bar"></span>
-                        <span class= "icon-bar"></span>
-                        <span class= "icon-bar"></span>
-                </button> 
-                <a  class= "navbar-brand"><FONT COLOR="#FFFFFF"><i class="fa fa-paw"></i> Aldea Animal </FONT></a>  
-            </div>
-            <div class="container m1 menu">
-              <div class= "collapse navbar-collapse navbar-ex1-collapse">
-                  <ul  class ="nav navbar-nav subMenu" >
-                      <li><a class= "page-scroll"href="#home"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
-                      <li><a class= "page-scroll" href="#servicios"><FONT COLOR="#FFFFFF">Mis Datos</FONT></a></li>
-                      <li><a class= "page-scroll" href="#about"><FONT COLOR="#FFFFFF">Mis Mascotas</FONT></a>
-                      
-                      <!--li><a href="#features">Features</a></li-->
-                      
-                  </ul>
-
-                  <ul class="nav navbar-nav navbar-right">
-
-                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Veterinario",
-array('controller' => 'vets', 'action' => 'logout')); ?>
-  </FONT></li>
-
-
-                       </ul> 
-                            </div>
-                          </div><!--/.navbar-collapse -->
-                  </div>
-              </nav>
-        </div>
-  
-
   <div class="container well ">
     <br>
     <div id= "ex2">
@@ -51,7 +12,7 @@ array('controller' => 'vets', 'action' => 'logout')); ?>
         </div>
     <br>
     
-    <FONT COLOR="#229b0d"> <h3>Dueño: <?php
+    <FONT COLOR="#229b0d"> <h3><?php
     $usuario = AuthComponent::user();
     
     echo ("Doctor: ".$usuario[0]['Vet']['name']);?></h3></FONT>
@@ -60,18 +21,22 @@ array('controller' => 'vets', 'action' => 'logout')); ?>
 
     <div class="row">
       <div class="col-md-9">
-             <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mi agenda</h3>
+
+              <a href="/AldeaAnimal/vets/miAgenda"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mi agenda</h3>
              Comprobar horario de trabajo, Solicitudes de hora de clientes, Solicitudes Aceptadas
-               </button>
+               </button></a>
+            
                 <br>
                <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Generar Atención</h3>
                </button>
                <br>
 
-               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nuevo Cliente</h3>
-               </button>
-               <br>
-
+               
+               
+               <a href="/AldeaAnimal/users/add"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nuevo Cliente</h3>
+               </button></a>            
+  
+                <br>
              	<button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nueva Mascota</h3>
              	A un cliente registrado previamente
                </button>

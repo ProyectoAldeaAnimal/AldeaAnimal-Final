@@ -64,8 +64,6 @@ class OfertaHorsController extends AppController {
 
 	public function agregarOfertaHoraria() {
 
-		debug($this->request->data);	
-
 		if ($this->request->is('post')) {
 			// Se obtiene los datos del formulario
 			$requesData = $this->request->data;

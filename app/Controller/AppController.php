@@ -36,21 +36,36 @@ class AppController extends Controller {
 			$params =$this->request->params;
 			$controller = $params['controller'];
 			$controller = ucwords($controller);
-		
+			$action;
+			if($params['action']) $action= $params['action'];
 			if(key($userId[0])=='Vet'){
-				$permisoUsuario= $this->Acl->check(array(
-					    'model' => 'Group',
-						    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
-						), 'controllers/'.$controller);
+				if($params['action'] && $params['controller']!= 'vets'){
+					$permisoUsuario= $this->Acl->check(array(
+						    'model' => 'Group',
+							    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
+							), 'controllers/'.$controller.'/'.$action);
+				}
+				else{	
+					$permisoUsuario= $this->Acl->check(array(
+						    'model' => 'Group',
+							    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
+							), 'controllers/'.$controller);
+					}
 				}
 			else if(key($userId[0])=='User'){
+					if($params['action'] && $params['controller']!= 'users'){
 						$permisoUsuario= $this->Acl->check(array(
-				    'model' => 'Group',
-					    'foreign_key' => $userId[0]['User']['ID_GROUP']
-					), 'controllers/'.$controller);
-				}
-
-			
+							    'model' => 'Group',
+								    'foreign_key' => $userId[0]['User']['ID_GROUP']
+								), 'controllers/'.$controller.'/'.$action);
+					}
+					else{
+						$permisoUsuario= $this->Acl->check(array(
+							    'model' => 'Group',
+								    'foreign_key' => $userId[0]['User']['ID_GROUP']
+								), 'controllers/'.$controller);
+						}
+			}
 
 
 			if($permisoUsuario){

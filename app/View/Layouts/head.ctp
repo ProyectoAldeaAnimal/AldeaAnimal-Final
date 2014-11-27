@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style= "background-color: #229b0d;">
   <head>
       <?php echo $this->Html->charset(); ?>
   <title>
@@ -10,7 +10,7 @@
         echo $this->Html->meta('favicon.ico','img/favicon.ico',array('type' => 'icon'));
         
         echo $this->Html->css (array('reset','style','fonts','http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700'));
-         // echo $this->Html -> css(array("cake.generic.css"));
+        echo $this->Html -> css(array("cake.generic.css"));
         echo $this->Html -> css(array("bootstrap.css"));
         echo $this->Html -> css(array("font-awesome.css"));
         echo $this->Html -> css(array("main.css"));
@@ -28,6 +28,12 @@
         echo $this->fetch('css');
         echo $this->fetch('script');
       ?>
+        <style type="text/css">   
+          a:link   
+          {   
+           text-decoration:none;   
+          }   
+          </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -49,7 +55,7 @@
             <div class="container m1 menu">
               <div class= "collapse navbar-collapse navbar-ex1-collapse">
                   <ul  class ="nav navbar-nav subMenu" >
-                      <li><a class= "page-scroll"href="#home"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Administración - Veterinario</FONT></a></li>                    
+                      <li><a class= "page-scroll"href="/AldeaAnimal/vets/homeVet"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Administración - Veterinario</FONT></a></li>                    
                       <!--li><a href="#features">Features</a></li-->
                     
                   </ul>
@@ -57,16 +63,29 @@
                           </div><!--/.navbar-collapse -->
                   </div>
               </nav>
+  <body class= "callout6">
+  <div class = "container well">
+   
+    <div>
 
+      <?php echo $this->Session->flash(); ?>
 
-              <?php echo $content_for_layout ?>
+      <?php echo $this->fetch('content'); ?>
+    </div>
 
+</div>
+     <div class="lineFinal">
+      <div class="container">
+        <div class="row downLine">
+          <div class="col-md-6 text-left copy">
+            <p>Copyright &copy; 2014 Aldea Animal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>               
 
-    <script>
-          $('#rut').Rut({
-            on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");}
-          });
-    </script>
   </body>
+
 </html>
 
