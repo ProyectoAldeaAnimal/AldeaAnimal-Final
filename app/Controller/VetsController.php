@@ -143,8 +143,62 @@ class VetsController extends AppController {
 	}
 
 	public function solicitudesHora(){
+		$usuario = AuthComponent::user();
 
 		$this->set('title_for_layout', 'Solicitudes de Hora');
+		$this->loadModel('Agenda');
+		$options = array('conditions' => array('Agenda.ID_VET' => $usuario[0]['Vet']['ID_VET']));
+		$agendas =$this->Agenda->find('all',$options);
+		$this->loadModel('User');
+		$usuarios;
+		foreach ($agendas as $key => $agenda) {
+			$options = array('conditions' => array('User.ID' => $agenda['Ma']['ID']));
+			$user =$this->User->find('all',$options);
+			$usuarios[$agenda['Ma']['ID_MAS']]= $user[0]['User']['name'];
+		}
+
+		$this->loadModel('BloqAgen');
+		$this->loadModel('OfertaHor');
+		$bloques =$this->BloqAgen->find('all');
+	
+		$horarios;
+		foreach ($bloques as $key => $bloque) {
+			
+				$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET'],
+				'OfertaHor.ID_OFERTA_HOR' => $bloque['BloqAgen']['ID_OFERTA_HOR']
+				));
+				$OfertaHors =$this->OfertaHor->find('all',$options);
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+			
+				$OfertaHors[0]['OfertaHor']['name'] = $dia.' '.$OfertaHors[0]['Cal']['FECHA_CAL'].': '. $OfertaHors[0]['OfertaHor']['name'];
+				if(!isset($horarios[$bloque['BloqAgen']['ID_AGENDA']]))
+					$horarios[$bloque['BloqAgen']['ID_AGENDA']] = $OfertaHors[0]['OfertaHor']['name'];
+		}
+		
+		$this->set(compact('agendas','usuarios','horarios'));	
+	  		
+	}
+	public function aceptar_solicitud($agenda){
+			$this->loadModel('Agenda');
+			$aceptada= $this->Agenda->find('all',array('conditions' => array('Agenda.ID_AGENDA' =>$agenda )));
+			$aceptada[0]['Agenda']['ESTADO_AGENDA'] = 'A';
+			if($this->Agenda->save($aceptada[0]['Agenda']))$this->Session->setFlash(__('La Hora ha sido aceptada.'));
+			$this->loadModel('BloqAgen');
+			$bloques= $this->BloqAgen->find('all',array('conditions' => array('BloqAgen.ID_AGENDA' =>$agenda )));
+			foreach ($bloques as $key => $bloque) {
+				$this->loadModel('OfertaHor');
+				$oferta = $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR'=>$bloque['BloqAgen']['ID_OFERTA_HOR'])));
+				$oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'A';
+				if($this->OfertaHor->save($oferta[0]['OfertaHor']))$this->Session->setFlash(__('La Oferta Horaria ha sido actualizada.'));
+			}
+
+			$this->set(compact('aceptada'));
+			
 	}
 	public function view($id = null) {
 		if (!$this->Vet->exists($id)) {

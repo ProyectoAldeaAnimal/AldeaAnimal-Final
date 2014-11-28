@@ -7,6 +7,7 @@
 		<h3><?php echo __('Solicitar Agendamiento'); ?></h3>
 		<br>
 	<?php
+
 		echo $this->Form->input('ID_MAS', array(
 			'label' => 'Seleccione la mascota que desea atender en la clínica : <br>',
 			'options' => $mas
@@ -29,7 +30,12 @@
 			));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Solicitar')); ?>
+
+<?php
+	if($ofertaHors!='El veterinario no tiene oferta Horaria' ){
+		echo $this->Form->end(__('Solicitar')); 	
+	}
+ ?>
 </div>
 <div class="actions">
 	<div id="ex5">

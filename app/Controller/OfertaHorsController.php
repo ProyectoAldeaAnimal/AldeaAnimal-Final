@@ -63,14 +63,14 @@ class OfertaHorsController extends AppController {
 	}
 
 	public function agregarOfertaHoraria() {
-
-		if ($this->request->is('post')) {
+		$this->set('title_for_layout', 'Oferta Horaria');
+		if ($this->request->is('posta')) {
 			// Se obtiene los datos del formulario
 			$requesData = $this->request->data;
 			$next = 1;
 			// Se carga el tamaño de bloque
 		 	$this->loadModel('Par');
-			$tamañoBloque= $this->Par->query("SELECT TAM_BLOQUE FROM par WHERE FIN_VIGENCIA IS NULL");
+			$tamañoBloque= $this->Par->query("SELECT TAM_BLOQUE FROM par WHERE ID_PAR IN (SELECT MAX(ID_PAR) FROM par)");
 			$tempHora = $requesData;
 		
 
@@ -359,7 +359,7 @@ class OfertaHorsController extends AppController {
 			}
 			if($next==1){
 				$this->Session->setFlash(__('Se ha creado la oferta horaria con exito'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('controller'=>'vets','action' => 'miAgenda'));
 			}	
 		
 		}

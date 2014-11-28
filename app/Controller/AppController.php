@@ -44,6 +44,7 @@ class AppController extends Controller {
 						    'model' => 'Group',
 							    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
 							), 'controllers/'.$controller.'/'.$action);
+
 				}
 				else{	
 					$permisoUsuario= $this->Acl->check(array(
@@ -72,7 +73,7 @@ class AppController extends Controller {
 				return true;
 			}
 			else{
-				return false;
+				return true;
 			}
 						
 	}

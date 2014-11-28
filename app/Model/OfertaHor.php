@@ -28,7 +28,7 @@ class OfertaHor extends AppModel {
  * @var string
  */
 	public $virtualFields = array(
-	    'name' => 'CONCAT(OfertaHor.HORA_INICIO, " - ", OfertaHor.HORA_TERMINO)'
+	    'name' => 'CONCAT(OfertaHor.HORA_INICIO)'
 	);
 	public $displayField = 'name';
 

@@ -51,6 +51,7 @@ class AgendasController extends AppController {
 			$esta= false;
 			$i++;
 		}
+
 		$blocks;
 		foreach ($bloques as $bloque) {
 			$blocks[$bloque['BloqAgen']['ID_AGENDA']]=$bloque['BloqAgen'];
@@ -59,8 +60,9 @@ class AgendasController extends AppController {
 		$ofertaHors;
 		$this->loadModel('OfertaHor');
 		$this->loadModel('Cal');
-		
-    		
+
+		$j=0;
+    	if($bloques)	
 		foreach ($blocks as $block) {
 			$options = array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR']));
 			$ofertaHors[$block['ID_AGENDA']]= $this->OfertaHor->find('list',$options);
@@ -78,10 +80,11 @@ class AgendasController extends AppController {
 			if($cals[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
 			if($cals[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
 			if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
-		
 			$ofertaHor['OfertaHor']['name'] = $dia." : ".$cals[0]['Cal']['FECHA_CAL'] . " Bloque Horario:  ".$ofertaHors[$i][$j]; 
 			$ofertaHors[$block['ID_AGENDA']] =$ofertaHor['OfertaHor']['name'];
 		}
+		else $this->Session->setFlash(__('Usted no tiene solicitudes de hora.'));
+
 		$this->set(compact('agendas','ofertaHors'));
 	}
 
@@ -109,6 +112,10 @@ class AgendasController extends AppController {
 		$usuario = AuthComponent::user();
 		if ($this->request->is('post')) {
 				$data =$this->request->data;
+				$this->loadModel('Pres');
+				$options = array('conditions' => array('Pres.ID_PRES' => $data['Agenda']['ID_PRES']));
+				$prestacion = $this->Pres->find('all',$options);
+				$numBloq = $prestacion[0]['Pres']['NUMERO_BLOQUES'];
 				$data['Agenda']['ESTADO_AGENDA'] = 'P';
 			$data2=false;
 			if(isset($data['OfertaHor']['OfertaHor'][0])){
@@ -116,18 +123,22 @@ class AgendasController extends AppController {
 				}
 			if ($data2) {
 				$this->loadModel('BloqAgen');
-				$this->BloqAgen->save( 
+				for ($i=0; $i <(int)$numBloq; $i++) { 
+					$this->BloqAgen->save( 
 				    array(
 				        'ID_OFERTA_HOR' => $data['OfertaHor']['OfertaHor'][0],
 				        'ID_AGENDA' => $data2['Agenda']['ID_AGENDA']
 				    )
-				);
+					);
+					$data['OfertaHor']['OfertaHor'][0] = $data['OfertaHor']['OfertaHor'][0] +1;
+				}
+				
 				$this->Session->setFlash(__('Su hora ha sido agendada.'));
 				return $this->redirect(array(
 					'controller' => 'users',
 					'action' => 'misMascotas'));
 			} else {
-				$this->Session->setFlash(__('The agenda could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('No se ha podido agendar su hora, por favor intente nuevamente.'));
 			}
 		}
 		$vets = $this->Agenda->Vet->find('list');
@@ -140,7 +151,8 @@ class AgendasController extends AppController {
 					'controller' => 'users',
 					'action' => 'misMascotas'));	
 		}
-		$pres = $this->Agenda->Pre->find('list');
+		$this->loadModel('Pre');
+		$pres = $this->Pre->find('list');
 		$ofertaHoras = $this->Agenda->OfertaHor->find('all');
 		$ofertaHors;
 		$i=0;
@@ -154,6 +166,11 @@ class AgendasController extends AppController {
     			$ofertaHors[$ofertaHoras[$i]['OfertaHor']['ID_OFERTA_HOR']] =$ofertaHor['OfertaHor']['name'];
     			$i++;
 		endforeach;
+		if(!$ofertaHoras){
+			$ofertaHors = 'El veterinario no tiene oferta Horaria';
+			$this->Session->setFlash(__($ofertaHors));
+		} 
+
 		$this->set(compact('vets', 'mas', 'pres', 'ofertaHors'));
 	}
 

@@ -4,7 +4,9 @@ class User extends AppModel {
 var $name = 'User'; 
 public $useTable = 'cli';
 public $primaryKey= 'ID';
-
+public $virtualFields = array(
+    'name' => 'CONCAT(User.NOMBRE_CLI, " ", User.APELLIDO_PCLI, " ",User.APELLIDO_MCLI)'
+);
 public $displayField = 'NOMBRE_CLI';
 public $validate = array(
 		'RUT_CLI' => array(

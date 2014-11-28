@@ -10,12 +10,13 @@
         echo $this->Html->meta('favicon.ico','img/favicon.ico',array('type' => 'icon'));
         
         echo $this->Html->css (array('reset','style','fonts','http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700'));
+        echo $this->Html -> css(array("cake.generic.css"));
         echo $this->Html -> css(array("bootstrap.css"));
         echo $this->Html -> css(array("font-awesome.css"));
         echo $this->Html -> css(array("main.css"));
         echo $this->Html -> css(array("style.css"));
         echo $this->Html -> css(array("style2.css"));
-        echo $this->Html -> css(array("signin.css"));
+       
         echo $this->Html-> script(array("jquery-1.8.3.min.js"));
         echo $this->Html-> script(array("ie-emulation-modes-warning.js"));
         echo $this->Html-> script(array("bootstrap.min.js"));
@@ -28,7 +29,8 @@
           a:link   
           {   
            text-decoration:none;   
-          }   
+          }
+        
           </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,7 +53,7 @@
             <div class="container m1 menu">
               <div class= "collapse navbar-collapse navbar-ex1-collapse">
                   <ul  class ="nav navbar-nav subMenu" >
-                      <li><a class= "page-scroll"href="/AldeaAnimal/vets/homeVet"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Administración - Veterinario</FONT></a></li> 
+                      <li><a class= "page-scroll"href="/AldeaAnimal/vets/homeVet"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">Home Veterinario</FONT></a></li> 
 
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/miAgenda"><FONT COLOR="#FFFFFF">  Mi Agenda</FONT></a></li> 
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/homeVet"><FONT COLOR="#FFFFFF">  Generar Atención </FONT></a></li> 
@@ -63,7 +65,7 @@
                   </ul>
                                    <ul class="nav navbar-nav navbar-right">
 
-                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Veterinario",
+                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout",
                             array('controller' => 'vets', 'action' => 'logout')); ?>
                               </FONT></li>
 

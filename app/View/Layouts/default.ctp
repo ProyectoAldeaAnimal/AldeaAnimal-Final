@@ -10,13 +10,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
+<?php echo $this->Html->charset('utf-8'); ?>
+
 	<title>
-		<?php echo  ''?>:
-		<?php echo $this->fetch('title'); ?>
+		<?php echo $title_for_layout?>
 	</title>
 	<?php
-		echo $this->Html->meta('icon');
+		echo $this->Html->meta('favicon.ico','img/favicon.ico',array('type' => 'icon'));
 
 		echo $this->Html->css('cake.generic');
 		echo $this->Html -> css(array("bootstrap.css"));

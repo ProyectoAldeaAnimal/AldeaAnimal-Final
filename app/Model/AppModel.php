@@ -21,4 +21,12 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+ function __construct($id = false, $table = null, $ds = null) { 
+         parent::__construct($id, $table, $ds); 
+
+         // your code 
+ 
+        $this->query("SET NAMES 'utf8'"); 
+    } 
 }
