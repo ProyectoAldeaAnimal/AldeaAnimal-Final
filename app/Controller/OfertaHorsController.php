@@ -64,7 +64,7 @@ class OfertaHorsController extends AppController {
 
 	public function agregarOfertaHoraria() {
 		$this->set('title_for_layout', 'Oferta Horaria');
-		if ($this->request->is('posta')) {
+		if ($this->request->is('post')) {
 			// Se obtiene los datos del formulario
 			$requesData = $this->request->data;
 			$next = 1;
@@ -377,7 +377,12 @@ class OfertaHorsController extends AppController {
 		for($i=0;$i<count($calsTemp);$i++){
 			$cals[$calsTemp[$i]]=$calsTemp[$i];
 		}
-		$this->set(compact('cals', 'vets','varDate','tamañoBloque'));
+
+		$this->loadModel('Par');
+		$parametros= $this->Par->query("SELECT * FROM par WHERE ID_PAR IN (SELECT MAX(ID_PAR) FROM par)");
+
+
+		$this->set(compact('cals', 'vets','varDate','tamañoBloque','parametros'));
 
 	}
 /**

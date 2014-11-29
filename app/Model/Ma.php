@@ -23,6 +23,37 @@ class Ma extends AppModel {
 	public $displayField = 'NOMBRE_MAS';
 
 
+
+	public $validate = array(
+		'NOMBRE_MAS' => array(
+	        'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese un nombre válido'
+	            ),
+            'login' => array(
+	                'rule' => 'alphaNumeric',
+	                'message' => 'Apellido inválido.'
+	            )
+		    ),
+		'RAZA_MAS' => array(
+		    'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese un nombre válido'
+	            ),
+            'login' => array(
+	                'rule' => 'alphaNumeric',
+	                'message' => 'Apellido inválido.'
+	            )
+		    ),
+	    'SEXO' => array(
+		        'rule' => array('inList', array('H', 'M')),
+		        'message' => 'Ingrese H para Hembra o M para Macho.'
+	    	)
+    	
+	);
+
+
+
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

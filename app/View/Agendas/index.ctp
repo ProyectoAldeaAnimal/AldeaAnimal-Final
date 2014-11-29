@@ -22,19 +22,28 @@
 	<tr>
 		
 		<td>
-			<?php echo $this->Html->link($agenda['Ma']['NOMBRE_MAS'], array('controller' => 'mas', 'action' => 'view', $agenda['Ma']['ID_MAS'])); ?>
+			<?php echo $agenda['Ma']['NOMBRE_MAS']; ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($agenda['Vet']['name'], array('controller' => 'vets', 'action' => 'view', $agenda['Vet']['ID_VET'])); ?>
+			<?php echo $agenda['Vet']['name']; ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($agenda['Pre']['NOMBRE_PRES'], array('controller' => 'pres', 'action' => 'view', $agenda['Pre']['ID_PRES'])); ?>
+			<?php echo $agenda['Pre']['NOMBRE_PRES']; ?>
 		</td>
-		<td><?php echo h($agenda['Agenda']['ESTADO_AGENDA']); ?>&nbsp;</td>
+		<td>
+				 <?php if($agenda['Agenda']['ESTADO_AGENDA']=='A'):?>  <FONT COLOR="#229b0d"><?php echo 'Aceptada'?></FONT>
+				 <?php endif?>
+
+				 <?php if($agenda['Agenda']['ESTADO_AGENDA']=='P'):?>  <FONT COLOR="#808000">Pendiente</FONT>
+				 <?php endif?>
+
+				 <?php if($agenda['Agenda']['ESTADO_AGENDA']=='R'):?>  <FONT COLOR="#FF0000">Rechazada</FONT>
+				 <?php endif?>
+				&nbsp;</td>
 
 		<td><?php echo h($ofertaHors[$agenda['Agenda']['ID_AGENDA']]); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $agenda['Agenda']['ID_AGENDA'])); ?>
+			
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $agenda['Agenda']['ID_AGENDA']), array(), __('Are you sure you want to delete # %s?', $agenda['Agenda']['ID_AGENDA'])); ?>
 		</td>
 	</tr>

@@ -144,13 +144,16 @@ class VetsController extends AppController {
 
 	public function solicitudesHora(){
 		$usuario = AuthComponent::user();
-
+		$tienePeteciones= true;
 		$this->set('title_for_layout', 'Solicitudes de Hora');
 		$this->loadModel('Agenda');
 		$options = array('conditions' => array('Agenda.ID_VET' => $usuario[0]['Vet']['ID_VET']));
 		$agendas =$this->Agenda->find('all',$options);
+		if(count($agendas)<1) $tienePeteciones= false;
+
 		$this->loadModel('User');
 		$usuarios;
+		if ($tienePeteciones)
 		foreach ($agendas as $key => $agenda) {
 			$options = array('conditions' => array('User.ID' => $agenda['Ma']['ID']));
 			$user =$this->User->find('all',$options);
@@ -160,8 +163,8 @@ class VetsController extends AppController {
 		$this->loadModel('BloqAgen');
 		$this->loadModel('OfertaHor');
 		$bloques =$this->BloqAgen->find('all');
-	
 		$horarios;
+		if ($tienePeteciones)
 		foreach ($bloques as $key => $bloque) {
 			
 				$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET'],
@@ -179,6 +182,8 @@ class VetsController extends AppController {
 				if(!isset($horarios[$bloque['BloqAgen']['ID_AGENDA']]))
 					$horarios[$bloque['BloqAgen']['ID_AGENDA']] = $OfertaHors[0]['OfertaHor']['name'];
 		}
+
+		
 		
 		$this->set(compact('agendas','usuarios','horarios'));	
 	  		

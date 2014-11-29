@@ -8,7 +8,7 @@
 	<?php
 		echo $this->Form->input('ID');
 		echo $this->Form->input('ID_GROUP', array('type'=> 'hidden'));
-		echo $this->Form->input('RUT_CLI' ,array('label'=> 'Rut'));
+		echo $this->Form->input('RUT_CLI' ,array('label'=> 'Rut','type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus'));
 		echo $this->Form->input('NOMBRE_CLI',array('label'=> 'Nombre'));
 		echo $this->Form->input('APELLIDO_PCLI',array('label'=> 'Apellido Paterno'));
 		echo $this->Form->input('APELLIDO_MCLI',array('label'=> 'Apellido Materno'));
@@ -29,3 +29,10 @@
 		          ?>
 		      </div>
 </div>
+<script>
+      $('#rut').Rut({
+        on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");
+        
+      }
+      });
+</script>

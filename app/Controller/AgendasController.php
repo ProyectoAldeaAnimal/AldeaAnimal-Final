@@ -109,6 +109,8 @@ class AgendasController extends AppController {
  * @return void
  */
 	public function add(){
+		$params = $this->params['url'];
+		if(count($params)==0) $this->redirect(array('controller'=>'users','action' => 'pre_solicitar_hora'));
 		$usuario = AuthComponent::user();
 		if ($this->request->is('post')) {
 				$data =$this->request->data;
@@ -141,7 +143,8 @@ class AgendasController extends AppController {
 				$this->Session->setFlash(__('No se ha podido agendar su hora, por favor intente nuevamente.'));
 			}
 		}
-		$vets = $this->Agenda->Vet->find('list');
+		$options = array('conditions' => array('VET.ID_VET'=> $params['param']));
+		$vets = $this->Agenda->Vet->find('list',$options);
 		$mas = $this->Agenda->Ma->find('list', array(
     			'conditions' => array('Ma.ID' => $usuario[0]['User']['ID'])
     			));
@@ -153,7 +156,8 @@ class AgendasController extends AppController {
 		}
 		$this->loadModel('Pre');
 		$pres = $this->Pre->find('list');
-		$ofertaHoras = $this->Agenda->OfertaHor->find('all');
+		$options = array('conditions' => array('OfertaHor.ID_VET'=> $params['param']));
+		$ofertaHoras = $this->Agenda->OfertaHor->find('all',$options);
 		$ofertaHors;
 		$i=0;
 		foreach ($ofertaHoras as $ofertaHor):			
@@ -161,7 +165,8 @@ class AgendasController extends AppController {
 				$cals=$this->Cal->find('all', array(
     			'conditions' => array('Cal.ID_CAL' => $ofertaHor['OfertaHor']['ID_CAL'])
     			));
-    			$ofertaHor['OfertaHor']['name'] = $cals[0]['Cal']['NOMBRE_DIA']. " .".$ofertaHor['OfertaHor']['name']; 
+    			
+    			$ofertaHor['OfertaHor']['name'] = $cals[0]['Cal']['NOMBRE_DIA']. " .".$ofertaHor['OfertaHor']['name'].'- Fecha:  ' . $ofertaHor['Cal']['FECHA_CAL']; 
     			$ofertaHoras[$i]['OfertaHor']['name'] = $ofertaHor['OfertaHor']['name'];
     			$ofertaHors[$ofertaHoras[$i]['OfertaHor']['ID_OFERTA_HOR']] =$ofertaHor['OfertaHor']['name'];
     			$i++;

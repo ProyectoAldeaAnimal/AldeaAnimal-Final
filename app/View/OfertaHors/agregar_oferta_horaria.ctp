@@ -34,6 +34,13 @@
 	        <?php
 	            echo $this->Html->image('esteto.png', array('alt' => 'clientes', 'class'=>"img-responsive"));
 	          ?>
+	          <?php 
+						
+						$usuario = AuthComponent::user();
+					
+						$user[$usuario[0]['Vet']['ID_VET']] = $vets[$usuario[0]['Vet']['ID_VET']];
+				
+					?>
   	</div>
   	<h2>Seleccione Rango de Fechas</h2>
 	<br>
@@ -41,8 +48,7 @@
 	<?php echo $this->Form->create('OfertaHor', array('action' => 'agregarOfertaHoraria')); ?>
 			<table>
 				<tr>
-					<?php echo $this->Form->input('ID_VET', array('label' => 'Ingrese su Rut:', 'class' => 'form-control','options' => $vets)); ?>
-					
+					<?php echo $this->Form->input('ID_VET', array('label' => 'Usted es:', 'class' => 'form-control','options' => $user)); ?>			
 				</tr>
 			</table>
 			<table>
@@ -73,42 +79,41 @@
 				</tr>
 				<tr>
 					<td>
-
 						<?php echo $this->Form->input('LUN', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')))?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')))?>
 						<?php echo $this->Form->input('LUN2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected'=>array('hour'=>'00','min'=>'00')));?>
+						'timeFormat'=>'24','selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
 					</td>
 					<td>
 						<?php echo $this->Form->input('MAR', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>				
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')));?>				
 						<?php echo $this->Form->input('MAR2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
 					</td>
 					<td>
 						<?php echo $this->Form->input('MIER', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')	));?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')	));?>
 						
 						<?php echo $this->Form->input('MIER2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
 					</td>
 					<td>
 						<?php echo $this->Form->input('JUE', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>						
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')));?>						
 						<?php echo $this->Form->input('JUE2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
 					</td>
 					<td>
 						<?php echo $this->Form->input('VI', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>				
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')));?>				
 						<?php echo $this->Form->input('VI2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>		
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>		
 					</td>
 					<td>
 						<?php echo $this->Form->input('SAB', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SAB'].'','min'=>'00')));?>
 						<?php echo $this->Form->input('SAB2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>'00','min'=>'00')));?>
+						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SAB'].'','min'=>'00')));?>
 					</td>
 				</tr>
 			</table>

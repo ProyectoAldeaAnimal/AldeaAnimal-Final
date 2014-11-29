@@ -73,10 +73,10 @@ class MasController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Ma->save($this->request->data)) {
-				$this->Session->setFlash(__('Los datos de la masctoa han sido actualizados.'));
+				$this->Session->setFlash(__('Los datos de la mascota han sido actualizados.'));
 				return $this->redirect(array('controller' => 'users', 'action' => 'misMascotas'));
 			} else {
-				$this->Session->setFlash(__('The ma could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Error en los campos, reviselos nuevamente.'));
 			}
 		} else {
 			$options = array('conditions' => array('Ma.' . $this->Ma->primaryKey => $id));

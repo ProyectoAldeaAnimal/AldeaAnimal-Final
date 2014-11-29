@@ -54,8 +54,7 @@
             <div class="container m1 menu">
               <div class= "collapse navbar-collapse navbar-ex1-collapse">
                   <ul  class ="nav navbar-nav subMenu" >
-                      <li style="padding-top: 20px;"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF"><?php echo $this->Html->link("Principal",
-array('controller' => 'users', 'action' => 'home'));?></FONT></li>                    
+                      <li><a class= "page-scroll"href="/AldeaAnimal/"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">Principal</FONT></a></li>                   
                       <!--li><a href="#features">Features</a></li-->
                       
                   </ul>

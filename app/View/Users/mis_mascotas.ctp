@@ -27,7 +27,7 @@
             Revise todas las solicitudes de hora que ha hecho
              </button></a>
              <br>
-              <a href="/AldeaAnimal/agendas/add"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Solicitar Hora</h3>
+              <a href="/AldeaAnimal/users/pre_solicitar_hora"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Solicitar Hora</h3>
             Para algun servicio, con alguno de nuestros profesionales
              </button></a>
               <br>

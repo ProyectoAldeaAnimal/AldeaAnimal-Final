@@ -67,8 +67,7 @@ class AppController extends Controller {
 								), 'controllers/'.$controller);
 						}
 			}
-
-
+			
 			if($permisoUsuario){
 				return true;
 			}

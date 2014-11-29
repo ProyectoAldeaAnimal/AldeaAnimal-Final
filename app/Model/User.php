@@ -12,7 +12,56 @@ public $validate = array(
 		'RUT_CLI' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
-                'message' => 'A username is required'
+                'message' => 'Ingrese un rut válido'
+            )
+        ),
+        'NOMBRE_CLI' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese un nombre'
+            ),
+            'login' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Nombre inválido.'
+            )   
+        ),
+        'APELLIDO_PCLI' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese su apellido paterno'
+            ),
+            'login' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Apellido inválido.'
+            )
+        ),
+        'APELLIDO_MCLI' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese su apellido materno'
+            ),
+            'login' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Apellido inválido.'
+            )
+        ),
+        'MAIL_CLI' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese su e-mail'
+            ),
+            'email' => array(
+                'rule' => array('email', true),
+                'message' => 'Ingrese un mail válido.'
+            )
+
+        ),
+
+        'TEL_CLI' => array(
+            'login' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Teléfono inválido.',
+                'allowEmpty' => true
             )
         ),
         'PASSWORD_CLI' => array(

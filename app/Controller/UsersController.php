@@ -180,6 +180,25 @@ class UsersController extends AppController{
 					return $this->redirect(array('action' => 'misMascotas'));
 				}
 			}
+
+			public function pre_solicitar_hora(){
+				$this->set('title_for_layout', 'Solicitar Hora');
+				$this->loadModel('Vet');
+				$vets= $this->Vet->find('all');
+				$vetes;
+				foreach ($vets as $key => $vet) {
+					$vetes[$vet['Vet']['ID_VET']] = $vet['Vet']['name'];
+				}
+
+				 if ($this->request->is('post')) {
+				 	$data = $this->request->data;
+				 	debug($data);
+				 	$this->redirect(array('controller'=>'agendas','action' => 'add', '?'=> array('param'=>$data['TempVet']['ID_VET']),$data));
+				 }
+				
+				$this->set(compact('vetes'));
+
+			}
 			public function editMascota($id){
 				$this->redirect(array('controller' => 'mas', 'action' => 'edit',$id));
 
