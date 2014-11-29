@@ -18349,3 +18349,45 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-11-29 03:27:15 Error: [MissingActionException] Action OfertaHorsController::ver_solicitudes() could not be found.
+Exception Attributes: array (
+  'controller' => 'OfertaHorsController',
+  'action' => 'ver_solicitudes',
+)
+Request URL: /AldeaAnimal/ofertahors/ver_solicitudes
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-29 03:27:50 Error: [MissingActionException] Action OfertaHorsController::ver_solicitudes() could not be found.
+Exception Attributes: array (
+  'controller' => 'OfertaHorsController',
+  'action' => 'ver_solicitudes',
+)
+Request URL: /AldeaAnimal/ofertahors/ver_solicitudes
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-29 03:28:11 Error: [MissingActionException] Action OfertaHorsController::ver_solicitudes() could not be found.
+Exception Attributes: array (
+  'controller' => 'OfertaHorsController',
+  'action' => 'ver_solicitudes',
+)
+Request URL: /AldeaAnimal/ofertahors/ver_solicitudes
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-29 03:33:04 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -7,32 +7,47 @@
 
 	<br>
 	<legend>
-
-		<h4><?php echo __('Su rut es:'); ?></h4>
-		<?php echo h($User['User']['RUT_CLI']); ?>
+		<div class="row">
+			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su rut es:'); ?></button></div>
+			<div class="col col-md-6"><?php echo h($User['User']['RUT_CLI']); ?></div>
+		</div>	
 	</legend>
 	<legend>
-		<h4><?php echo __('Su nombre Completo es:'); ?></h4>
-		<?php echo h($User['User']['NOMBRE_CLI']); ?> <?php echo h($User['User']['APELLIDO_PCLI']); ?> <?php echo h($User['User']['APELLIDO_MCLI']); ?>
+		<div class="row">
+			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su nombre Completo es:'); ?></button></div>
+			<div class="col col-md-6"><?php echo h($User['User']['NOMBRE_CLI']); ?> <?php echo h($User['User']['APELLIDO_PCLI']); ?> <?php echo h($User['User']['APELLIDO_MCLI']); ?></div>
+		</div>
 	</legend>
 	<legend>
-		<h4><?php echo __('Su E-mail es:'); ?></h4>
-		<?php echo h($User['User']['MAIL_CLI']); ?>
+		<div class="row">
+			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su E-mail es:'); ?></button></div>
+			<div class="col col-md-6"><?php echo h($User['User']['MAIL_CLI']); ?></div>
+		</div>
 	</legend>
 	<legend>
-		<h4><?php echo __('Su teléfono es:'); ?></h4>
-		<?php echo h($User['User']['TEL_CLI']); ?>
+		<div class="row">
+			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su teléfono es:'); ?></button></div>
+			<div class="col col-md-6"><?php echo h($User['User']['TEL_CLI']); ?></div>
+		</div>
+		
+		
+		
 	</legend>
 	<legend>
-		<h4><?php echo __('Usted fue registrado el día:'); ?></h4>
-		<?php echo h($User['User']['FECHA_REGISTRO_CLI']); ?>
+		<div class="row">
+			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Usted fue registrado el día:'); ?></button></div>
+			<div class="col col-md-6"><?php echo h($User['User']['FECHA_REGISTRO_CLI']); ?></div>
+		</div>
+		
+		
+		
 	</legend>
 	<legend>
-		<h4><?php echo __('Su dirección es:'); ?></h4>
-		<?php echo h($User['User']['DIR_CLI']); ?>
+		<div class="row">
+			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su dirección es:'); ?></button></div>
+			<div class="col col-md-6"><?php echo h($User['User']['DIR_CLI']); ?></div>
+		</div>
 	</legend>
-
-	
 	<legend>
 		
 		<?php 

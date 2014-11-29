@@ -1,29 +1,29 @@
+<?php
+
+ $this->layout= 'head';
+?>
 <div class="mas form">
 <?php echo $this->Form->create('Ma'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Ma'); ?></legend>
+		<FONT COLOR="#229b0d"><h3><?php echo __('Agregar nueva mascota a un cliente'); ?></h3></FONT>
 	<?php
-		echo $this->Form->input('ID_TIPO_MAS');
-		echo $this->Form->input('ID');
-		echo $this->Form->input('NOMBRE_MAS');
-		echo $this->Form->input('RAZA_MAS');
-		echo $this->Form->input('FECHA_NACIMIENTO');
-		echo $this->Form->input('SEXO');
-		echo $this->Form->input('COLOR');
-		echo $this->Form->input('CARACTERISTICA');
-		echo $this->Form->input('FECHA_DEFUNCION');
+		echo $this->Form->input('ID_TIPO_MAS',array('label'=> 'Seleccione el tipo de mascota:', 'options' => $tipoMas));
+		echo $this->Form->input('ID',array('label'=> 'Seleccione el dueño:', 'options' => $users));
+		echo $this->Form->input('NOMBRE_MAS',array('label'=> 'Ingrese el nombre:'));
+		echo $this->Form->input('RAZA_MAS',array('label'=> 'Ingrese la raza:'));
+		echo $this->Form->input('FECHA_NACIMIENTO',array('label'=> 'Ingrese fecha de naciemiento: <br>'));
+		echo $this->Form->input('SEXO',array('label'=> 'Sexo:'));
+		echo $this->Form->input('COLOR',array('label'=> 'Color:'));
+		echo $this->Form->input('CARACTERISTICA',array('label'=> 'Ingrese características adicionales:'));
+		echo $this->Form->input('FECHA_DEFUNCION',array('type'=>'hidden'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Mas'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Tipo Mas'), array('controller' => 'tipo_mas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Tipo Mas'), array('controller' => 'tipo_mas', 'action' => 'add')); ?> </li>
-	</ul>
+    <div id="ex5">
+                <?php
+                    echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+                  ?>
+              </div>
 </div>

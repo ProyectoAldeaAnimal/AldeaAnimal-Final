@@ -89,7 +89,7 @@ $this->layout = 'layoutVacio'
               <?php echo $this->Form->create('Vet', array('action'=>'login', 'type'=>'post')); ?>
               <fieldset>
                    
-                    <?php echo $this->Form->input('RUT_VET',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus' ));
+                    <?php echo $this->Form->input('RUT_VET',array('label'=>"",'type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rutVet", 'required autofocus' ));
                     echo $this->Form->input('PASSWORD_VET',array('label'=>"",'type'=>'password','class'=>"form-control", 'placeholder'=> "Password", 'required'));
 
                     $langs = array('Administrador' => 'Administrador', 'Veterinario' => 'Veterinario');
@@ -137,11 +137,12 @@ $this->layout = 'layoutVacio'
             </div>
           </div>
         </div>
-  </body>
     <script>
-          $('#rut').Rut({
+          $('#rutVet').Rut({
             on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");
             
           }
           });
     </script>
+  </body>
+  

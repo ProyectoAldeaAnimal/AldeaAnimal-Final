@@ -7,7 +7,7 @@ public $primaryKey= 'ID';
 public $virtualFields = array(
     'name' => 'CONCAT(User.NOMBRE_CLI, " ", User.APELLIDO_PCLI, " ",User.APELLIDO_MCLI)'
 );
-public $displayField = 'NOMBRE_CLI';
+public $displayField = 'name';
 public $validate = array(
 		'RUT_CLI' => array(
             'required' => array(

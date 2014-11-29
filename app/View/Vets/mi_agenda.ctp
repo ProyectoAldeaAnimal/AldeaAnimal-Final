@@ -31,7 +31,7 @@ $this->layout= 'headVets';
                </button></a>
             
                 <br>
-               <a href="#"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Ver Solicitudes Aceptadas</h3>
+               <a href="/AldeaAnimal/vets/ver_solicitudes"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Ver Solicitudes Aceptadas</h3>
                </button></a>            
   
                 <br>

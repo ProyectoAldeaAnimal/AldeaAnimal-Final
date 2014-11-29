@@ -31,15 +31,15 @@
                </button>
                <br>
 
-               
+              
                
                <a href="/AldeaAnimal/users/add"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nuevo Cliente</h3>
                </button></a>            
   
                 <br>
-             	<button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nueva Mascota</h3>
+             <a href="/AldeaAnimal/mas/add"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nueva Mascota</h3>
              	A un cliente registrado previamente
-               </button>
+               </button></a>
                <br>
 
                <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Administración</h3>

@@ -147,7 +147,7 @@ class VetsController extends AppController {
 		$tienePeteciones= true;
 		$this->set('title_for_layout', 'Solicitudes de Hora');
 		$this->loadModel('Agenda');
-		$options = array('conditions' => array('Agenda.ID_VET' => $usuario[0]['Vet']['ID_VET']));
+		$options = array('conditions' => array('Agenda.ID_VET' => $usuario[0]['Vet']['ID_VET'], 'Agenda.ESTADO_AGENDA' => 'P'));
 		$agendas =$this->Agenda->find('all',$options);
 		if(count($agendas)<1) $tienePeteciones= false;
 
@@ -205,6 +205,54 @@ class VetsController extends AppController {
 			$this->set(compact('aceptada'));
 			
 	}
+
+	public function ver_solicitudes(){
+				$usuario = AuthComponent::user();
+		$tienePeteciones= true;
+		$this->set('title_for_layout', 'Solicitudes de Hora');
+		$this->loadModel('Agenda');
+		$options = array('conditions' => array('Agenda.ID_VET' => $usuario[0]['Vet']['ID_VET'], 'Agenda.ESTADO_AGENDA' => 'A'));
+		$agendas =$this->Agenda->find('all',$options);
+		if(count($agendas)<1) $tienePeteciones= false;
+
+		$this->loadModel('User');
+		$usuarios;
+		if ($tienePeteciones)
+		foreach ($agendas as $key => $agenda) {
+			$options = array('conditions' => array('User.ID' => $agenda['Ma']['ID']));
+			$user =$this->User->find('all',$options);
+			$usuarios[$agenda['Ma']['ID_MAS']]= $user[0]['User']['name'];
+		}
+
+		$this->loadModel('BloqAgen');
+		$this->loadModel('OfertaHor');
+		$bloques =$this->BloqAgen->find('all');
+		$horarios;
+		if ($tienePeteciones)
+		foreach ($bloques as $key => $bloque) {
+			
+				$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET'],
+				'OfertaHor.ID_OFERTA_HOR' => $bloque['BloqAgen']['ID_OFERTA_HOR']
+				));
+				$OfertaHors =$this->OfertaHor->find('all',$options);
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+			
+				$OfertaHors[0]['OfertaHor']['name'] = $dia.' '.$OfertaHors[0]['Cal']['FECHA_CAL'].': '. $OfertaHors[0]['OfertaHor']['name'];
+				if(!isset($horarios[$bloque['BloqAgen']['ID_AGENDA']]))
+					$horarios[$bloque['BloqAgen']['ID_AGENDA']] = $OfertaHors[0]['OfertaHor']['name'];
+		}
+
+		
+		
+		$this->set(compact('agendas','usuarios','horarios'));
+
+	}
+
 	public function view($id = null) {
 		if (!$this->Vet->exists($id)) {
 			throw new NotFoundException(__('Invalid vet'));
