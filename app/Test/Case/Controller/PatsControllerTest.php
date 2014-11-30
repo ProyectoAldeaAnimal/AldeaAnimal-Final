@@ -1,11 +1,11 @@
 <?php
-App::uses('TipoExesController', 'Controller');
+App::uses('PatsController', 'Controller');
 
 /**
- * TipoExesController Test Case
+ * PatsController Test Case
  *
  */
-class TipoExesControllerTest extends ControllerTestCase {
+class PatsControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,7 +13,19 @@ class TipoExesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.tipo_ex'
+		'app.pat',
+		'app.farmaco',
+		'app.far_pat',
+		'app.atencion',
+		'app.pre',
+		'app.tipo_pre',
+		'app.ma',
+		'app.user',
+		'app.group',
+		'app.tipo_ma',
+		'app.mas',
+		'app.pat_atencion',
+		'app.p_a_t_m_a'
 	);
 
 /**

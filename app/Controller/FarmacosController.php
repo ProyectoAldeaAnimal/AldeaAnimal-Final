@@ -49,7 +49,7 @@ class FarmacosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Farmaco->create();
 			if ($this->Farmaco->save($this->request->data)) {
-				$this->Session->setFlash(__('The farmaco has been saved.'));
+				$this->Session->setFlash(__('El fármaco ha sido agregado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The farmaco could not be saved. Please, try again.'));

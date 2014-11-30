@@ -18930,3 +18930,404 @@ Stack Trace:
 #11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
 #12 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2014-11-30 20:15:53 Error: Fatal Error (1): Call to a member function exists() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 350]
+2014-11-30 20:15:53 Error: [FatalErrorException] Call to a member function exists() on a non-object
+Request URL: /AldeaAnimal/vets/delete
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 350)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 350, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 350, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 20:16:33 Error: [MissingControllerException] Controller class PatsController could not be found.
+Exception Attributes: array (
+  'class' => 'PatsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/pats
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 20:17:06 Error: [MissingControllerException] Controller class PatsController could not be found.
+Exception Attributes: array (
+  'class' => 'PatsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/pats
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 20:17:14 Error: [MissingControllerException] Controller class PatsController could not be found.
+Exception Attributes: array (
+  'class' => 'PatsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/pats
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 20:17:17 Error: [MissingControllerException] Controller class PatController could not be found.
+Exception Attributes: array (
+  'class' => 'PatController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/pat
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 20:18:42 Error: [MissingTableException] Table fars for model Far was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'fars',
+  'class' => 'Far',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/pats
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('fars')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1058): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(867): Model->_constructLinkedModel('Far', 'Far', NULL)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(900): Model->__isset('Far')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(423): Model->__get('Far')
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(136): Scaffold->_associations()
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(PatsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 20:19:55 Error: [MissingTableException] Table t_i_p_o__m_as for model TIPO_MA was not found in datasource default.
+Exception Attributes: array (
+  'table' => 't_i_p_o__m_as',
+  'class' => 'TIPO_MA',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/pats
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('t_i_p_o__m_as')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1058): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(867): Model->_constructLinkedModel('TIPO_MA', 'TIPO_MA', NULL)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(900): Model->__isset('TIPO_MA')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(423): Model->__get('TIPO_MA')
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(136): Scaffold->_associations()
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(PatsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 20:49:33 Error: [PrivateActionException] Private Action VetsController::admin_patologias() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'admin_patologias',
+)
+Request URL: /AldeaAnimal/vets/admin_patologias
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 20:49:58 Error: [PrivateActionException] Private Action VetsController::admin_patologias() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'admin_patologias',
+)
+Request URL: /AldeaAnimal/vets/admin_patologias
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 20:50:12 Error: [PrivateActionException] Private Action VetsController::admin_patologias() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'admin_patologias',
+)
+Request URL: /AldeaAnimal/vets/admin_patologias
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 20:50:25 Error: [PrivateActionException] Private Action VetsController::admin_patologias() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'admin_patologias',
+)
+Request URL: /AldeaAnimal/vets/admin_patologias
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 20:50:56 Error: [MissingActionException] Action VetsController::admin_patologias() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'admin_patologias',
+)
+Request URL: /AldeaAnimal/vets/admin_patologias
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 20:59:05 Error: [NotFoundException] Invalid Pat
+Request URL: /AldeaAnimal/pats/view
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(386): Scaffold->_scaffoldView(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(PatsController), Object(CakeRequest))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-11-30 20:59:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FarPat.pat_id' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Farmaco...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Farmaco...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `Farmaco...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `Farmaco...', Array, 'Farmaco')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(Farmaco), 'hasAndBelongsTo...', 'Farmaco', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1608): Model->find('first', Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(169): Model->read()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(386): Scaffold->_scaffoldView(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#16 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2014-11-30 20:59:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FarPat.pat_id' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/10
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Farmaco...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Farmaco...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `Farmaco...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `Farmaco...', Array, 'Farmaco')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(Farmaco), 'hasAndBelongsTo...', 'Farmaco', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1608): Model->find('first', Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(169): Model->read()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(386): Scaffold->_scaffoldView(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#16 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2014-11-30 20:59:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FarPat.pat_id' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Farmaco...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Farmaco...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `Farmaco...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `Farmaco...', Array, 'Farmaco')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(Farmaco), 'hasAndBelongsTo...', 'Farmaco', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1608): Model->find('first', Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(169): Model->read()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(386): Scaffold->_scaffoldView(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#16 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2014-11-30 21:02:17 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(122): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-30 21:03:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FarPat.pat_id' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Farmaco...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Farmaco...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `Farmaco...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `Farmaco...', Array, 'Farmaco')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(Farmaco), 'hasAndBelongsTo...', 'Farmaco', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\PatsController.php(40): Model->find('first', Array)
+#9 [internal function]: PatsController->view('1')
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PatsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 21:12:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PATMA.ID_TIPO_MA' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `TipoMa`...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `TipoMa`...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `TipoMa`...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `TipoMa`...', Array, 'TipoMa')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(TipoMa), 'hasAndBelongsTo...', 'TipoMa', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\PatsController.php(42): Model->find('first', Array)
+#9 [internal function]: PatsController->view('1')
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PatsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 21:13:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PatMa.ID_TIPO_MA' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `TipoMa`...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `TipoMa`...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `TipoMa`...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `TipoMa`...', Array, 'TipoMa')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(TipoMa), 'hasAndBelongsTo...', 'TipoMa', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\PatsController.php(42): Model->find('first', Array)
+#9 [internal function]: PatsController->view('1')
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PatsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 21:13:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PatMa.ID_TIPO_MA' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `TipoMa`...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `TipoMa`...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `TipoMa`...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `TipoMa`...', Array, 'TipoMa')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(TipoMa), 'hasAndBelongsTo...', 'TipoMa', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\PatsController.php(42): Model->find('first', Array)
+#9 [internal function]: PatsController->view('1')
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PatsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 21:14:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PatMa.ID_TIPO_MA' in 'on clause'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `TipoMa`...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `TipoMa`...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1441): DboSource->fetchAll('SELECT `TipoMa`...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1292): DboSource->_fetchHasAndBelongsToMany(Object(Pat), 'SELECT `TipoMa`...', Array, 'TipoMa')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Pat), Object(TipoMa), 'hasAndBelongsTo...', 'TipoMa', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Pat), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\PatsController.php(42): Model->find('first', Array)
+#9 [internal function]: PatsController->view('1')
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PatsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PatsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 21:22:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`aldeaanimal`.`far_pat`, CONSTRAINT `FK_SE_ASOCIA` FOREIGN KEY (`ID_FAR`) REFERENCES `far` (`ID_FAR`))
+Request URL: /AldeaAnimal/farmacos/delete/1345
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('DELETE `Farmaco...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\Database\Mysql.php(454): DboSource->execute('DELETE `Farmaco...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2634): Mysql->delete(Object(Farmaco), Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\FarmacosController.php(97): Model->delete()
+#5 [internal function]: FarmacosController->delete('1345')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FarmacosController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(FarmacosController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-11-30 21:26:57 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting ',' or ';' in [C:\xampp\htdocs\AldeaAnimal\app\View\Pats\view.ctp, line 94]
+2014-11-30 21:26:57 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting ',' or ';'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 94)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 94, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 94, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 21:27:03 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING), expecting ',' or ';' in [C:\xampp\htdocs\AldeaAnimal\app\View\Pats\view.ctp, line 94]
+2014-11-30 21:27:03 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING), expecting ',' or ';'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 94)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 94, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 94, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 21:27:27 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [C:\xampp\htdocs\AldeaAnimal\app\View\Pats\view.ctp, line 93]
+2014-11-30 21:27:27 Error: [FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 21:27:33 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\View\Pats\view.ctp, line 93]
+2014-11-30 21:27:33 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/pats/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 23:23:44 Error: [MissingControllerException] Controller class TipodeexController could not be found.
+Exception Attributes: array (
+  'class' => 'TipodeexController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/tipodeex/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 23:24:14 Error: [MissingControllerException] Controller class TipodeexesController could not be found.
+Exception Attributes: array (
+  'class' => 'TipodeexesController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/tipodeexes/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

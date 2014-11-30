@@ -12,6 +12,7 @@ class TipoMa extends AppModel {
  *
  * @var string
  */
+	public $useTable = 'tipo_mas';
 	public $primaryKey = 'ID_TIPO_MAS';
 
 /**

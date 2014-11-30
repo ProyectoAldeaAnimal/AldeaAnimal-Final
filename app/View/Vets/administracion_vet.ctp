@@ -10,17 +10,17 @@ $this->layout= 'headVets';
 				<a href="/AldeaAnimal/vets/view"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Mis Datos Veterinario</h4></button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
+				<a href="/AldeaAnimal/pats/index"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Patologías</h4>Crear, ver, y actualizar</button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
+				<a href="/AldeaAnimal/farmacos/index"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Medicamentos</h4>Crear, ver, y actualizar</button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
+				<a href="/AldeaAnimal/tipodeints/index"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Tipos de Intervención</h4>Crear, ver, y actualizar</button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
-				<h4>Tipos de Intervención</h4>Crear, ver, y actualizar</button></a>
+				<a href="/AldeaAnimal/tipoexes/index"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
+				<h4>Tipos de Examen</h4>Crear, ver, y actualizar</button></a>
 				<br><br><br>
 			</div>
 			<div class="col col-md-5">

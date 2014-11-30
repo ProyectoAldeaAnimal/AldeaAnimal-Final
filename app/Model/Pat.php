@@ -56,11 +56,11 @@ class Pat extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
-		'Far' => array(
-			'className' => 'Far',
+		'Farmaco' => array(
+			'className' => 'Farmaco',
 			'joinTable' => 'far_pat',
-			'foreignKey' => 'pat_id',
-			'associationForeignKey' => 'far_id',
+			'foreignKey' => 'ID_PAT',
+			'associationForeignKey' => 'ID_FAR',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -72,8 +72,8 @@ class Pat extends AppModel {
 		'Atencion' => array(
 			'className' => 'Atencion',
 			'joinTable' => 'pat_atencion',
-			'foreignKey' => 'pat_id',
-			'associationForeignKey' => 'atencion_id',
+			'foreignKey' => 'ID_PAT',
+			'associationForeignKey' => 'ID_ATENCION',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -82,11 +82,11 @@ class Pat extends AppModel {
 			'offset' => '',
 			'finderQuery' => '',
 		),
-		'TIPO_MA' => array(
-			'className' => 'TIPO_MA',
-			'joinTable' => 'PAT_MAS',
-			'foreignKey' => 'pat_id',
-			'associationForeignKey' => 'pat_id',
+		'TipoMa' => array(
+			'className' => 'TipoMa',
+			'joinTable' => 'pat_mas',
+			'foreignKey' => 'ID_PAT',
+			'associationForeignKey' => 'ID_TIPO_MAS',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

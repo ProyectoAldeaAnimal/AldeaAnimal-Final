@@ -4,7 +4,7 @@
 <div class="atencions form">
 <?php echo $this->Form->create('Atencion'); ?>
 	<fieldset>
-		<h3><?php echo __('Solicitar Agendamiento'); ?></h3>
+		<h3><?php echo __('Creando Una Nueva Atención'); ?></h3>
 		<br>
 	<?php
 
