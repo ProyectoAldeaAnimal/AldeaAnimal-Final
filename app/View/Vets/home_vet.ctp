@@ -27,8 +27,8 @@
                </button></a>
             
                 <br>
-               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Generar Atención</h3>
-               </button>
+                <a href="/AldeaAnimal/atencions/add"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Generar Atención</h3>
+               </button></a>
                <br>
 
               

@@ -365,7 +365,12 @@ img.grayscale {
   -moz-box-shadow: 10px 10px 10px rgba(0,0,0,10);
   box-shadow: 10px 10px 10px rgba(0,0,0,10);
 }
-
+.colorBlanco{
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,10);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,10);
+  box-shadow: 1px 1px 1px rgba(0,0,0,10);
+}
 
 
 

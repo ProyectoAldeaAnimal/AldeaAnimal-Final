@@ -18391,3 +18391,433 @@ Request URL: /AldeaAnimal/AldeaAnimal/
 Stack Trace:
 #0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-11-29 20:43:59 Error: [MissingControllerException] Controller class AtencionesController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencionesController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/atenciones
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 20:44:02 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 20:44:07 Error: [MissingControllerException] Controller class AtecionesController could not be found.
+Exception Attributes: array (
+  'class' => 'AtecionesController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/ateciones
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 20:44:12 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 20:44:52 Error: [MissingControllerException] Controller class AtencionesController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencionesController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/atenciones
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 20:48:27 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 20:56:57 Error: Fatal Error (4): syntax error, unexpected ''label'' (T_CONSTANT_ENCAPSED_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\View\Atencions\add.ctp, line 10]
+2014-11-29 20:56:57 Error: [FatalErrorException] syntax error, unexpected ''label'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 20:57:04 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\AldeaAnimal\app\View\Atencions\add.ctp, line 10]
+2014-11-29 20:57:04 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:07:21 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ID_PRES' cannot be null
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Atencion), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AtencionsController.php(52): Model->save(Array)
+#5 [internal function]: AtencionsController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AtencionsController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AtencionsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-11-29 21:14:31 Error: Fatal Error (4): syntax error, unexpected ''options'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\View\Atencions\add.ctp, line 12]
+2014-11-29 21:14:31 Error: [FatalErrorException] syntax error, unexpected ''options'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:16:24 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\View\Atencions\add.ctp, line 11]
+2014-11-29 21:16:24 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 11, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 11, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:16:36 Error: Fatal Error (4): syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\View\Atencions\add.ctp, line 40]
+2014-11-29 21:16:36 Error: [FatalErrorException] syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:16:49 Error: Fatal Error (4): syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\View\Atencions\add.ctp, line 46]
+2014-11-29 21:16:49 Error: [FatalErrorException] syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 46, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 46, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:19:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PatAtencion.pat_id' in 'field list'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `PatAten...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `PatAten...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `PatAten...', false)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2947): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1995): Model->find('all', Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1867): Model->_saveMulti(Array, '1', Object(Mysql))
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\AtencionsController.php(52): Model->save(Array)
+#9 [internal function]: AtencionsController->add()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AtencionsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AtencionsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-29 21:35:25 Error: [MissingActionException] Action VetsController::atecionMedica() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'atecionMedica',
+)
+Request URL: /AldeaAnimal/vets/atecionMedica
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-29 21:36:27 Error: [MissingActionException] Action VetsController::atecionMedica() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'atecionMedica',
+)
+Request URL: /AldeaAnimal/vets/atecionMedica
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-29 21:36:37 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\Vets\atecion_medica.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Vets\\atecion_medica.ctp',
+)
+Request URL: /AldeaAnimal/vets/atecion_medica
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-29 21:36:58 Error: [MissingActionException] Action VetsController::atecion_medica() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'atecion_medica',
+)
+Request URL: /AldeaAnimal/vets/atecion_medica
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-29 21:37:04 Error: [MissingLayoutException] Layout file "C:\xampp\htdocs\AldeaAnimal\app\View\Layouts\headVet.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Layouts\\headVet.ctp',
+)
+Request URL: /AldeaAnimal/vets/atencion_medica
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(510): View->_getLayoutFileName('headVet')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(479): View->renderLayout('', 'headVet')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-11-29 21:50:44 Error: Fatal Error (4): syntax error, unexpected ''message'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\Model\Atencion.php, line 38]
+2014-11-29 21:50:44 Error: [FatalErrorException] syntax error, unexpected ''message'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 38, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 38, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:51:22 Error: Fatal Error (4): syntax error, unexpected ''TEMPERATURA'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\Model\Atencion.php, line 40]
+2014-11-29 21:51:22 Error: [FatalErrorException] syntax error, unexpected ''TEMPERATURA'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 00:34:57 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\Model\Atencion.php, line 63]
+2014-11-30 00:34:57 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 00:35:20 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\Model\Atencion.php, line 63]
+2014-11-30 00:35:20 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 00:41:07 Error: Fatal Error (4): syntax error, unexpected ''allowEmpty'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\AldeaAnimal\app\Model\Atencion.php, line 40]
+2014-11-30 00:41:07 Error: [FatalErrorException] syntax error, unexpected ''allowEmpty'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 00:41:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'PESO' cannot be null
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Atencion), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AtencionsController.php(56): Model->save(Array)
+#5 [internal function]: AtencionsController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AtencionsController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AtencionsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-11-30 00:56:51 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AtencionsController.php, line 57]
+2014-11-30 00:56:51 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/atencions/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 57, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 57, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 01:12:45 Error: [MissingTableException] Table atenciã³ns for model AtenciÃ³n was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'atenciã³ns',
+  'class' => 'AtenciÃ³n',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/atencion_medica?param=15
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('atenci\xE3\xB3ns')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(262): Controller->loadModel('Atenci\xC3\xB3n')
+#6 [internal function]: VetsController->atencion_medica()
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-11-30 01:38:59 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 268]
+2014-11-30 01:38:59 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/vets/atencion_medica?param=15
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 268)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 268, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 268, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 01:39:11 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\View\Vets\atencion_medica.ctp, line 4]
+2014-11-30 01:39:11 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING)
+Request URL: /AldeaAnimal/vets/atencion_medica?param=15
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-30 02:38:19 Error: [MissingTableException] Table fars for model Far was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'fars',
+  'class' => 'Far',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/recmeds
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('fars')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1058): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(867): Model->_constructLinkedModel('Far', 'Far', NULL)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(900): Model->__isset('Far')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(423): Model->__get('Far')
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(136): Scaffold->_associations()
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(RecMedsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(RecMedsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 03:04:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`far_rec`, CONSTRAINT `FK_TIENE5` FOREIGN KEY (`ID_MODO`) REFERENCES `modo` (`ID_MODO`))
+Request URL: /AldeaAnimal/recmeds/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(3149): PDOStatement->execute()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2036): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1867): Model->_saveMulti(Array, false, Object(Mysql))
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\RecMedsController.php(52): Model->save(Array)
+#4 [internal function]: RecmedsController->add()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(RecmedsController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(RecmedsController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-30 04:33:32 Error: [MissingTableException] Table tipoexs for model Tipoexs was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'tipoexs',
+  'class' => 'Tipoexs',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/ordenexes
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('tipoexs')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1058): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(867): Model->_constructLinkedModel('Tipoexs', 'Tipoexs', NULL)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(900): Model->__isset('Tipoexs')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(423): Model->__get('Tipoexs')
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(136): Scaffold->_associations()
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(OrdenExesController), Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OrdenExesController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 05:05:57 Error: [MissingActionException] Action AtencionsController::atencion_medica() could not be found.
+Exception Attributes: array (
+  'controller' => 'AtencionsController',
+  'action' => 'atencion_medica',
+)
+Request URL: /AldeaAnimal/atencions/atencion_medica
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AtencionsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:30:16 Error: [MissingActionException] Action VetsController::AldeaAnimal() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'AldeaAnimal',
+)
+Request URL: /AldeaAnimal/vets/AldeaAnimal/ordenints/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:30:34 Error: [MissingActionException] Action VetsController::AldeaAnimal() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'AldeaAnimal',
+)
+Request URL: /AldeaAnimal/vets/AldeaAnimal/ordenints/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:32:21 Error: [MissingControllerException] Controller class OrdenhospController could not be found.
+Exception Attributes: array (
+  'class' => 'OrdenhospController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/ordenhosp/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:40:22 Error: [MissingActionException] Action VetsController::AldeaAnimal() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'AldeaAnimal',
+)
+Request URL: /AldeaAnimal/vets/AldeaAnimal/ordenhosps/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

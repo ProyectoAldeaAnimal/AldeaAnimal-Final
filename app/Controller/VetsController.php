@@ -207,7 +207,7 @@ class VetsController extends AppController {
 	}
 
 	public function ver_solicitudes(){
-				$usuario = AuthComponent::user();
+		$usuario = AuthComponent::user();
 		$tienePeteciones= true;
 		$this->set('title_for_layout', 'Solicitudes de Hora');
 		$this->loadModel('Agenda');
@@ -252,6 +252,30 @@ class VetsController extends AppController {
 		$this->set(compact('agendas','usuarios','horarios'));
 
 	}
+
+
+
+	public function atencion_medica(){
+		$this->set('title_for_layout', 'Atención Médica');
+		$params = $this->params['url'];
+	
+		$options = array('conditions' => array('Atencion.ID_ATENCION' => $params));
+		$this->loadModel('Atencion');
+		$atencion = $this->Atencion->find('all',$options);
+		$this->set(compact('params','atencion'));
+		
+
+	}
+
+
+
+
+
+
+
+
+
+
 
 	public function view($id = null) {
 		if (!$this->Vet->exists($id)) {
