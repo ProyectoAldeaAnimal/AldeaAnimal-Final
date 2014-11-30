@@ -20,7 +20,7 @@ $this->layout= 'head';
 				<h4>Generar Orden de Hospitalización</h4></button></a>
 				<br>
 				<a href="/AldeaAnimal/ordenints/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
-				<h4>Generar Orden de Interveción</h4></button></a>
+				<h4>Generar Orden de Intervención</h4></button></a>
 				<br>
 				<a href="/AldeaAnimal/inters/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Generar Interveción</h4></button></a>

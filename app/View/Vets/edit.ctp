@@ -1,31 +1,60 @@
-<div class="vets form">
-<?php echo $this->Form->create('Vet'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Vet'); ?></legend>
-	<?php
-		echo $this->Form->input('ID_VET');
-		echo $this->Form->input('ID_GROUP');
-		echo $this->Form->input('RUT_VET');
-		echo $this->Form->input('NOMBRE_VET');
-		echo $this->Form->input('APELLIDO_PVET');
-		echo $this->Form->input('APELLIDO_MVET');
-		echo $this->Form->input('TEL_VET');
-		echo $this->Form->input('DIR_VET');
-		echo $this->Form->input('MAIL_VET');
-		echo $this->Form->input('FECHA_REGISTRO_VET');
-		echo $this->Form->input('HABILITADO');
-		echo $this->Form->input('PASSWORD_VET');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<?php
+	$this->layout= 'head';
+?>
+	<div class="vets form">
+	<?php echo $this->Form->create('Vet'); ?>
+		<fieldset>
+			<h3><?php echo __('Editar Mis Datos'); ?></h3>
+		<?php
+			echo $this->Form->input('ID_VET');
+			echo $this->Form->input('ID_GROUP', array(
+			'type' => 'hidden'
+			));
+			echo $this->Form->input('RUT_VET',array('label'=> 'Rut','type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus'));	
+			echo $this->Form->input('NOMBRE_VET', array(
+			'label' => 'Ingrese su nombre: '
+			));
+			echo $this->Form->input('APELLIDO_PVET', array(
+			'label' => 'Ingrese su nombre: '
+			));
+			echo $this->Form->input('APELLIDO_MVET', array(
+			'label' => 'Ingrese su apellido paterno: '
+			));
+			echo $this->Form->input('TEL_VET', array(
+			'label' => 'Ingrese su apellido materno: '
+			));
+			echo $this->Form->input('DIR_VET', array(
+			'label' => 'Ingrese su dirección: '
+			));
+			echo $this->Form->input('MAIL_VET', array(
+			'label' => 'Ingrese su e-mail: '
+			));
+			echo $this->Form->input('FECHA_REGISTRO_VET', array(
+			'type' => 'hidden'
+			));
+			echo $this->Form->input('HABILITADO', array(
+			'type' => 'hidden'
+			));
+			echo $this->Form->input('PASSWORD_VET', array(
+			'label' => 'Cambie su contraseña: '
+			));
+		?>
+		</fieldset>
+	<?php echo $this->Form->end(__('Ingresar')); ?>
+	</div>
+	<div class="actions">
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Vet.ID_VET')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Vet.ID_VET'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Vets'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Oferta Hors'), array('controller' => 'oferta_hors', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Oferta Hor'), array('controller' => 'oferta_hors', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+		<div id="ex5">
+			        <?php
+			            echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+			          ?>
+			      </div>
+
+	</div>
+	<script>
+      $('#rut').Rut({
+        on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");
+        
+      }
+      });
+</script>

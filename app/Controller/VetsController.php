@@ -268,7 +268,10 @@ class VetsController extends AppController {
 
 
 
+	public function administracion_vet(){
+		$this->set('title_for_layout', 'Administración Veterinario');
 
+	}
 
 
 
@@ -277,10 +280,13 @@ class VetsController extends AppController {
 
 
 	public function view($id = null) {
-		if (!$this->Vet->exists($id)) {
+		$this->set('title_for_layout', 'Mis Datos');
+		$usuario = AuthComponent::user();
+		$this->loadModel('Vet');
+		if (!$this->Vet->exists($usuario[0]['Vet']['ID_VET'])) {
 			throw new NotFoundException(__('Invalid vet'));
 		}
-		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $usuario[0]['Vet']['ID_VET']));
 		$this->set('vet', $this->Vet->find('first', $options));
 	}
 
@@ -311,18 +317,21 @@ class VetsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->Vet->exists($id)) {
+		$this->set('title_for_layout', 'Editar Mis Datos');
+		$usuario = AuthComponent::user();
+		$this->loadModel('Vet');
+		if (!$this->Vet->exists($usuario[0]['Vet']['ID_VET'])) {
 			throw new NotFoundException(__('Invalid vet'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Vet->save($this->request->data)) {
-				$this->Session->setFlash(__('The vet has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Tus datos han sido actualizados.'));
+				return $this->redirect(array('action' => 'view'));
 			} else {
 				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
 			}
 		} else {
-			$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+			$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $usuario[0]['Vet']['ID_VET']));
 			$this->request->data = $this->Vet->find('first', $options);
 		}
 		$groups = $this->Vet->Group->find('list');
