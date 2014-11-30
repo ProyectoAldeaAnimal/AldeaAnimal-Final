@@ -258,7 +258,6 @@ class VetsController extends AppController {
 	public function atencion_medica(){
 		$this->set('title_for_layout', 'Atención Médica');
 		$params = $this->params['url'];
-	
 		$options = array('conditions' => array('Atencion.ID_ATENCION' => $params));
 		$this->loadModel('Atencion');
 		$atencion = $this->Atencion->find('all',$options);

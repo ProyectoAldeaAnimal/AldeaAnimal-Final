@@ -22,10 +22,10 @@ $this->layout= 'head';
 				<a href="/AldeaAnimal/ordenints/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Generar Orden de Interveción</h4></button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
+				<a href="/AldeaAnimal/inters/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Generar Interveción</h4></button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
+				<a href="/AldeaAnimal/hosps/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" style="background:#229b0d;">
 				<h4>Generar Hospitalización</h4></button></a>
 				<br>
 			</div>

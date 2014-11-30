@@ -50,8 +50,8 @@ class OrdenIntsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->OrdenInt->create();
 			if ($this->OrdenInt->save($this->request->data)) {
-				$this->Session->setFlash(__('The orden int has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				
+				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
 			} else {
 				$this->Session->setFlash(__('The orden int could not be saved. Please, try again.'));
 			}

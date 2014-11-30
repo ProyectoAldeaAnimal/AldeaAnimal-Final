@@ -49,8 +49,8 @@ class OrdenHospsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->OrdenHosp->create();
 			if ($this->OrdenHosp->save($this->request->data)) {
-				$this->Session->setFlash(__('The orden hosp has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+		
+				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
 			} else {
 				$this->Session->setFlash(__('The orden hosp could not be saved. Please, try again.'));
 			}

@@ -72,7 +72,7 @@ class AppController extends Controller {
 				return true;
 			}
 			else{
-				return true;
+				return false;
 			}
 						
 	}

@@ -18821,3 +18821,54 @@ Stack Trace:
 #1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
 #2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-11-30 05:48:40 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => model
+    [Aro0.foreign_key] => G
+)
+"
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(80): AclNode->node(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(74): Permission->check(Array, 'controllers/Mas', '*')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(110): DbAcl->check(Array, 'controllers/Mas', '*')
+#3 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(122): AclComponent->check(Array, 'controllers/Mas')
+#4 [internal function]: UsersController->homeCliente()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-11-30 05:54:28 Error: [MissingActionException] Action VetsController::inters() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'inters',
+)
+Request URL: /AldeaAnimal/vets/inters
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:54:37 Error: [MissingActionException] Action VetsController::ints() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'ints',
+)
+Request URL: /AldeaAnimal/vets/ints
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:54:48 Error: [MissingActionException] Action VetsController::inters() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'inters',
+)
+Request URL: /AldeaAnimal/vets/inters
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
