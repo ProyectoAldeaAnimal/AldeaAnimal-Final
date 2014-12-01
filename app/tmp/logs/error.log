@@ -20099,3 +20099,136 @@ Stack Trace:
 #8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PresController), Object(CakeRequest))
 #9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2014-12-01 23:19:43 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:20:45 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:20:58 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:21:16 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:21:48 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:21:48 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\xampp\htdocs\AldeaAnimal\app\View\Errors\missing_controller.ctp, line 5]
+2014-12-01 23:21:48 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 5, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 5, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 23:22:05 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:22:14 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:22:28 Error: [MissingControllerException] Controller class VtsController could not be found.
+Exception Attributes: array (
+  'class' => 'VtsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vts/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:23:17 Error: [MissingControllerException] Controller class Kdjasdfkj2301ej12e1kldm1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Kdjasdfkj2301ej12e1kldm1Controller',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/kdjasdfkj2301ej12e1kldm1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:42:50 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-01 23:43:14 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-01 23:43:19 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

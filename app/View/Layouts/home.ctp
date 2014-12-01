@@ -25,6 +25,12 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+    <style type="text/css">   
+a:link   
+{   
+ text-decoration:none;   
+}   
+</style>
 </head>
 <body id="home" data-spy="scroll" data-target=".navbar-fixed-top">
     
@@ -174,7 +180,10 @@ array('controller' => 'users', 'action' => 'login')); ?>
   
 
       </div>
+        <a href="/AldeaAnimal/pres/catalogo"><div class="btn btn-success">CONOCE NUESTROS SERVICIOS  </div></a>
+        
     </div>
+
   </div>
 </div>
     

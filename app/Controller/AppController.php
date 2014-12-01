@@ -104,6 +104,7 @@ class AppController extends Controller {
 	     $this->Auth->loginError = 'El nombre de usuario y/o la contraseña no son correctos. Por favor, inténtalo otra vez';
          $this->Auth->authError = 'Para entrar en la zona privada tienes que autenticarte';
          $this->Auth->allow(array('display','login'));
+         if($this->name=='Pres')  $this->Auth->allow(array('catalogo'));
          $this->Auth->authorize = 'controller';
 	}
 }	

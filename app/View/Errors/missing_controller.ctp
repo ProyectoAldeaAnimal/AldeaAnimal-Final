@@ -1,9 +1,11 @@
 <?php
 
 	$usuario = AuthComponent::user();
-	if(key($usuario[0])=='Vet') $this->layout= 'head';
-	else 	$this->layout= 'headClientes';
-	
+	if(isset($usuario)){
+		if(key($usuario[0])=='Vet') $this->layout= 'head';
+		else 	$this->layout= 'headClientes';
+	}
+	else $this->layout= 'headClientes';
 ?>
 <div id="ex5">
 		        <?php

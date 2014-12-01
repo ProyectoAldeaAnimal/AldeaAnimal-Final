@@ -26,6 +26,12 @@ class PresController extends AppController {
 		$this->set('pres', $this->Paginator->paginate());
 	}
 
+	public function catalogo() {
+		$this->set('title_for_layout', 'Prestaciones');
+		$this->Pre->recursive = 0;
+		$this->set('pres', $this->Paginator->paginate());
+	}
+
 /**
  * view method
  *
