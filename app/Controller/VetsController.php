@@ -76,7 +76,9 @@ class VetsController extends AppController {
 	public function login() {
 				$this->set('title_for_layout', 'Login Veterinarios');
 				if($this->Session->check('Auth.User')){
-							if ($admin){
+							$vet = AuthComponent::user();
+
+							if ($vet[0]['Vet']['ID_GROUP']== 3){
 				
 								$this->redirect( array('controller' => 'vets', 'action' => 'homeAdministrador'));
 
@@ -88,37 +90,83 @@ class VetsController extends AppController {
 								}
 					}
 					
-
 				    if ($this->request->is('post')) {
 
-    					$this->loadModel('Vet');
-						$vet= $this->Vet->find('all',array(
+    						$this->loadModel('Vet');
+							$vet= $this->Vet->find('all',array(
 									'conditions' => array(
 											'VET.RUT_VET' => $this->request->data['Vet']['RUT_VET'])
 										)
 								);
+
+							if($this->request->data['Vet']['rol']== 'Administrador' && $vet[0]['Vet']['ID_GROUP'] ==3){
+
+
+
+							    if(($vet[0]['Vet']['RUT_VET'] == $this->request->data['Vet']['RUT_VET']) &&
+										($vet[0]['Vet']['PASSWORD_VET'] == Security::hash($this->request->data['Vet']['PASSWORD_VET']))
+
+									){
+							    		$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeAdministrador');
+										$this->Auth->login($vet);
+										return $this->redirect($this->Auth->redirect());
+
+									}
+
+								else {
+
+						            $this->Session->setFlash(
+						                __('Rut o contraseña incorrecta'),
+						                'default',
+						                array(),
+						                'auth'
+						            );
+						        }
+									
+
+							}
+							else if($this->request->data['Vet']['rol']== 'Veterinario' && $vet[0]['Vet']['ID_GROUP'] ==2){
+								if(($vet[0]['Vet']['RUT_VET'] == $this->request->data['Vet']['RUT_VET']) &&
+										($vet[0]['Vet']['PASSWORD_VET'] == Security::hash($this->request->data['Vet']['PASSWORD_VET']))
+
+									){
+							    		$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeVet');
+										$this->Auth->login($vet);
+										return $this->redirect($this->Auth->redirect());
+
+									}
+
+								else {
+
+						            $this->Session->setFlash(
+						                __('Rut o contraseña incorrecta'),
+						                'default',
+						                array(),
+						                'auth'
+						            );
+						        }
 								
-				
 
-						    if(($vet[0]['Vet']['RUT_VET'] == $this->request->data['Vet']['RUT_VET']) &&
-									($vet[0]['Vet']['PASSWORD_VET'] == Security::hash($this->request->data['Vet']['PASSWORD_VET']))
-
-								){
-						    		$this->Auth->loginRedirect = array('controller' => 'vets', 'action' => 'homeVet');
-									$this->Auth->login($vet);
-									return $this->redirect($this->Auth->redirect());
+								
+							}
+							else {
+								if($this->request->data['Vet']['rol']== 'Administrador'){
+									$mensaje= '<script name="accion">window.onload = function(){            
+											        swal("Usted NO es un Administrador", "Ingrese a su sección correspondiente", "error")
+											        }
+											   </script>';	
+									echo($mensaje);
 
 								}
+								else{
+									$mensaje= '<script name="accion">window.onload = function(){            
+											        swal("Usted NO es un Veterinario", "Ingrese a su sección correspondiente", "error")
+											        }
+										        </script>';	
+									echo($mensaje);				
+								}
+							}
 
-							else {
-
-					            $this->Session->setFlash(
-					                __('Rut o contraseña incorrecta'),
-					                'default',
-					                array(),
-					                'auth'
-					            );
-					        }
 					    }
 			}
 	public function homeVet(){

@@ -19331,3 +19331,24 @@ Request URL: /AldeaAnimal/tipodeexes/index
 Stack Trace:
 #0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-12-01 00:02:12 Error: [MissingActionException] Action VetsController::homeAdmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'homeAdmin',
+)
+Request URL: /AldeaAnimal/vets/homeAdmin
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 01:31:39 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 101]
+2014-12-01 01:31:39 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 101)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 101, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 101, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -142,6 +142,7 @@ $this->layout = 'layoutVacio'
             on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");
             
           }
+
           });
     </script>
   </body>
