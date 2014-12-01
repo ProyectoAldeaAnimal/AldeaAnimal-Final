@@ -57,7 +57,7 @@
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/registro_vet"><FONT COLOR="#FFFFFF">  Veterinarios</FONT></a></li> 
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/gestion"><FONT COLOR="#FFFFFF">  Gestion de Usuarios </FONT></a></li> 
                       <li><a class= "page-scroll"href="#"><FONT COLOR="#FFFFFF">  Consumo</FONT></a></li>
-                      <li><a class= "page-scroll"href="#"><FONT COLOR="#FFFFFF">  Catálogo de Prestaciones</FONT></a></li>                                          
+                      <li><a class= "page-scroll"href="/AldeaAnimal/pres/index"><FONT COLOR="#FFFFFF">  Catálogo de Prestaciones</FONT></a></li>                                          
                       <!--li><a href="#features">Features</a></li-->
                     
                   </ul>

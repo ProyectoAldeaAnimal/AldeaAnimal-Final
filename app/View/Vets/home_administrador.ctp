@@ -32,7 +32,7 @@
                </button></a>
                <br>
 
-             	<a href="/AldeaAnimal/vets/view"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Calendario de Prestaciones</h3>
+             	<a href="/AldeaAnimal/pres/index"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Calendario de Prestaciones</h3>
              	Ingresar o modificar Prestaciones ofrecidas por la clínica
                </button></a>
                <br>
