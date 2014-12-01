@@ -21,6 +21,7 @@ class TipoDeIntsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('title_for_layout', 'Intervenciones');
 		$this->TipoDeInt->recursive = 0;
 		$this->set('tipoDeInts', $this->Paginator->paginate());
 	}
@@ -33,6 +34,7 @@ class TipoDeIntsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('title_for_layout', 'Ver');
 		if (!$this->TipoDeInt->exists($id)) {
 			throw new NotFoundException(__('Invalid tipo de int'));
 		}
@@ -46,6 +48,7 @@ class TipoDeIntsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('title_for_layout', 'Agregar');
 		if ($this->request->is('post')) {
 			$this->TipoDeInt->create();
 			if ($this->TipoDeInt->save($this->request->data)) {
@@ -65,6 +68,7 @@ class TipoDeIntsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('title_for_layout', 'Editar');
 		if (!$this->TipoDeInt->exists($id)) {
 			throw new NotFoundException(__('Invalid tipo de int'));
 		}

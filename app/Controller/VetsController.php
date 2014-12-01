@@ -54,10 +54,13 @@ class VetsController extends AppController {
 	public function index(){
 		$this->redirect(array('controller' => 'vets','action' => 'login'));
 	}
-	/*public function index() {
+
+	public function registro_vet() {
+		$this->loadModel('Vet');
 		$this->Vet->recursive = 0;
-		$this->set('vets', $this->Paginator->paginate());
-	}*/
+		$vets = $this->Paginator->paginate('Vet');
+		$this->set(compact('vets'));
+	}
 
 /**
  * view method
@@ -320,7 +323,51 @@ class VetsController extends AppController {
 		$this->set('title_for_layout', 'Administración Veterinario');
 
 	}
+	public function gestion(){
+		$this->set('title_for_layout', 'Gestion Admin');
 
+	}
+	public function gestion_cliente(){
+		$this->set('title_for_layout', 'Gestion Cliente');
+
+		if ($this->request->is(array('post', 'put'))) {
+			$this->loadModel('User');
+			if ($this->User->save($this->request->data)) {
+				$this->Session->setFlash(__('El Cliente a sido guardado.'));
+				return $this->redirect(array('action' => 'gestion'));
+			} else {
+				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
+			}
+		}
+
+
+
+		$this->loadModel('User');
+		$users= $this->User->find('list');
+		$this->set(compact('users'));
+
+	}
+	
+	public function gestion_vet(){
+		$this->set('title_for_layout', 'Gestion Vet');
+
+		if ($this->request->is(array('post', 'put'))) {
+			$this->loadModel('Vet');
+			if ($this->Vet->save($this->request->data)) {
+				$this->Session->setFlash(__('El Cliente a sido guardado.'));
+				return $this->redirect(array('action' => 'gestion'));
+			} else {
+				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
+			}
+		}
+
+
+
+		$this->loadModel('Vet');
+		$vets= $this->Vet->find('list');
+		$this->set(compact('vets'));
+	}
+	
 	
 
 
@@ -337,6 +384,17 @@ class VetsController extends AppController {
 		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $usuario[0]['Vet']['ID_VET']));
 		$this->set('vet', $this->Vet->find('first', $options));
 	}
+	public function view2($id = null) {
+		$this->view = 'view';
+		$this->set('title_for_layout', 'Vet Datos');
+		$usuario = AuthComponent::user();
+		$this->loadModel('Vet');
+		if (!$this->Vet->exists($usuario[0]['Vet']['ID_VET'])) {
+			throw new NotFoundException(__('Invalid vet'));
+		}
+		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+		$this->set('vet', $this->Vet->find('first', $options));
+	}
 
 /**
  * add method
@@ -344,16 +402,20 @@ class VetsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('title_for_layout', 'Ingresar Veterinario');
 		if ($this->request->is('post')) {
+			$this->loadModel('Vet');
 			$this->Vet->create();
 			if ($this->Vet->save($this->request->data)) {
-				$this->Session->setFlash(__('The vet has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('El veterinario a sido guardado.'));
+				return $this->redirect(array('action' => 'add'));
 			} else {
 				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
 			}
 		}
-		$groups = $this->Vet->Group->find('list');
+		$this->loadModel('Group');
+		$groups = $this->Group->find('list');
+		unset($groups[1]);
 		$this->set(compact('groups'));
 	}
 
@@ -385,6 +447,29 @@ class VetsController extends AppController {
 		$groups = $this->Vet->Group->find('list');
 		$this->set(compact('groups'));
 	}
+	public function edit2($id = null) {
+		$this->view = 'edit';
+		$this->set('title_for_layout', 'Editar Datos');
+		$usuario = AuthComponent::user();
+		$this->loadModel('Vet');
+		if (!$this->Vet->exists($usuario[0]['Vet']['ID_VET'])) {
+			throw new NotFoundException(__('Invalid vet'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->Vet->save($this->request->data)) {
+				$this->Session->setFlash(__('Tus datos han sido actualizados.'));
+				return $this->redirect(array('action' => 'view'));
+			} else {
+				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
+			}
+		} else {
+		
+			$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+			$this->request->data = $this->Vet->find('first', $options);
+		}
+		$groups = $this->Vet->Group->find('list');
+		$this->set(compact('groups'));
+	}
 
 /**
  * delete method
@@ -393,17 +478,4 @@ class VetsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
-		$this->Vet->id = $id;
-		if (!$this->Vet->exists()) {
-			throw new NotFoundException(__('Invalid vet'));
-		}
-		$this->request->allowMethod('post', 'delete');
-		if ($this->Vet->delete()) {
-			$this->Session->setFlash(__('The vet has been deleted.'));
-		} else {
-			$this->Session->setFlash(__('The vet could not be deleted. Please, try again.'));
-		}
-		return $this->redirect(array('action' => 'index'));
-	}
 }

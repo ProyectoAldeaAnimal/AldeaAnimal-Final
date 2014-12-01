@@ -19,24 +19,12 @@
 
     <div class="row">
       <div class="col-md-9">
-             <a href="/AldeaAnimal/vets/registro_vet"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Veterinarios</h3>
-             Crear, actualizar datos, lista de registros
+             <a href="/AldeaAnimal/vets/gestion_cliente"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Habilitar - Deshabilitar Cliente</h3>
                </button></a>
                 <br>
-               <a href="/AldeaAnimal/vets/gestion"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Gestión de Usuarios</h3>
+               <a href="/AldeaAnimal/vets/gestion_vet"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Habilitar - Deshabilitar Veterinario</h3>
                </button></a>
                <br>
-
-               <a href="#"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Consumo Teórico de Insumos</h3> 
-                En construcción
-               </button></a>
-               <br>
-
-             	<a href="/AldeaAnimal/vets/view"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Calendario de Prestaciones</h3>
-             	Ingresar o modificar Prestaciones ofrecidas por la clínica
-               </button></a>
-               <br>
-              
 
         
       </div>
@@ -57,6 +45,7 @@
           <div class="col-md-6 text-left copy">
             <p>Copyright &copy; 2014 Aldea Animal.</p>
           </div>
+
         </div>
       </div>
     </div>

@@ -19352,3 +19352,504 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-01 03:14:14 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(60): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vets()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:15:24 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(61): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vets()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:16:27 Error: [MissingActionException] Action VetsController::registro_vets() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'registro_vets',
+)
+Request URL: /AldeaAnimal/vets/registro_vets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 03:16:36 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(61): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:16:41 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(61): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:17:24 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(61): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:17:49 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(61): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:18:31 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(62): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:19:09 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(61): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:21:01 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(62): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:21:16 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(63): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:21:54 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(63): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:22:09 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(63): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:22:24 Error: [MissingTableException] Table vets for model Vets was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'vets',
+  'class' => 'Vets',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('vets')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(367): Controller->loadModel('Vets')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(278): Controller->__isset('Vets')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\PaginatorComponent.php(135): PaginatorComponent->_getObject(NULL)
+#8 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(63): PaginatorComponent->paginate()
+#9 [internal function]: VetsController->registro_vet()
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#13 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-12-01 03:34:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 359]
+2014-12-01 03:34:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /AldeaAnimal/vets/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 359)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 359, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 359, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 03:51:36 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 352]
+2014-12-01 03:51:36 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /AldeaAnimal/vets/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 352)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 352, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 352, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 03:55:39 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 352]
+2014-12-01 03:55:39 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /AldeaAnimal/vets/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 352)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 352, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 352, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 04:05:11 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\Vets\edit2.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Vets\\edit2.ctp',
+)
+Request URL: /AldeaAnimal/vets/edit2/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-01 04:07:24 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\Vets\edit2.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Vets\\edit2.ctp',
+)
+Request URL: /AldeaAnimal/vets/edit2/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-01 04:14:04 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\Vets\a_d_d.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Vets\\a_d_d.ctp',
+)
+Request URL: /AldeaAnimal/vets/ADD
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-01 05:11:59 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 40]
+2014-12-01 05:11:59 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/tipodeints/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 05:24:23 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AppController.php, line 44]
+2014-12-01 05:24:23 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 44)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 44, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 44, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 05:32:41 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 05:33:04 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 05:35:40 Error: [MissingActionException] Action VetsController::homeVets() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'homeVets',
+)
+Request URL: /AldeaAnimal/vets/homeVets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 05:36:02 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 05:37:36 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 05:38:09 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 05:44:00 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 06:16:18 Error: [MissingActionException] Action VetsController::homeAdmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'homeAdmin',
+)
+Request URL: /AldeaAnimal/vets/homeAdmin
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 06:16:27 Error: [MissingActionException] Action VetsController::homeAdmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'homeAdmin',
+)
+Request URL: /AldeaAnimal/vets/homeAdmin
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 06:17:01 Error: [MissingControllerException] Controller class GestionController could not be found.
+Exception Attributes: array (
+  'class' => 'GestionController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/gestion
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 06:17:04 Error: [MissingControllerException] Controller class GestionController could not be found.
+Exception Attributes: array (
+  'class' => 'GestionController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/gestion
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
