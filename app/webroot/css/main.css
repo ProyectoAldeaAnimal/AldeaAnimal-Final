@@ -361,9 +361,9 @@ img.grayscale {
 }
 .color13{
 
-          -webkit-box-shadow: 10px 10px 10px rgba(0,0,0,10);
-  -moz-box-shadow: 10px 10px 10px rgba(0,0,0,10);
-  box-shadow: 10px 10px 10px rgba(0,0,0,10);
+          -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,5);
+  -moz-box-shadow: 5px 5px 5px rgba(0,0,0,5);
+  box-shadow: 5px 5px 5px rgba(0,0,0,5);
 }
 .colorBlanco{
   background-color: #FFFFFF;

@@ -91,11 +91,11 @@ array('controller' => 'users', 'action' => 'logout')); ?>
 
     <div class="row">
       <div class="col-md-9">
-              <a href="/AldeaAnimal/users/misDatos"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Datos</h3>
+              <a href="/AldeaAnimal/users/misDatos"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Mis Datos</h3>
               Revise sus datos personales - Modifique sus Datos
                </button>
                 <br>
-               <a href="/AldeaAnimal/users/misMascotas"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Mascotas</h3>
+               <a href="/AldeaAnimal/users/misMascotas"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Mis Mascotas</h3>
               Revise atenciones, vacunas y desparacitaciones sobre tus queridas mascotas
                </button></a>
         

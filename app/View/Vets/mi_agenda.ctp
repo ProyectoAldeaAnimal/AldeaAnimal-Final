@@ -26,16 +26,16 @@ $this->layout= 'headVets';
       </div>
       <div class="col-md-9">
 
-              <a href="/AldeaAnimal/vets/solicitudesHora"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Solicitudes de hora de clientes</h3>
+              <a href="/AldeaAnimal/vets/solicitudesHora"> <button type="button" class="btn btn-lg btn-primary btn-block color13" > <h3>Solicitudes de hora de clientes</h3>
              
                </button></a>
             
                 <br>
-               <a href="/AldeaAnimal/vets/ver_solicitudes"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Ver Solicitudes Aceptadas</h3>
+               <a href="/AldeaAnimal/vets/ver_solicitudes"><button type="button" class="btn btn-lg btn-primary btn-block color13" > <h3>Ver Solicitudes Aceptadas</h3>
                </button></a>            
   
                 <br>
-             	<a href="/AldeaAnimal/ofertahors/agregarOfertaHoraria"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mi Oferta Horaria</h3>
+             	<a href="/AldeaAnimal/ofertahors/agregarOfertaHoraria"><button type="button" class="btn btn-lg btn-primary btn-block color13" > <h3>Mi Oferta Horaria</h3>
                </button></a>
                <br>
 

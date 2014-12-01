@@ -22,27 +22,27 @@
     <div class="row">
       <div class="col-md-9">
 
-              <a href="/AldeaAnimal/vets/miAgenda"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mi agenda</h3>
+              <a href="/AldeaAnimal/vets/miAgenda"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Mi agenda</h3>
              Comprobar horario de trabajo, Solicitudes de hora de clientes, Solicitudes Aceptadas
                </button></a>
             
                 <br>
-                <a href="/AldeaAnimal/atencions/add"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Generar Atención</h3>
+                <a href="/AldeaAnimal/atencions/add"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Generar Atención</h3>
                </button></a>
                <br>
 
               
                
-               <a href="/AldeaAnimal/users/add"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nuevo Cliente</h3>
+               <a href="/AldeaAnimal/users/add"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Registrar Nuevo Cliente</h3>
                </button></a>            
   
                 <br>
-             <a href="/AldeaAnimal/mas/add"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registrar Nueva Mascota</h3>
+             <a href="/AldeaAnimal/mas/add"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Registrar Nueva Mascota</h3>
              	A un cliente registrado previamente
                </button></a>
                <br>
 
-               <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Administración</h3>
+               <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Administración</h3>
                Modificar Datos Personales, Ingresar Patoligías, Ingresar Medicamentos, Ingresar tipo de vacunas
                </button>
               

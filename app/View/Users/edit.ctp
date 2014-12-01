@@ -9,15 +9,15 @@
 		echo $this->Form->input('ID');
 		echo $this->Form->input('ID_GROUP', array('type'=> 'hidden'));
 		echo $this->Form->input('RUT_CLI' ,array('label'=> 'Rut','type'=>'text','class'=>"form-control required rut", 'placeholder'=>"Rut", 'id'=>"rut", 'required autofocus'));
-		echo $this->Form->input('NOMBRE_CLI',array('label'=> 'Nombre'));
-		echo $this->Form->input('APELLIDO_PCLI',array('label'=> 'Apellido Paterno'));
-		echo $this->Form->input('APELLIDO_MCLI',array('label'=> 'Apellido Materno'));
-		echo $this->Form->input('MAIL_CLI',array('label'=> 'E-Mail'));
-		echo $this->Form->input('TEL_CLI',array('label'=> 'Teléfono'));
-		echo $this->Form->input('FECHA_REGISTRO_CLI',array('type'=> 'hidden'));
-		echo $this->Form->input('DIR_CLI',array('label'=> 'Dirección'));
-		echo $this->Form->input('HABILITADO_CLI',array('type'=> 'hidden'));
-		echo $this->Form->input('PASSWORD_CLI',array('label'=> 'Contraseña'));
+		echo $this->Form->input('NOMBRE_CLI',array('label'=> 'Nombre','class'=>"form-control"));
+		echo $this->Form->input('APELLIDO_PCLI',array('label'=> 'Apellido Paterno','class'=>"form-control"));
+		echo $this->Form->input('APELLIDO_MCLI',array('label'=> 'Apellido Materno','class'=>"form-control"));
+		echo $this->Form->input('MAIL_CLI',array('label'=> 'E-Mail','class'=>"form-control"));
+		echo $this->Form->input('TEL_CLI',array('label'=> 'Teléfono','class'=>"form-control"));
+		echo $this->Form->input('FECHA_REGISTRO_CLI',array('type'=> 'hidden','class'=>"form-control"));
+		echo $this->Form->input('DIR_CLI',array('label'=> 'Dirección','class'=>"form-control"));
+		echo $this->Form->input('HABILITADO_CLI',array('type'=> 'hidden','class'=>"form-control"));
+		echo $this->Form->input('PASSWORD_CLI',array('label'=> 'Contraseña','class'=>"form-control"));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Ingresar')); ?>

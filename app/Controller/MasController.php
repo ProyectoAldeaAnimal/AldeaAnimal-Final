@@ -92,7 +92,6 @@ class MasController extends AppController {
 		$this->loadModel('Ficha');
 		$options = array('conditions' => array('FICHA.'. $this->Ma->primaryKey => $id));
 		$ficha = $this->Ficha->find('all',$options);
-		debug($ficha);
 		$this->set(compact('users', 'tipoMas'));
 	}
 

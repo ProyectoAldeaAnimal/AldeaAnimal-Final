@@ -63,7 +63,7 @@
                   </div>
               </nav>
 
-    <div class="callout3">
+    <div class="callout6">
       <div class="form-signin login-box" role="form">
         <div id= "ex4">
         <?php
@@ -108,17 +108,16 @@
 
     </div> <!-- /container -->
 
-<div class="lineFinal">
+ <div id="footer" class= "lineFinal footer">
       <div class="container">
-        <div class="row downLine">
-          <div class="col-md-6 text-left copy">
+             <div class="row downLine">
+              <div >
             <p>Copyright &copy; 2014 Aldea Animal.</p>
-          </div>
-          <div class="col-md-6 text-right dm">
           </div>
         </div>
       </div>
     </div>
+  
     <script>
           $('#rut').Rut({
             on_error: function(){swal(" Rut Incorrecto!", "Debe contener puntos y guiones", "error");

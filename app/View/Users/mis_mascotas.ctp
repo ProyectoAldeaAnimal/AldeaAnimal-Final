@@ -19,23 +19,23 @@
     <div class="row">
       <div class="col-md-9">
 
-           <a href="/AldeaAnimal/users/verDatosMascotas"><button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Ver Datos</h3>
+           <a href="/AldeaAnimal/users/verDatosMascotas"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Ver Datos</h3>
               Revisa los datos de tus mascotas
              </button></a>
              <br>
-              <a href="/AldeaAnimal/agendas/index"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Mis Solicitudes de Hora</h3>
+              <a href="/AldeaAnimal/agendas/index"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Mis Solicitudes de Hora</h3>
             Revise todas las solicitudes de hora que ha hecho
              </button></a>
              <br>
-              <a href="/AldeaAnimal/users/pre_solicitar_hora"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Solicitar Hora</h3>
+              <a href="/AldeaAnimal/users/pre_solicitar_hora"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Solicitar Hora</h3>
             Para algun servicio, con alguno de nuestros profesionales
              </button></a>
               <br>
-              <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Recetas</h3>
+              <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Recetas</h3>
             Para alguna de sus mascotas
              </button>
              <br>
-             <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Próximas fechas de control</h3>
+             <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Próximas fechas de control</h3>
             Consulta de fechas sugeridas para las prestaciones de la clínica
              </button>
              <br>

@@ -47,7 +47,8 @@ class RecmedsController extends AppController {
  */
 	public function add() {
 		$this->set('title_for_layout', 'Receta o Medicación');
-		if ($this->request->is('post')) {
+		debug($this->request->data);
+		if ($this->request->is('posta')) {
 			$this->Recmed->create();
 			if ($this->Recmed->save($this->request->data)) {
 				$this->Session->setFlash(__('The recmed has been saved.'));
