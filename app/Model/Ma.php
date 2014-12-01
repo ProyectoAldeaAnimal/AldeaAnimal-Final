@@ -32,17 +32,17 @@ class Ma extends AppModel {
 	            ),
             'login' => array(
 	                'rule' => 'alphaNumeric',
-	                'message' => 'Apellido inválido.'
+	                'message' => 'Nombre inválido.'
 	            )
 		    ),
 		'RAZA_MAS' => array(
 		    'required' => array(
                 'rule' => array('notEmpty'),
-                'message' => 'Ingrese un nombre válido'
+                'message' => 'Ingrese una raza válido'
 	            ),
             'login' => array(
 	                'rule' => 'alphaNumeric',
-	                'message' => 'Apellido inválido.'
+	                'message' => 'Raza inválido.'
 	            )
 		    ),
 	    'SEXO' => array(

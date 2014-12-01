@@ -111,17 +111,16 @@ array('controller' => 'users', 'action' => 'logout')); ?>
 
   </div>
 <br>
-    <div class="lineFinal">
+ <div id="footer" class= "lineFinal footer">
       <div class="container">
-        <div class="row downLine">
-          <div class="col-md-6 text-left copy">
+             <div class="row downLine">
+              <div >
             <p>Copyright &copy; 2014 Aldea Animal.</p>
           </div>
-          
         </div>
       </div>
     </div>
-    </div>    
+  
 
 
 	<?//php echo $this->element('sql_dump'); ?>

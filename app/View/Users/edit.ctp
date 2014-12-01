@@ -20,7 +20,7 @@
 		echo $this->Form->input('PASSWORD_CLI',array('label'=> 'Contraseña'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Ingresar')); ?>
 </div>
 <div class="actions">
 	<div id="ex5">

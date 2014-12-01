@@ -55,6 +55,7 @@ echo $mascotasCli[0]['mas']['FECHA_DEFUNCION'];
 		<td class="actions">
 			
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'editMascota', $mascotasCli['mas']['ID_MAS'])); ?>
+			<?php echo $this->Html->link(__('Ver Ficha'), array('action' => 'verMascota', $mascotasCli['mas']['ID_MAS'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

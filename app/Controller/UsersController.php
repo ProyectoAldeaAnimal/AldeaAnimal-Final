@@ -159,20 +159,30 @@ class UsersController extends AppController{
 			}
 			public function verDatosMascotas(){
 				$this->set('title_for_layout', 'Ver Datos Mascotas');
+				
+
+		
+				
+
 				$this->loadModel('Ma');
 				$usuario = AuthComponent::user();
 				$id = $usuario[0]['User']['ID'];
 				$mascotasCli= $this->Ma->query("SELECT * FROM mas WHERE ID =".$usuario[0]['User']['ID']);
 				if($mascotasCli){
 					$this->loadModel('TipoMa');
+					//$this->loadModel('Ficha');
 					$sql = "SELECT * FROM tipo_mas WHERE ID_TIPO_MAS =".$mascotasCli[0]['mas']['ID_TIPO_MAS'];
+
+					//$sql2 = "SELECT * FROM ficha WHERE ID_MAS =".$mascotasCli[0]['mas']['ID_MAS'];
+
 					for($i=1;$i< count($mascotasCli);$i++){
 						$sql = $sql." OR ID_TIPO_MAS =".$mascotasCli[$i]['mas']['ID_TIPO_MAS'];
+						//$sql2 = $sql2." OR ID_MAS =".$mascotasCli[$i]['mas']['ID_MAS'];
 
 					}
 					
 					$tipos= $this->TipoMa->query($sql);
-					
+					//$fichas = $this->Ficha->query($sql2);
 					$this->set(compact('mascotasCli','tipos'));
 				}	
 				else {
@@ -201,6 +211,10 @@ class UsersController extends AppController{
 			}
 			public function editMascota($id){
 				$this->redirect(array('controller' => 'mas', 'action' => 'edit',$id));
+
+			}
+			public function verMascota($id){
+				$this->redirect(array('controller' => 'mas', 'action' => 'view',$id));
 
 			}
 

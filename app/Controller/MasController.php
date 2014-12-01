@@ -33,11 +33,16 @@ class MasController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('title_for_layout', 'Ver Ficha');
 		if (!$this->Ma->exists($id)) {
 			throw new NotFoundException(__('Invalid ma'));
 		}
 		$options = array('conditions' => array('Ma.' . $this->Ma->primaryKey => $id));
-		$this->set('ma', $this->Ma->find('first', $options));
+		$ma= $this->Ma->find('first', $options);
+		$this->loadModel('Ficha');
+		$options = array('conditions' => array('Ficha.' . $this->Ficha->primaryKey => $id));
+		$ficha= $this->Ficha->find('first', $options);
+		$this->set(compact('ma','ficha'));
 	}
 
 /**
@@ -84,6 +89,10 @@ class MasController extends AppController {
 		}
 		$users = $this->Ma->User->find('list');
 		$tipoMas = $this->Ma->TipoMa->find('list');
+		$this->loadModel('Ficha');
+		$options = array('conditions' => array('FICHA.'. $this->Ma->primaryKey => $id));
+		$ficha = $this->Ficha->find('all',$options);
+		debug($ficha);
 		$this->set(compact('users', 'tipoMas'));
 	}
 

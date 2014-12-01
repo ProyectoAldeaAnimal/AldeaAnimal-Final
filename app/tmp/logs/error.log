@@ -19920,3 +19920,182 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-01 17:10:18 Error: [MissingTableException] Table fichas for model Ficha was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'fichas',
+  'class' => 'Ficha',
+  'ds' => 'default',
+)
+Request URL: /AldeaAnimal/users/verDatosMascotas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('fichas')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#2 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(186): AppModel->__construct(Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(738): ClassRegistry::init(Array)
+#5 C:\xampp\htdocs\AldeaAnimal\app\Controller\UsersController.php(162): Controller->loadModel('Ficha')
+#6 [internal function]: UsersController->verDatosMascotas()
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-12-01 17:29:32 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\MasController.php, line 97]
+2014-12-01 17:29:32 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /AldeaAnimal/mas/edit/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 97, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 97, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 22:34:07 Error: [MissingActionException] Action UsersController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'view',
+)
+Request URL: /AldeaAnimal/users/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 22:34:34 Error: [MissingActionException] Action UsersController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'view',
+)
+Request URL: /AldeaAnimal/users/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 22:41:16 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\View\Mas\view.ctp, line 4]
+2014-12-01 22:41:16 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING)
+Request URL: /AldeaAnimal/mas/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 22:42:41 Error: [MissingActionException] Action UsersController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'view',
+)
+Request URL: /AldeaAnimal/users/view/31
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 22:42:47 Error: [MissingActionException] Action UsersController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'view',
+)
+Request URL: /AldeaAnimal/users/view/31
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 22:48:21 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\AldeaAnimal\app\View\Mas\view.ctp, line 52]
+2014-12-01 22:48:21 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /AldeaAnimal/mas/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 52, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 52, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-01 22:55:43 Error: [MissingActionException] Action MasController::verDatosMascotas() could not be found.
+Exception Attributes: array (
+  'controller' => 'MasController',
+  'action' => 'verDatosMascotas',
+)
+Request URL: /AldeaAnimal/mas/verDatosMascotas/2/controler:vets
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 22:56:33 Error: [MissingActionException] Action MasController::verDatosMascotas() could not be found.
+Exception Attributes: array (
+  'controller' => 'MasController',
+  'action' => 'verDatosMascotas',
+)
+Request URL: /AldeaAnimal/mas/verDatosMascotas/1/controler:users
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(MasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 23:06:53 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:06:58 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:07:02 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-01 23:12:23 Error: [MissingActionException] Action UsersController::a() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'a',
+)
+Request URL: /AldeaAnimal/users/a
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 23:12:42 Error: [MissingActionException] Action UsersController::a() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'a',
+)
+Request URL: /AldeaAnimal/users/a
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-01 23:16:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`aldeaanimal`.`ins_pres`, CONSTRAINT `FK_TIENE_CONSUMO_DE` FOREIGN KEY (`ID_PRES`) REFERENCES `pres` (`ID_PRES`))
+Request URL: /AldeaAnimal/pres/delete/36
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('DELETE `Pre` FR...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\Database\Mysql.php(454): DboSource->execute('DELETE `Pre` FR...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2634): Mysql->delete(Object(Pre), Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\PresController.php(105): Model->delete()
+#5 [internal function]: PresController->delete('36')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PresController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PresController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

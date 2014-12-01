@@ -377,6 +377,6 @@ veterinarios y personal calificado, todos apasionados amantes de los animales y 
 
     </script>
 
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 </body>
 </html>
