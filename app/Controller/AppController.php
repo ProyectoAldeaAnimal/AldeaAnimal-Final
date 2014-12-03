@@ -37,7 +37,6 @@ class AppController extends Controller {
 			$controller = $params['controller'];
 			$controller = ucwords($controller);
 			$action;
-
 			if($params['action']) $action= $params['action'];
 
 			//debug('controllers/'.$controller.'/'.$action);
@@ -86,11 +85,12 @@ class AppController extends Controller {
 								), 'controllers/'.$controller);
 						}
 			}
+
 			if($permisoUsuario){
 				return true;
 			}
 			else{
-				return true;
+				return false;
 			}
 						
 	}

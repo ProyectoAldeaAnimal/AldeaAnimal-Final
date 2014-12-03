@@ -21,6 +21,7 @@ class AtencionsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('title_for_layout', 'Lista De Atenciones');
 		$this->Atencion->recursive = 0;
 		$this->set('atencions', $this->Paginator->paginate());
 	}
@@ -33,6 +34,7 @@ class AtencionsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('title_for_layout', 'Ver Atención');
 		if (!$this->Atencion->exists($id)) {
 			throw new NotFoundException(__('Invalid atencion'));
 		}
@@ -45,7 +47,7 @@ class AtencionsController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($id = null) {
 		$this->set('title_for_layout', 'Generar Atención');
 		if ($this->request->is('post')) {
 			$data= $this->request->data;
@@ -62,7 +64,13 @@ class AtencionsController extends AppController {
 		}
 		$pres = $this->Atencion->Pre->find('list');
 		$tipoPres = $this->Atencion->TipoPre->find('list');
-		$mas = $this->Atencion->Ma->find('list');
+		$options = array('conditions' => array('Ma.ID'	=> $id));
+		$mas = $this->Atencion->Ma->find('list',$options);
+		if(count($mas)<1){
+
+			$this->Session->setFlash(__('El cliente no tiene mascotas registradas'));
+			return $this->redirect(array('controller'=>'vets','action' => 'seleccion_cliente'));
+		} 
 		$pats = $this->Atencion->Pat->find('list');
 		$this->set(compact('pres', 'tipoPres', 'mas', 'pats'));
 	}

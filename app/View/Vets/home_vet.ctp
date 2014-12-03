@@ -27,10 +27,13 @@
                </button></a>
             
                 <br>
-                <a href="/AldeaAnimal/atencions/add"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Generar Atención</h3>
+                <a href="/AldeaAnimal/vets/seleccion_cliente"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Generar Atención</h3>
                </button></a>
                <br>
-
+  
+              <a href="/AldeaAnimal/atencions/index"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Ver Atenciones</h3>
+                       </button></a>
+               <br>
               
                
                <a href="/AldeaAnimal/users/add"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Registrar Nuevo Cliente</h3>

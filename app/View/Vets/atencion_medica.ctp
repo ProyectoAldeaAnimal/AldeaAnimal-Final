@@ -7,10 +7,13 @@ $this->layout= 'head';
 
 		<div class="row">
 			<div class="col col-md-7">
-				<a href="/AldeaAnimal/recmeds/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" 	>
+				<a href="/AldeaAnimal/recmeds/select_meds"> <button type="button" class="btn btn-sm btn-primary btn-block color13" 	>
 				<h4>Generar Receta o Medicación</h4></button></a>
 				<br>
-				<a href="#"> <button type="button" class="btn btn-sm btn-primary btn-block color13" 	>
+				<a href="/AldeaAnimal/recmeds/index"> <button type="button" class="btn btn-sm btn-primary btn-block color13" 	>
+				<h4>Ver Recetas</h4></button></a>
+				<br>
+				<a href="/AldeaAnimal/procs/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" 	>
 				<h4>Procedimiento</h4>Próximas Vacunaciones, desparacitaciones, entre otros</button></a>
 				<br>
 				<a href="/AldeaAnimal/ordenexes/add"> <button type="button" class="btn btn-sm btn-primary btn-block color13" 	>

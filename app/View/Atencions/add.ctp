@@ -10,6 +10,7 @@
 
 		echo $this->Form->input('ID_ATENCION', array(
 			'type' => 'hidden',
+
 			));
 		echo $this->Form->input('ID_PRES', array(
 			'label' => 'Seleccione el servicio a realizar: <br>',
@@ -28,36 +29,42 @@
 			
 			));
 		echo $this->Form->input('PESO', array(
-			'label' => 'Ingrese el peso de la mascota en Kg:'
+			'label' => 'Ingrese el peso de la mascota en Kg:',
+			'class'=> 'form-control'
 			
 			));
 		echo $this->Form->input('TEMPERATURA', array(
-			'label' => 'Ingrese la temperatura de la mascota C°:'
+			'label' => 'Ingrese la temperatura de la mascota C°:',
+			'class'=> 'form-control'
 			
 			));
 		echo $this->Form->input('MOTIVO', array(
-			'label' => 'Ingrese en pocas palabras el motivo de la atención:'
+			'label' => 'Ingrese en pocas palabras el motivo de la atención:',
+			'class'=> 'form-control'
 			
 			));
 		echo $this->Form->input('ANAMNESIS', array(
 			'label' => 'Ingrese antecedentes aportados por el dueño (ANAMNESIS):',
 			'type'  => 'textarea',
 			'class' =>'colorBlanco' ,
+			'class'=> 'form-control'
 			
 			));
 		echo $this->Form->input('DIAGNOSTICO', array(
 			'label' => 'Ingrese su diagnóstico:',
 			'type'  => 'textarea',
-			'class' =>'colorBlanco' ,
+			'class' =>'colorBlanco',
+			'class'=> 'form-control'
 			
 			));
 		echo $this->Form->input('Pat', array(
-			'label' => 'Seleccione alguna de las patologías identificadas o ninguna si no es necesario:'
+			'label' => 'Seleccione alguna de las patologías identificadas o ninguna si no es necesario:',
+			'class'=> 'form-control'
 			
 			));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Generar')); ?>
 </div>
 <div class="actions">
 	<div id="ex5">

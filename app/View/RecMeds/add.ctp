@@ -9,21 +9,39 @@
 	<?php
 		echo $this->Form->input('ID_ATENCION', array(
 				'label' => 'Atención: <br>',
-				'options' => $atencions
+				'options' => $atencions,
+				'class'=> 'form-control'
 			));
 		$rOm = array('M'=> 'Medicación', 'R' => 'Receta');
 		echo $this->Form->input('TIPO', array(
 				'label' => 'Seleccione si esta realizando una medicación o una receta: <br>',
-				'options' => $rOm
+				'options' => $rOm,
+				'class'=> 'form-control'
 			));
 		echo $this->Form->input('OBS_RECETA', array(
 				'label' => 'Ingrese las observaciones que estime pertinentes: <br>',
-				'type' => 'textarea'
+				'type' => 'textarea',
+				'class'=> 'form-control'
 			));
-		echo $this->Form->input('Farmaco');
+		for ($i=0; $i<$params['param']; $i++) {
+			
+			echo $this->Form->input('Farmaco '.$i, array(
+				'label' => 'Fármaco '.($i+1).': <br>',
+				'type' => 'select',
+				'class'=> 'form-control',
+				'options' => $farmacos
+			));
+
+			echo $this->Form->input('Posologia '.$i, array(
+				'label' => 'Posología: <br>',
+				'type' => 'textarea',
+				'class'=> 'form-control' 
+			));
+		}
+
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Listo')); ?>
 </div>
 <div class="actions">
 	<div id="ex5">

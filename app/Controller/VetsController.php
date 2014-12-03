@@ -471,6 +471,29 @@ class VetsController extends AppController {
 		$this->set(compact('groups'));
 	}
 
+
+
+
+	public function seleccion_cliente(){
+		$this->set('title_for_layout', 'Selección Cliente');
+
+
+		
+
+		if($this->request->is('post')){
+
+			$id = $this->request->data['cliente']['NOMBRE_CLI'];
+			return $this->redirect(array(
+				'controller' => 'atencions',
+				'action' => 'add',
+				$this->request->data['cliente']['NOMBRE_CLI']
+				));
+		}
+		$this->loadModel('User');
+		$users=$this->User->find('list');
+		$this->set(compact('users'));
+
+	}
 /**
  * delete method
  *
