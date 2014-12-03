@@ -58,7 +58,7 @@ $this->layout = 'layoutVacio'
             <div class="container m1 menu">
               <div class= "collapse navbar-collapse navbar-ex1-collapse">
                   <ul  class ="nav navbar-nav subMenu" >
-                      <li><a class= "page-scroll"href="/AldeaAnimal/vets/homeVet"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Administración - Veterinario</FONT></a></li>                    
+                      <li><a class= "page-scroll"href="/AldeaAnimal/"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
                       <!--li><a href="#features">Features</a></li-->
                     
                   </ul>

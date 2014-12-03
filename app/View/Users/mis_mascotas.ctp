@@ -31,13 +31,19 @@
             Para algun servicio, con alguno de nuestros profesionales
              </button></a>
               <br>
+
+              <a href="/AldeaAnimal/recmeds/recetas_mas"> 
+            
               <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Recetas</h3>
             Para alguna de sus mascotas
-             </button>
+             </button></a>
              <br>
+  
+            
+              <a href="/AldeaAnimal/recmeds/recetas_mas"> 
              <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Próximas fechas de control</h3>
             Consulta de fechas sugeridas para las prestaciones de la clínica
-             </button>
+             </button></a>
              <br>
              <button type="button" class="btn btn-lg btn-primary btn-block color13" > <h3>Historial Mascota</h3>
              </button>

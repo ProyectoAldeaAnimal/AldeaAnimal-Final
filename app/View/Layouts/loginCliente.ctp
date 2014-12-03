@@ -83,6 +83,7 @@
         </div>
      
           <div class="users form">
+            <FONT COLOR="#FFFFFF">
               <?php echo $this->Session->flash('auth'); ?>
               <?php echo $this->Form->create('User', array('action'=>'login', 'type'=>'post')); ?>
               <fieldset>
@@ -102,7 +103,7 @@
                       <?php echo $this->Form->end();*/?>
         
                  
-
+            </FONT>
           </div>
       
 

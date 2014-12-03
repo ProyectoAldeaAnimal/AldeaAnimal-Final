@@ -1,9 +1,8 @@
 
 <?php 
-$this->layout = 'headVets';
+$this->layout = 'headClientes';
 ?>
 
-<div class="container well">
 	<div class="atencions view">
 		<legend><FONT COLOR="#229b0d"><h3><?php echo __('Atencion N°'.$atencion['Atencion']['ID_ATENCION']); ?></h3></FONT></legend>
 
@@ -135,7 +134,7 @@ $this->layout = 'headVets';
 		<h3><?php echo __('Actions'); ?></h3>
 		<ul>
 
-			<li><?php echo $this->Html->link(__('Atrás'), array('action' => 'index')); ?> </li>
+			<li><?php echo $this->Html->link(__('Atrás'), array('controller'=>'recmeds','action' => 'recetas_mas')); ?> </li>
 
 		</ul>
 	</div>
@@ -165,5 +164,4 @@ $this->layout = 'headVets';
 	<?php endif; ?>
 	</div>
 
-</div>
 

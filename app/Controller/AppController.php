@@ -90,6 +90,7 @@ class AppController extends Controller {
 				return true;
 			}
 			else{
+				// HABILITA O DESAHABILITA LA SEGURIDAD
 				return false;
 			}
 						

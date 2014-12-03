@@ -48,16 +48,50 @@ class RecmedsController extends AppController {
 		$this->set(compact('recmed','posologias'));
 	}
 
+
+	public function view2($id = null) {
+		if (!$this->Recmed->exists($id)) {
+			throw new NotFoundException(__('Invalid recmed'));
+		}
+
+		$options = array('conditions' => array('Recmed.' . $this->Recmed->primaryKey => $id));
+		$recmed=$this->Recmed->find('first', $options);
+		$this->loadModel('FarRec');
+		$options = array('conditions' => array('FarRec.' . $this->Recmed->primaryKey => $id));
+		$posologias=$this->FarRec->find('all', $options);
+		$this->set(compact('recmed','posologias'));
+	}
+
 /**
  * add method
  *
  * @return void
  */
+	public function recetas_mas(){
+		$this->set('title_for_layout', 'Recetas');
+		$usuario = AuthComponent::user();
+		$this->loadModel('Ma');
+		$options = array('conditions' => array('Ma.ID' => $usuario[0]['User']['ID']));
+		$mas= $this->Ma->find('all',$options);
+		
+		$this->loadModel('RecMed');
+		$this->RecMed->recursive = 0;
+		$recMed = $this->Paginator->paginate('RecMed');
+		$recMeds;
+		for ($j=0; $j <count($recMed) ; $j++) { 
+			for ($i=0; $i <count($mas) ; $i++) { 
+				if($recMed[$j]['Atencion']['ID_MAS']== $mas[$i]['Ma']['ID_MAS']){
+					$recMeds[$j]= $recMed[$j];
+				}
+			}
+		}
+		
+		$this->set(compact('recMeds'));
 
+	}
 
 	
 	public function select_meds(){
-		$this->set('title_for_layout', 'Número de Fármacos');
 		$data = $this->request->data;
 		if($this->request->is('post'))return $this->redirect(array('controller'=>'recmeds','action' => 'add', '?'=> array('param'=>$data['NumMeds']['NUMERO']),$data));
 	}
@@ -66,8 +100,8 @@ class RecmedsController extends AppController {
 	public function add() {
 		$this->set('title_for_layout', 'Receta o Medicación');
 		$params = $this->params['url'];
-
 		if ($this->request->is('post')) {
+
 			$data = $this->request->data;
 			$receta['ID_ATENCION'] = $data['RecMed']['ID_ATENCION'];
 			$receta['TIPO'] = $data['RecMed']['TIPO'];
@@ -84,11 +118,10 @@ class RecmedsController extends AppController {
 			$this->Recmed->create();
 
 			if ($recTemp = $this->Recmed->save($receta)) {
-
-			
 				$this->loadModel('FarRec');
 				for ($i=0; $i < count($medicamentos); $i++) {
-					$this->FarRec->create(); 
+					$this->FarRec->create();
+					$medicamentos[$i]['ID_ATENCION'] = $recTemp['Recmed']['ID_ATENCION']; 
 					$medicamentos[$i]['ID_RECETA'] = $recTemp['Recmed']['ID_RECETA'];
 					if (!$this->FarRec->save($medicamentos[$i])) {
 						$this->Session->setFlash(__('Ha ocurrido un error ingresando los medicamentos'));

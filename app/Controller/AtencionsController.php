@@ -42,6 +42,16 @@ class AtencionsController extends AppController {
 		$this->set('atencion', $this->Atencion->find('first', $options));
 	}
 
+
+	public function view2($id = null) {
+		$this->set('title_for_layout', 'Ver Atención');
+		if (!$this->Atencion->exists($id)) {
+			throw new NotFoundException(__('Invalid atencion'));
+		}
+		$options = array('conditions' => array('Atencion.' . $this->Atencion->primaryKey => $id));
+		$this->set('atencion', $this->Atencion->find('first', $options));
+	}
+
 /**
  * add method
  *

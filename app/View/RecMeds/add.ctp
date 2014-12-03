@@ -1,5 +1,6 @@
 <?php
 	$this->layout= 'head';
+	debug(date("d",strtotime(end($atencions))));
 ?>
 
 <div class="recMeds form">
@@ -10,7 +11,9 @@
 		echo $this->Form->input('ID_ATENCION', array(
 				'label' => 'Atención: <br>',
 				'options' => $atencions,
-				'class'=> 'form-control'
+				'class'=> 'form-control',
+				'selected' => array(end($atencions)),
+				'selected' =>array('month'=>date("m",strtotime(end($atencions))), 'day'=>'')
 			));
 		$rOm = array('M'=> 'Medicación', 'R' => 'Receta');
 		echo $this->Form->input('TIPO', array(

@@ -79,41 +79,106 @@
 				</tr>
 				<tr>
 					<td>
-						<?php echo $this->Form->input('LUN', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')))?>
-						<?php echo $this->Form->input('LUN2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
-					</td>
-					<td>
-						<?php echo $this->Form->input('MAR', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')));?>				
-						<?php echo $this->Form->input('MAR2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
-					</td>
-					<td>
-						<?php echo $this->Form->input('MIER', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')	));?>
+						<?php echo $this->Form->input('LUN', array(
+							'label'=>'De:   ',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'')
+						))?>
+						<?php echo $this->Form->input('LUN2', array(
+							'label'=>'Hasta:',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'')
 						
-						<?php echo $this->Form->input('MIER2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
+						));?>
 					</td>
 					<td>
-						<?php echo $this->Form->input('JUE', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')));?>						
-						<?php echo $this->Form->input('JUE2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>
+						<?php echo $this->Form->input('MAR', array(
+							'label'=>'De:   ',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'')
+						))?>				
+						<?php echo $this->Form->input('MAR2', array(
+							'label'=>'Hasta:',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'')
+						
+						));?>
 					</td>
 					<td>
-						<?php echo $this->Form->input('VI', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'','min'=>'00')));?>				
-						<?php echo $this->Form->input('VI2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'','min'=>'00')));?>		
+						<?php echo $this->Form->input('MIER', array(
+							'label'=>'De:   ',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'')
+						))?>
+						
+						<?php echo $this->Form->input('MIER2', array(
+							'label'=>'Hasta:',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'')
+						
+						));?>
 					</td>
 					<td>
-						<?php echo $this->Form->input('SAB', array('label'=>'De:   ','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['IN_SAB'].'','min'=>'00')));?>
-						<?php echo $this->Form->input('SAB2', array('label'=>'Hasta:','type' => 'time',
-						'timeFormat'=>'24','selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SAB'].'','min'=>'00')));?>
+						<?php echo $this->Form->input('JUE', array(
+							'label'=>'De:   ',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'')
+						))?>						
+						<?php echo $this->Form->input('JUE2', array(
+							'label'=>'Hasta:',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'')
+						
+						));?>
+					</td>
+					<td>
+						<?php echo $this->Form->input('VI', array(
+							'label'=>'De:   ',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['IN_SEMANA'].'')
+						))?>				
+						<?php echo $this->Form->input('VI2', array(
+							'label'=>'Hasta:',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected'=>array('hour'=>''.$parametros[0]['par']['FIN_SEMANA'].'')
+						
+						));?>		
+					</td>
+					<td>
+						<?php echo $this->Form->input('SAB', array(
+							'label'=>'De:   ',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['IN_SAB'].'')
+						));?>
+						<?php echo $this->Form->input('SAB2', array(
+							'label'=>'Hasta:',
+							'type' => 'time',
+							'timeFormat'=>'24',
+							'interval' => $parametros[0]['par']['TAM_BLOQUE'],
+							'selected' =>array('hour'=>''.$parametros[0]['par']['FIN_SAB'].'')
+						));?>
 					</td>
 				</tr>
 			</table>
