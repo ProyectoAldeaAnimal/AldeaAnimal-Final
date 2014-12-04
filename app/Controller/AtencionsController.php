@@ -59,6 +59,9 @@ class AtencionsController extends AppController {
  */
 	public function add($id = null) {
 		$this->set('title_for_layout', 'Generar Atención');
+
+		date_default_timezone_set('America/Santiago');
+
 		if ($this->request->is('post')) {
 			$data= $this->request->data;
 			$options = array('conditions' => array('Pre.ID_PRES' =>$data['Atencion']['ID_PRES']));

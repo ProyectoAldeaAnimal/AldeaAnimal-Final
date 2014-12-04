@@ -45,10 +45,10 @@
                </button></a>
                <br>
 
-               <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Administración</h3>
+               <a href="/AldeaAnimal/vets/administracion_vet"><button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Administración</h3>
                Modificar Datos Personales, Ingresar Patoligías, Ingresar Medicamentos, Ingresar tipo de vacunas
                </button>
-              
+              </a>
 
         
       </div>

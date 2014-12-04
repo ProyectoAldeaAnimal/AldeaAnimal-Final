@@ -36,6 +36,11 @@
              	Ingresar o modificar Prestaciones ofrecidas por la clínica
                </button></a>
                <br>
+                <a href="/AldeaAnimal/pars/index"> <button type="button" class="btn btn-lg btn-primary btn-block color13" style="background:#229b0d;"> <h3>Registro de Parámetros</h3>
+              Precaución con el uso de esta funcionalidad, puede afectar el funcionamiento del sistema.
+               </button></a>
+               <br>
+              
               
 
         

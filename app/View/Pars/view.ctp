@@ -21,6 +21,26 @@
 			<?php echo h($par['Par']['FIN_VIGENCIA']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('IN SEMANA'); ?></dt>
+		<dd>
+			<?php echo h($par['Par']['IN_SEMANA']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('FIN SEMANA'); ?></dt>
+		<dd>
+			<?php echo h($par['Par']['FIN_SEMANA']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('IN SAB'); ?></dt>
+		<dd>
+			<?php echo h($par['Par']['IN_SAB']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('FIN SAB'); ?></dt>
+		<dd>
+			<?php echo h($par['Par']['FIN_SAB']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

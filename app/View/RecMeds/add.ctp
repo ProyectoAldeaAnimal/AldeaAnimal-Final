@@ -1,6 +1,13 @@
 <?php
 	$this->layout= 'head';
-	debug(date("d",strtotime(end($atencions))));
+//	debug(date("Y:m:d H:i:s",strtotime(end($atencions))));
+
+	
+	$atenciones;
+	foreach ($atencions as $key => $atencion) {
+	 	$atenciones = $key;
+	}
+	
 ?>
 
 <div class="recMeds form">
@@ -12,8 +19,8 @@
 				'label' => 'Atención: <br>',
 				'options' => $atencions,
 				'class'=> 'form-control',
-				'selected' => array(end($atencions)),
-				'selected' =>array('month'=>date("m",strtotime(end($atencions))), 'day'=>'')
+				'selected' => $atenciones
+				//'selected' =>array('hour'=>''.date("H",strtotime(end($atencions))).'','day'=>date("d",strtotime(end($atencions))),
 			));
 		$rOm = array('M'=> 'Medicación', 'R' => 'Receta');
 		echo $this->Form->input('TIPO', array(
