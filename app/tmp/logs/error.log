@@ -21135,3 +21135,189 @@ Request URL: /AldeaAnimal/AldeaAnimal/
 Stack Trace:
 #0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-12-04 00:42:37 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 197]
+2014-12-04 00:42:37 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/vets/miAgenda
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 197)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 197, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 197, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 00:42:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sql' at line 1
+Request URL: /AldeaAnimal/vets/miAgenda
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('sql', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('sql', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('sql', Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(808): DboSource->query('sql', Array, Object(Agenda))
+#5 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(197): Model->__call('sql', Array)
+#6 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(197): Agenda->sql('CALL `Numero de...')
+#7 [internal function]: VetsController->miAgenda()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-04 00:44:11 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sql' at line 1
+Request URL: /AldeaAnimal/vets/miAgenda
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('sql', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('sql', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('sql', Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(808): DboSource->query('sql', Array, Object(Agenda))
+#5 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(197): Model->__call('sql', Array)
+#6 C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php(197): Agenda->sql('CALL `Numero de...')
+#7 [internal function]: VetsController->miAgenda()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(VetsController), Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-04 00:48:21 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 198]
+2014-12-04 00:48:21 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/vets/miAgenda
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 00:48:45 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 198]
+2014-12-04 00:48:45 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/vets/miAgenda
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 00:48:46 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 198]
+2014-12-04 00:48:46 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/vets/miAgenda
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 01:02:57 Error: Fatal Error (4): syntax error, unexpected '[', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 404]
+2014-12-04 01:02:57 Error: [FatalErrorException] syntax error, unexpected '[', expecting ']'
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 01:04:22 Error: Fatal Error (4): syntax error, unexpected '[', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 404]
+2014-12-04 01:04:22 Error: [FatalErrorException] syntax error, unexpected '[', expecting ']'
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 01:06:24 Error: Fatal Error (4): syntax error, unexpected '[', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 404]
+2014-12-04 01:06:24 Error: [FatalErrorException] syntax error, unexpected '[', expecting ']'
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-04 01:06:55 Error: Fatal Error (4): syntax error, unexpected '[', expecting ']' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 404]
+2014-12-04 01:06:55 Error: [FatalErrorException] syntax error, unexpected '[', expecting ']'
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 404, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-03 21:07:58 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT FECHA_CA...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT FECHA_CA...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT FECHA_CA...')
+#4 [internal function]: DboSource->query('SELECT FECHA_CA...')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3354): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php(395): Model->query('SELECT FECHA_CA...')
+#7 [internal function]: OfertaHorsController->agregarOfertaHoraria()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(OfertaHorsController), Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-03 21:08:25 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT FECHA_CA...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT FECHA_CA...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT FECHA_CA...')
+#4 [internal function]: DboSource->query('SELECT FECHA_CA...')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3354): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php(395): Model->query('SELECT FECHA_CA...')
+#7 [internal function]: OfertaHorsController->agregarOfertaHoraria()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(OfertaHorsController), Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-03 21:11:17 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 2014-12-01' at line 1
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT FECHA_CA...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT FECHA_CA...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT FECHA_CA...')
+#4 [internal function]: DboSource->query('SELECT FECHA_CA...')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3354): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php(395): Model->query('SELECT FECHA_CA...')
+#7 [internal function]: OfertaHorsController->agregarOfertaHoraria()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(OfertaHorsController), Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-03 21:11:28 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '2014-12-01'' at line 1
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT FECHA_CA...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT FECHA_CA...', Array, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(537): DboSource->fetchAll('SELECT FECHA_CA...')
+#4 [internal function]: DboSource->query('SELECT FECHA_CA...')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3354): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php(395): Model->query('SELECT FECHA_CA...')
+#7 [internal function]: OfertaHorsController->agregarOfertaHoraria()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(OfertaHorsController), Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(OfertaHorsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-04 01:24:44 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\Debugger.php, line 802]
+2014-12-04 01:24:44 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 802)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 802, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 802, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

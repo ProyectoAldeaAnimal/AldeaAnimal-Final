@@ -191,6 +191,10 @@ class VetsController extends AppController {
 	public function miAgenda(){
 
 		$this->set('title_for_layout', 'Mi Agenda');
+		$this->loadModel('Agenda');
+		$usuario = AuthComponent::user();
+		$numSol =$this->Agenda->query('CALL `SP_NUM_AGENDA`('.$usuario[0]['Vet']['ID_VET'].')');
+		$this->set(compact('numSol'));
 	}
 
 	public function solicitudesHora(){

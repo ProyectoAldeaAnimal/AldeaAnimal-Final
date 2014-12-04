@@ -64,93 +64,57 @@ class OfertaHorsController extends AppController {
 
 	public function agregarOfertaHoraria() {
 		$this->set('title_for_layout', 'Oferta Horaria');
+		
 		if ($this->request->is('post')) {
-			// Se obtiene los datos del formulario
-			$requesData = $this->request->data;
-			$next = 1;
-			// Se carga el tamaño de bloque
-		 	$this->loadModel('Par');
-			$tamañoBloque= $this->Par->query("SELECT TAM_BLOQUE FROM par WHERE ID_PAR IN (SELECT MAX(ID_PAR) FROM par)");
-			$tempHora = $requesData;
-		
+				// Se obtiene los datos del formulario
+			$usuario = AuthComponent::user();
+			$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET']));
+			$ofertas = $this->OfertaHor->find('all',$options);
 
-			// Arreglo para guardar los datos que entraran a la base de datos
-			$datos = array();
-			// Se busca el id de la fecha seleccionada
-			$fecha= $this->OfertaHor->Cal->find('all',array(
-								'conditions' => array(
-										'Cal.FECHA_CAL' => $requesData['OfertaHor']['varDate'])
-									)
-							);
 
-			// INGRESO DEL DÍA LUNES DE LA SEMANA
-			//Se cargan los datos de la oferta horaria en el arreglo
-			while($tempHora['OfertaHor']['LUN']!=$tempHora['OfertaHor']['LUN2']){
-				if($tempHora['OfertaHor']['LUN']==$tempHora['OfertaHor']['LUN2']){
-
-				}
-				else{
-					$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-					$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
-					$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
-					$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['LUN'];
-					
-					$tempHora['OfertaHor']['LUN']['min'] = (string) ($tempHora['OfertaHor']['LUN']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
-					if ($tempHora['OfertaHor']['LUN']['min']=='60'){
-
-						$tempHora['OfertaHor']['LUN']['min']='00';
-						$tempHora['OfertaHor']['LUN']['hour'] = (string)($tempHora['OfertaHor']['LUN']['hour']+1);
-						$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['LUN'];
-					}
-					else{
-						$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['LUN'];
-					}
-					//debug($datos);
-					$this->OfertaHor->create();
-
-					if ($this->OfertaHor->save($datos)) {
-						$next=1;
-						
-					} else {
-						$next=0;
-						$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
-					}	
-				}
-				
+			$ofertaRepetida = false;
+			foreach ($ofertas as $key => $oferta) {
+				if($oferta['Cal']['FECHA_CAL']== $this->request->data['OfertaHor']['varDate']) $ofertaRepetida = true;
 			}
+			if(!$ofertaRepetida){
+				$requesData = $this->request->data;
+				$next = 1;
+				// Se carga el tamaño de bloque
+			 	$this->loadModel('Par');
+				$tamañoBloque= $this->Par->query("SELECT TAM_BLOQUE FROM par WHERE ID_PAR IN (SELECT MAX(ID_PAR) FROM par)");
+				$tempHora = $requesData;
 			
 
-			if($next==1){
-				$nextfecha=$fecha[0]['Cal']['FECHA_CAL'];
-				$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$tempfecha=(string)($nextfecha +1);
-				$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+				// Arreglo para guardar los datos que entraran a la base de datos
+				$datos = array();
+				// Se busca el id de la fecha seleccionada
 				$fecha= $this->OfertaHor->Cal->find('all',array(
 									'conditions' => array(
-											'Cal.FECHA_CAL' => $nextfecha)
+											'Cal.FECHA_CAL' => $requesData['OfertaHor']['varDate'])
 										)
 								);
-				// INGRESO DEL DIA MARTES DE LA SEMANA
-				while($tempHora['OfertaHor']['MAR']!=$tempHora['OfertaHor']['MAR2']){
-					if($tempHora['OfertaHor']['MAR']==$tempHora['OfertaHor']['MAR2']){
+
+				// INGRESO DEL DÍA LUNES DE LA SEMANA
+				//Se cargan los datos de la oferta horaria en el arreglo
+				while($tempHora['OfertaHor']['LUN']!=$tempHora['OfertaHor']['LUN2']){
+					if($tempHora['OfertaHor']['LUN']==$tempHora['OfertaHor']['LUN2']){
 
 					}
 					else{
 						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
 						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
 						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
-						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['MAR'];
+						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['LUN'];
 						
-						$tempHora['OfertaHor']['MAR']['min'] = (string) ($tempHora['OfertaHor']['MAR']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
-						if ($tempHora['OfertaHor']['MAR']['min']=='60'){
+						$tempHora['OfertaHor']['LUN']['min'] = (string) ($tempHora['OfertaHor']['LUN']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
+						if ($tempHora['OfertaHor']['LUN']['min']=='60'){
 
-							$tempHora['OfertaHor']['MAR']['min']='00';
-							$tempHora['OfertaHor']['MAR']['hour'] = (string)($tempHora['OfertaHor']['MAR']['hour']+1);
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MAR'];
+							$tempHora['OfertaHor']['LUN']['min']='00';
+							$tempHora['OfertaHor']['LUN']['hour'] = (string)($tempHora['OfertaHor']['LUN']['hour']+1);
+							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['LUN'];
 						}
 						else{
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MAR'];
+							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['LUN'];
 						}
 						//debug($datos);
 						$this->OfertaHor->create();
@@ -161,212 +125,286 @@ class OfertaHorsController extends AppController {
 						} else {
 							$next=0;
 							$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
-						}
+						}	
 					}
 					
 				}
 				
-			}
 
-			if($next==1){
-				$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$tempfecha=(string)($nextfecha +1);
-				$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
-				$fecha= $this->OfertaHor->Cal->find('all',array(
-									'conditions' => array(
-											'Cal.FECHA_CAL' => $nextfecha)
-										)
-								);
-				// Ingreso del dia miercoles de la semana
-				while($tempHora['OfertaHor']['MIER']!=$tempHora['OfertaHor']['MIER2']){
-					if($tempHora['OfertaHor']['MIER']==$tempHora['OfertaHor']['MIER2']){
+				if($next==1){
+					$nextfecha=$fecha[0]['Cal']['FECHA_CAL'];
+					$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$tempfecha=(string)($nextfecha +1);
+					$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+					$fecha= $this->OfertaHor->Cal->find('all',array(
+										'conditions' => array(
+												'Cal.FECHA_CAL' => $nextfecha)
+											)
+									);
+					// INGRESO DEL DIA MARTES DE LA SEMANA
+					while($tempHora['OfertaHor']['MAR']!=$tempHora['OfertaHor']['MAR2']){
+						if($tempHora['OfertaHor']['MAR']==$tempHora['OfertaHor']['MAR2']){
 
-					}
-					else{
-						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
-						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
-						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['MIER'];
-						
-						$tempHora['OfertaHor']['MIER']['min'] = (string) ($tempHora['OfertaHor']['MIER']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
-						if ($tempHora['OfertaHor']['MIER']['min']=='60'){
-
-							$tempHora['OfertaHor']['MIER']['min']='00';
-							$tempHora['OfertaHor']['MIER']['hour'] = (string)($tempHora['OfertaHor']['MIER']['hour']+1);
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MIER'];
 						}
 						else{
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MIER'];
-						}
-						//debug($datos);
-						$this->OfertaHor->create();
-
-						if ($this->OfertaHor->save($datos)) {
-							$next=1;
+							$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
+							$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
+							$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
+							$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['MAR'];
 							
-						} else {
-							$next=0;
-							$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							$tempHora['OfertaHor']['MAR']['min'] = (string) ($tempHora['OfertaHor']['MAR']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
+							if ($tempHora['OfertaHor']['MAR']['min']=='60'){
+
+								$tempHora['OfertaHor']['MAR']['min']='00';
+								$tempHora['OfertaHor']['MAR']['hour'] = (string)($tempHora['OfertaHor']['MAR']['hour']+1);
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MAR'];
+							}
+							else{
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MAR'];
+							}
+							//debug($datos);
+							$this->OfertaHor->create();
+
+							if ($this->OfertaHor->save($datos)) {
+								$next=1;
+								
+							} else {
+								$next=0;
+								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							}
 						}
+						
 					}
 					
 				}
-				
-			}
-			
-			if($next==1){
-				$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$tempfecha=(string)($nextfecha +1);
-				$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
-				$fecha= $this->OfertaHor->Cal->find('all',array(
-									'conditions' => array(
-											'Cal.FECHA_CAL' => $nextfecha)
-										)
-								);
 
-				//Ingreso del dia jueves de la semana
-				while($tempHora['OfertaHor']['JUE']!=$tempHora['OfertaHor']['JUE2']){
-					if($tempHora['OfertaHor']['JUE']==$tempHora['OfertaHor']['JUE2']){
+				if($next==1){
+					$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$tempfecha=(string)($nextfecha +1);
+					$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+					$fecha= $this->OfertaHor->Cal->find('all',array(
+										'conditions' => array(
+												'Cal.FECHA_CAL' => $nextfecha)
+											)
+									);
+					// Ingreso del dia miercoles de la semana
+					while($tempHora['OfertaHor']['MIER']!=$tempHora['OfertaHor']['MIER2']){
+						if($tempHora['OfertaHor']['MIER']==$tempHora['OfertaHor']['MIER2']){
 
-					}
-					else{
-						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
-						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
-						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['JUE'];
-						
-						$tempHora['OfertaHor']['JUE']['min'] = (string) ($tempHora['OfertaHor']['JUE']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
-						if ($tempHora['OfertaHor']['JUE']['min']=='60'){
-
-							$tempHora['OfertaHor']['JUE']['min']='00';
-							$tempHora['OfertaHor']['JUE']['hour'] = (string)($tempHora['OfertaHor']['JUE']['hour']+1);
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['JUE'];
 						}
 						else{
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['JUE'];
-						}
-						//debug($datos);
-						$this->OfertaHor->create();
-
-						if ($this->OfertaHor->save($datos)) {
-							$next=1;
+							$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
+							$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
+							$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
+							$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['MIER'];
 							
-						} else {
-							$next=0;
-							$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							$tempHora['OfertaHor']['MIER']['min'] = (string) ($tempHora['OfertaHor']['MIER']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
+							if ($tempHora['OfertaHor']['MIER']['min']=='60'){
+
+								$tempHora['OfertaHor']['MIER']['min']='00';
+								$tempHora['OfertaHor']['MIER']['hour'] = (string)($tempHora['OfertaHor']['MIER']['hour']+1);
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MIER'];
+							}
+							else{
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['MIER'];
+							}
+							//debug($datos);
+							$this->OfertaHor->create();
+
+							if ($this->OfertaHor->save($datos)) {
+								$next=1;
+								
+							} else {
+								$next=0;
+								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							}
 						}
+						
 					}
 					
 				}
 				
-			}
-			if($next==1){
-				$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$tempfecha=(string)($nextfecha +1);
-				$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
-				$fecha= $this->OfertaHor->Cal->find('all',array(
-									'conditions' => array(
-											'Cal.FECHA_CAL' => $nextfecha)
-										)
-								);
+				if($next==1){
+					$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$tempfecha=(string)($nextfecha +1);
+					$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+					$fecha= $this->OfertaHor->Cal->find('all',array(
+										'conditions' => array(
+												'Cal.FECHA_CAL' => $nextfecha)
+											)
+									);
 
-				// Ingreso del dia viernes de la semana
-				while($tempHora['OfertaHor']['VI']!=$tempHora['OfertaHor']['VI2']){
-					if($tempHora['OfertaHor']['VI']==$tempHora['OfertaHor']['VI2']){
+					//Ingreso del dia jueves de la semana
+					while($tempHora['OfertaHor']['JUE']!=$tempHora['OfertaHor']['JUE2']){
+						if($tempHora['OfertaHor']['JUE']==$tempHora['OfertaHor']['JUE2']){
 
-					}
-					else{
-						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
-						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
-						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['VI'];
-						
-						$tempHora['OfertaHor']['VI']['min'] = (string) ($tempHora['OfertaHor']['VI']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
-						if ($tempHora['OfertaHor']['VI']['min']=='60'){
-
-							$tempHora['OfertaHor']['VI']['min']='00';
-							$tempHora['OfertaHor']['VI']['hour'] = (string)($tempHora['OfertaHor']['VI']['hour']+1);
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['VI'];
 						}
 						else{
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['VI'];
-						}
-						//debug($datos);
-						$this->OfertaHor->create();
-
-						if ($this->OfertaHor->save($datos)) {
-							$next=1;
+							$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
+							$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
+							$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
+							$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['JUE'];
 							
-						} else {
-							$next=0;
-							$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							$tempHora['OfertaHor']['JUE']['min'] = (string) ($tempHora['OfertaHor']['JUE']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
+							if ($tempHora['OfertaHor']['JUE']['min']=='60'){
+
+								$tempHora['OfertaHor']['JUE']['min']='00';
+								$tempHora['OfertaHor']['JUE']['hour'] = (string)($tempHora['OfertaHor']['JUE']['hour']+1);
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['JUE'];
+							}
+							else{
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['JUE'];
+							}
+							//debug($datos);
+							$this->OfertaHor->create();
+
+							if ($this->OfertaHor->save($datos)) {
+								$next=1;
+								
+							} else {
+								$next=0;
+								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							}
 						}
+						
 					}
 					
 				}
-				
-			}
+				if($next==1){
+					$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$tempfecha=(string)($nextfecha +1);
+					$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+					$fecha= $this->OfertaHor->Cal->find('all',array(
+										'conditions' => array(
+												'Cal.FECHA_CAL' => $nextfecha)
+											)
+									);
 
-			
-			if($next==1){
-				$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$tempfecha=(string)($nextfecha +1);
-				$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
-				$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
-				$fecha= $this->OfertaHor->Cal->find('all',array(
-									'conditions' => array(
-											'Cal.FECHA_CAL' => $nextfecha)
-										)
-								);
-				// Ingreso del día sabado de la semana
-				while($tempHora['OfertaHor']['SAB']!=$tempHora['OfertaHor']['SAB2']){
-					if($tempHora['OfertaHor']['SAB']==$tempHora['OfertaHor']['SAB2']){
+					// Ingreso del dia viernes de la semana
+					while($tempHora['OfertaHor']['VI']!=$tempHora['OfertaHor']['VI2']){
+						if($tempHora['OfertaHor']['VI']==$tempHora['OfertaHor']['VI2']){
 
-					}
-					else{
-						$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
-						$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
-						$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
-						$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['SAB'];
-						
-						$tempHora['OfertaHor']['SAB']['min'] = (string) ($tempHora['OfertaHor']['SAB']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
-						if ($tempHora['OfertaHor']['SAB']['min']=='60'){
-
-							$tempHora['OfertaHor']['SAB']['min']='00';
-							$tempHora['OfertaHor']['SAB']['hour'] = (string)($tempHora['OfertaHor']['SAB']['hour']+1);
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['SAB'];
 						}
 						else{
-							$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['SAB'];
-						}
-						//debug($datos);
-						$this->OfertaHor->create();
-
-						if ($this->OfertaHor->save($datos)) {
-							$next=1;
+							$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
+							$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
+							$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
+							$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['VI'];
 							
-						} else {
-							$next=0;
-							$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							$tempHora['OfertaHor']['VI']['min'] = (string) ($tempHora['OfertaHor']['VI']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
+							if ($tempHora['OfertaHor']['VI']['min']=='60'){
+
+								$tempHora['OfertaHor']['VI']['min']='00';
+								$tempHora['OfertaHor']['VI']['hour'] = (string)($tempHora['OfertaHor']['VI']['hour']+1);
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['VI'];
+							}
+							else{
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['VI'];
+							}
+							//debug($datos);
+							$this->OfertaHor->create();
+
+							if ($this->OfertaHor->save($datos)) {
+								$next=1;
+								
+							} else {
+								$next=0;
+								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							}
 						}
+						
 					}
 					
 				}
+
 				
+				if($next==1){
+					$nextfecha=  date("d", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$tempfecha=(string)($nextfecha +1);
+					$nextfecha=  date("Y-m", strtotime($fecha[0]['Cal']['FECHA_CAL']));
+					$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+					$fecha= $this->OfertaHor->Cal->find('all',array(
+										'conditions' => array(
+												'Cal.FECHA_CAL' => $nextfecha)
+											)
+									);
+					// Ingreso del día sabado de la semana
+					while($tempHora['OfertaHor']['SAB']!=$tempHora['OfertaHor']['SAB2']){
+						if($tempHora['OfertaHor']['SAB']==$tempHora['OfertaHor']['SAB2']){
+
+						}
+						else{
+							$datos['OfertaHor']['ID_CAL'] =	$fecha[0]['Cal']['ID_CAL'];
+							$datos['OfertaHor']['ID_VET'] = $requesData['OfertaHor']['ID_VET'];
+							$datos['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'P';
+							$datos['OfertaHor']['HORA_INICIO'] = $tempHora['OfertaHor']['SAB'];
+							
+							$tempHora['OfertaHor']['SAB']['min'] = (string) ($tempHora['OfertaHor']['SAB']['min'] + $tamañoBloque[0]['par']['TAM_BLOQUE']);
+							if ($tempHora['OfertaHor']['SAB']['min']=='60'){
+
+								$tempHora['OfertaHor']['SAB']['min']='00';
+								$tempHora['OfertaHor']['SAB']['hour'] = (string)($tempHora['OfertaHor']['SAB']['hour']+1);
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['SAB'];
+							}
+							else{
+								$datos['OfertaHor']['HORA_TERMINO'] = $tempHora['OfertaHor']['SAB'];
+							}
+							//debug($datos);
+							$this->OfertaHor->create();
+
+							if ($this->OfertaHor->save($datos)) {
+								$next=1;
+								
+							} else {
+								$next=0;
+								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							}
+						}
+						
+					}
+					
+				}
+				if($next==1){
+					return $this->redirect(array('controller'=>'vets','action' => 'miAgenda'));
+				}	
 			}
-			if($next==1){
-				$this->Session->setFlash(__('Se ha creado la oferta horaria con exito'));
-				return $this->redirect(array('controller'=>'vets','action' => 'miAgenda'));
+			else{
+				$this->Session->setFlash(__('No puede tomar oferta horaria en la fecha seleccionada, usted ya generó oferta para esa semana.'));
 			}	
-		
 		}
+
+
+		date_default_timezone_set('America/Santiago');
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
+		# Obtenemos el numero de la semana
+		$semana=date("W",mktime(0,0,0,$month,$day,$year));
+
+		# Obtenemos el día de la semana de la fecha dada
+		$diaSemana=date("w",mktime(0,0,0,$month,$day,$year));
+
+		# el 0 equivale al domingo...
+		if($diaSemana==0)
+		    $diaSemana=7;
+
+		# A la fecha recibida, le restamos el dia de la semana y obtendremos el lunes
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day-$diaSemana+1,$year));
+
+		# A la fecha recibida, le sumamos el dia de la semana menos siete y obtendremos el domingo
+		//$ultimoDia=date("d-m-Y",mktime(0,0,0,$month,$day+(7-$diaSemana),$year));
+
+		//echo "<br>Semana: ".$semana." - año: ".$year;
+		//echo "<br>Primer día ".$primerDia;
+		//echo "<br>Ultimo día ".$ultimoDia;
 
 		
 		$vets = $this->OfertaHor->Vet->find('list');
-		$result = $this->OfertaHor->Cal->query("SELECT FECHA_CAL FROM cal WHERE NOMBRE_DIA = 'LU'");
+		$result = $this->OfertaHor->Cal->query("SELECT FECHA_CAL FROM cal WHERE NOMBRE_DIA = 'LU' AND FECHA_CAL >=  '".$primerDia."'");
 		$varDate;
 		$calsTemp= array();
 		//
@@ -380,9 +418,11 @@ class OfertaHorsController extends AppController {
 
 		$this->loadModel('Par');
 		$parametros= $this->Par->query("SELECT * FROM par WHERE ID_PAR IN (SELECT MAX(ID_PAR) FROM par)");
+		
 
 
-		$this->set(compact('cals', 'vets','varDate','tamañoBloque','parametros'));
+
+		$this->set(compact('cals', 'vets','varDate','tamañoBloque','parametros','primerDia'));
 
 	}
 /**

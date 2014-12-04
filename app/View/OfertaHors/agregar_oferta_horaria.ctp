@@ -37,7 +37,6 @@
 	          <?php 
 						
 						$usuario = AuthComponent::user();
-					
 						$user[$usuario[0]['Vet']['ID_VET']] = $vets[$usuario[0]['Vet']['ID_VET']];
 				
 					?>
@@ -58,7 +57,9 @@
 
 						<?php
 							 		
-							echo $this->Form->input('varDate', array('label'=>'Desde lunes:','class' => 'form-control', 'options' => $cals,'div' => 'col col-md-6'));?>
+							echo $this->Form->input('varDate', array('label'=>'Desde lunes:','class' => 'form-control', 'options' => $cals,'div' => 'col col-md-6',
+								'selected' =>array($primerDia)
+							));?>
 					</td>
 					  <td>
 
