@@ -120,7 +120,7 @@ class AgendasController extends AppController {
 				$numBloq = $prestacion[0]['Pres']['NUMERO_BLOQUES'];
 				$data['Agenda']['ESTADO_AGENDA'] = 'P';
 			$data2=false;
-			if(isset($data['OfertaHor']['OfertaHor'][0])){
+			if(isset($data['OfertaHor']['OfertaHor'])){
 				$data2= $this->Agenda->save($data['Agenda']);
 				}
 			if ($data2) {
@@ -128,11 +128,11 @@ class AgendasController extends AppController {
 				for ($i=0; $i <(int)$numBloq; $i++) { 
 					$this->BloqAgen->save( 
 				    array(
-				        'ID_OFERTA_HOR' => $data['OfertaHor']['OfertaHor'][0],
+				        'ID_OFERTA_HOR' => $data['OfertaHor']['OfertaHor'],
 				        'ID_AGENDA' => $data2['Agenda']['ID_AGENDA']
 				    )
 					);
-					$data['OfertaHor']['OfertaHor'][0] = $data['OfertaHor']['OfertaHor'][0] +1;
+					$data['OfertaHor']['OfertaHor'] = $data['OfertaHor']['OfertaHor'] +1;
 				}
 				
 				$this->Session->setFlash(__('Su hora ha sido agendada.'));
@@ -154,9 +154,36 @@ class AgendasController extends AppController {
 					'controller' => 'users',
 					'action' => 'misMascotas'));	
 		}
+
+		date_default_timezone_set('America/Santiago');
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
+		# Obtenemos el numero de la semana
+		$semana=date("W",mktime(0,0,0,$month,$day,$year));
+
+		# Obtenemos el día de la semana de la fecha dada
+		$diaSemana=date("w",mktime(0,0,0,$month,$day,$year));
+
+		# el 0 equivale al domingo...
+		if($diaSemana==0)
+		    $diaSemana=7;
+
+		# A la fecha recibida, le restamos el dia de la semana y obtendremos el lunes
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day-$diaSemana+1,$year));
+
+		# A la fecha recibida, le sumamos el dia de la semana menos siete y obtendremos el domingo
+		//$ultimoDia=date("d-m-Y",mktime(0,0,0,$month,$day+(7-$diaSemana),$year));
+
+		//echo "<br>Semana: ".$semana." - año: ".$year;
+		//echo "<br>Primer día ".$primerDia;
+		//echo "<br>Ultimo día ".$ultimoDia;
+
+
+
 		$this->loadModel('Pre');
 		$pres = $this->Pre->find('list');
-		$options = array('conditions' => array('OfertaHor.ID_VET'=> $params['param']));
+		$options = array('conditions' => array('OfertaHor.ID_VET'=> $params['param'], 'Cal.FECHA_CAL >=' =>  $primerDia));
 		$ofertaHoras = $this->Agenda->OfertaHor->find('all',$options);
 		$ofertaHors;
 		$i=0;
@@ -175,7 +202,6 @@ class AgendasController extends AppController {
 			$ofertaHors = 'El veterinario no tiene oferta Horaria';
 			$this->Session->setFlash(__($ofertaHors));
 		} 
-
 		$this->set(compact('vets', 'mas', 'pres', 'ofertaHors'));
 	}
 
@@ -222,7 +248,7 @@ class AgendasController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Agenda->delete()) {
-			$this->Session->setFlash(__('The agenda has been deleted.'));
+			$this->Session->setFlash(__('La agenda ha sido eliminada.'));
 		} else {
 			$this->Session->setFlash(__('The agenda could not be deleted. Please, try again.'));
 		}

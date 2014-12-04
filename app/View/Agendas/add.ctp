@@ -10,15 +10,18 @@
 
 		echo $this->Form->input('ID_MAS', array(
 			'label' => 'Seleccione la mascota que desea atender en la clínica : <br>',
-			'options' => $mas
+			'options' => $mas,
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('ID_VET', array(
 			'label' => 'Seleccione profesional con el cual desea atender a su mascota : <br>',
-			'options' => $vets
+			'options' => $vets,
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('ID_PRES', array(
 			'label' => 'Seleccione la prestación con la cual desea solicitar hora : <br>',
-			'options' => $pres
+			'options' => $pres,
+			'class' => 'form-control'
 			));
 		
 		echo $this->Form->input('ESTADO_AGENDA', array(
@@ -26,7 +29,9 @@
 			));
 		echo $this->Form->input('OfertaHor', array(
 			'label' => 'Seleccione oferta Horaria de su veterinario : <br>',
-			'options' => $ofertaHors
+			'options' => $ofertaHors,
+			'type' => 'select',
+			'class' => 'form-control'
 			));
 	?>
 	</fieldset>

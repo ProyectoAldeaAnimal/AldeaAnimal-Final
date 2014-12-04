@@ -44,7 +44,7 @@
 		<td><?php echo h($ofertaHors[$agenda['Agenda']['ID_AGENDA']]); ?>&nbsp;</td>
 		<td class="actions">
 			
-			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $agenda['Agenda']['ID_AGENDA']), array(), __('Are you sure you want to delete # %s?', $agenda['Agenda']['ID_AGENDA'])); ?>
+			<?php if ($agenda['Agenda']['ESTADO_AGENDA']!='A')echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $agenda['Agenda']['ID_AGENDA']), array(), __('Are you sure you want to delete # %s?', $agenda['Agenda']['ID_AGENDA'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
