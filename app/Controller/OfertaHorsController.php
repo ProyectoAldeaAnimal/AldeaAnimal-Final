@@ -67,6 +67,20 @@ class OfertaHorsController extends AppController {
 		
 		if ($this->request->is('post')) {
 				// Se obtiene los datos del formulario
+
+			$temporal =$this->request->data;
+
+			$count=0;
+			if($temporal['OfertaHor']['LUN']>$temporal['OfertaHor']['LUN2']) $count = $count +1;
+			if($temporal['OfertaHor']['MAR']>$temporal['OfertaHor']['MAR2']) $count = $count +1;
+			if($temporal['OfertaHor']['MIER']>$temporal['OfertaHor']['MIER2']) $count = $count +1;
+			if($temporal['OfertaHor']['JUE']>$temporal['OfertaHor']['JUE2']) $count = $count +1;
+			if($temporal['OfertaHor']['VI']>$temporal['OfertaHor']['VI2']) $count = $count +1;
+			if($temporal['OfertaHor']['SAB']>$temporal['OfertaHor']['SAB2']) $count = $count +1;
+			if($count > 0) {
+				$this->Session->setFlash(__('Tiene '.$count. ' campo/s de horario inválido/s, la hora "De:" no puede ser superior a la hora "Hasta:"'));
+	 			return $this->redirect(array('action' => 'agregarOfertaHoraria'));
+	 		}
 			$usuario = AuthComponent::user();
 			$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET']));
 			$ofertas = $this->OfertaHor->find('all',$options);
