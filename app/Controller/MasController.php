@@ -51,10 +51,11 @@ class MasController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('title_for_layout', 'Agregar Mascota');
 		if ($this->request->is('post')) {
 			$this->Ma->create();
 			if ($this->Ma->save($this->request->data)) {
-				$this->Session->setFlash(__('The ma has been saved.'));
+				$this->Session->setFlash(__('La mascota ha sido guardada.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The ma could not be saved. Please, try again.'));

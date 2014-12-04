@@ -21,6 +21,7 @@ class ParsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('title_for_layout', 'Parámetros del Sistema');
 		$this->Par->recursive = 0;
 		$this->set('pars', $this->Paginator->paginate());
 	}
@@ -46,7 +47,9 @@ class ParsController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
+		$temp= $this->request->data;
+		debug($temp);
+		if ($this->request->is('posta')) {
 			$this->Par->create();
 			if ($this->Par->save($this->request->data)) {
 				$this->Session->setFlash(__('The par has been saved.'));

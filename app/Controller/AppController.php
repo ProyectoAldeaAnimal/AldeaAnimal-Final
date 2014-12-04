@@ -39,6 +39,8 @@ class AppController extends Controller {
 			$action;
 			if($params['action']) $action= $params['action'];
 
+
+
 			//debug('controllers/'.$controller.'/'.$action);
 			if(key($userId[0])=='Vet'){
 				if($params['action'] && $params['controller']!= 'vets'){
@@ -91,7 +93,7 @@ class AppController extends Controller {
 			}
 			else{
 				// HABILITA O DESAHABILITA LA SEGURIDAD
-				return false;
+				return true;
 			}
 						
 	}

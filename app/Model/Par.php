@@ -27,4 +27,12 @@ class Par extends AppModel {
  */
 	public $displayField = 'TAM_BLOQUE';
 
+
+	public $validate = array(
+	    'TAM_BLOQUE' => array(
+	    	  'age' => array(
+		        'rule' => array('comparison', '>=', 0),
+		        'message' => 'El bloque debe ser un número positivo.'
+		    )
+	));
 }

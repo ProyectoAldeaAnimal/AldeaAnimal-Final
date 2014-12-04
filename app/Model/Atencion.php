@@ -36,7 +36,8 @@ class Atencion extends AppModel {
 	    'PESO' => array(
 	    	  'age' => array(
 		        'rule' => array('comparison', '>=', 0),
-		        'message' => 'Debe tener al menos 18 años para calificar.'
+		        'message' => 'Debe tener al menos 18 años para calificar.',
+		        'allowEmpty' => true
 		    ),
             'decimal' => array(  
 
@@ -46,11 +47,11 @@ class Atencion extends AppModel {
 	        )
 	    ),
 	    'TEMPERATURA' => array(
-            'login' => array(
-                'rule' => 'alphaNumeric',
-                'message' => 'La mascota debe tener un temperatura válida.',
-                'allowEmpty' => true
-            ),
+            'age' => array(
+		        'rule' => array('comparison', '>=', 0),
+		        'message' => 'Debe tener al menos 18 años para calificar.',
+		        'allowEmpty' => true
+		    ),
             'decimal' => array(   
 		        'rule' => array('decimal', 2),
 		        'message' => 'El número debe ser decimal, ejemplo 1,00'

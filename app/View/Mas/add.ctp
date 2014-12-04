@@ -12,11 +12,17 @@
 		echo $this->Form->input('NOMBRE_MAS',array('label'=> 'Ingrese el nombre:','class'=>"form-control"));
 		echo $this->Form->input('RAZA_MAS',array('label'=> 'Ingrese la raza:','class'=>"form-control"));
 		echo $this->Form->input('FECHA_NACIMIENTO',array('label'=> 'Ingrese fecha de naciemiento: <br>'));
-		echo $this->Form->input('SEXO',array('label'=> 'Sexo:','class'=>"form-control"));
+		
+		$sex = array('H'=>'Hembra','M'=>'Macho');
+		echo $this->Form->input('SEXO',array(
+			'label'=> 'Sexo:',
+			'class'=>"form-control",
+			'options' => $sex
+
+			));
 		echo $this->Form->input('COLOR',array(
 			'label'=> 'Color:',
-			'class'=>"form-control",
-			'select' => array('H'=>'Hembra','M'=>'Macho')
+			'class'=>"form-control"
 			));
 		echo $this->Form->input('CARACTERISTICA',array('label'=> 'Ingrese características adicionales:','class'=>"form-control"));
 		echo $this->Form->input('FECHA_DEFUNCION',array('type'=>'hidden'));
