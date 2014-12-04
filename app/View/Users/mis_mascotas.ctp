@@ -40,7 +40,7 @@
              <br>
   
             
-              <a href="/AldeaAnimal/recmeds/recetas_mas"> 
+              <a href="/AldeaAnimal/procs/index"> 
              <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Próximas fechas de control</h3>
             Consulta de fechas sugeridas para las prestaciones de la clínica
              </button></a>

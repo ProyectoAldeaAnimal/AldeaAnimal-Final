@@ -21,6 +21,7 @@ class ProcsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('title_for_layout', 'Procedimientos');
 		$this->Proc->recursive = 0;
 		$this->set('procs', $this->Paginator->paginate());
 	}
@@ -33,6 +34,7 @@ class ProcsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('title_for_layout', 'Ver Procedimiento');
 		if (!$this->Proc->exists($id)) {
 			throw new NotFoundException(__('Invalid proc'));
 		}
@@ -50,7 +52,7 @@ class ProcsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Proc->create();
 			if ($this->Proc->save($this->request->data)) {
-				$this->Session->setFlash(__('The proc has been saved.'));
+				$this->Session->setFlash(__('Se ha creado el nuevo procedimiento.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The proc could not be saved. Please, try again.'));

@@ -34,14 +34,15 @@ class Atencion extends AppModel {
 
 	public $validate = array(
 	    'PESO' => array(
-            'login' => array(
-                'rule' => 'alphaNumeric',
-                'message' => 'La mascota debe tener un peso válido.',
-                'allowEmpty' => true
-            ),
-            'decimal' => array(   
+	    	  'age' => array(
+		        'rule' => array('comparison', '>=', 0),
+		        'message' => 'Debe tener al menos 18 años para calificar.'
+		    ),
+            'decimal' => array(  
+
 		        'rule' => array('decimal', 2),
-		        'message' => 'El número debe ser decimal, ejemplo 1,00'
+		        'message' => 'El número debe ser decimal, ejemplo 1,00',
+		        'allowEmpty' => true
 	        )
 	    ),
 	    'TEMPERATURA' => array(

@@ -1,13 +1,19 @@
+<?php 
+$this->layout = "headClientes"
+?>
+
 <div class="procs index">
-	<h2><?php echo __('Procs'); ?></h2>
+	<h3 class="text-center"><?php echo __('Procedimientos'); ?></h3>
+	<br>
 	<table cellpadding="0" cellspacing="0">
+
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('ID_PROC'); ?></th>
-			<th><?php echo $this->Paginator->sort('ID_ATENCION'); ?></th>
-			<th><?php echo $this->Paginator->sort('OBS_PROC'); ?></th>
-			<th><?php echo $this->Paginator->sort('FECHA_SGTE_PROC'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th><?php echo $this->Paginator->sort('Número de Procedimiento'); ?></th>
+			<th><?php echo $this->Paginator->sort('Fecha Atención'); ?></th>
+			<th><?php echo $this->Paginator->sort('Observaciones'); ?></th>
+			<th><?php echo $this->Paginator->sort('Fecha siguiente procedimiento'); ?></th>
+			<th class="actions"><?php echo __('Acciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -15,14 +21,14 @@
 	<tr>
 		<td><?php echo h($proc['Proc']['ID_PROC']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($proc['Atencion']['FECHA_ATENCION'], array('controller' => 'atencions', 'action' => 'view', $proc['Atencion']['ID_ATENCION'])); ?>
+			<?php echo $this->Html->link($proc['Atencion']['FECHA_ATENCION'], array('controller' => 'atencions', 'action' => 'view2', $proc['Atencion']['ID_ATENCION'])); ?>
 		</td>
 		<td><?php echo h($proc['Proc']['OBS_PROC']); ?>&nbsp;</td>
 		<td><?php echo h($proc['Proc']['FECHA_SGTE_PROC']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $proc['Proc']['ID_PROC'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $proc['Proc']['ID_PROC'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $proc['Proc']['ID_PROC']), array(), __('Are you sure you want to delete # %s?', $proc['Proc']['ID_PROC'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $proc['Proc']['ID_PROC'])); ?>
+			
+		
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -31,22 +37,25 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Página {:page} de {:pages}, mostrando {:current} registros de {:count} en total, empezando en registro {:start}, terminando en {:end}')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Siguiente') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Acciones'); ?></h3>
+	<div id="ex5">
+		        <?php
+		            echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+		          ?>
+  	</div>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Proc'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Atencions'), array('controller' => 'atencions', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Atencion'), array('controller' => 'atencions', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Atrás'), array('controller'=>'users','action' => 'misMascotas')); ?></li>
 	</ul>
 </div>
