@@ -22005,3 +22005,154 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-05 04:05:12 Error: [MissingActionException] Action VetsController::delete() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'delete',
+)
+Request URL: /AldeaAnimal/vets/delete/8
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-05 04:05:22 Error: [MissingActionException] Action VetsController::delete() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'delete',
+)
+Request URL: /AldeaAnimal/vets/delete/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-05 04:07:39 Error: [MissingActionException] Action VetsController::delete() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'delete',
+)
+Request URL: /AldeaAnimal/vets/delete/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-05 04:08:29 Error: [MissingActionException] Action VetsController::delete() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'delete',
+)
+Request URL: /AldeaAnimal/vets/delete/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-05 05:12:41 Error: Fatal Error (4): syntax error, unexpected '$atenciones' (T_VARIABLE) in [C:\xampp\htdocs\AldeaAnimal\app\View\Procs\add.ctp, line 5]
+2014-12-05 05:12:41 Error: [FatalErrorException] syntax error, unexpected '$atenciones' (T_VARIABLE)
+Request URL: /AldeaAnimal/procs/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 5, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 5, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 05:16:37 Error: [MissingControllerException] Controller class TipomaController could not be found.
+Exception Attributes: array (
+  'class' => 'TipomaController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/tipoma/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-05 05:16:41 Error: [MissingControllerException] Controller class TipomaController could not be found.
+Exception Attributes: array (
+  'class' => 'TipomaController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/tipoma/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-05 05:16:46 Error: [MissingControllerException] Controller class TipoMaController could not be found.
+Exception Attributes: array (
+  'class' => 'TipoMaController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/tipo_ma/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-05 01:36:42 Error: Fatal Error (1): Call to undefined function getMonthDays() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 546]
+2014-12-05 01:36:42 Error: [FatalErrorException] Call to undefined function getMonthDays()
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 01:37:25 Error: Fatal Error (1): Call to undefined function getMonthDays() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 546]
+2014-12-05 01:37:25 Error: [FatalErrorException] Call to undefined function getMonthDays()
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 01:37:39 Error: Fatal Error (1): Call to undefined function getMonthDays() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 546]
+2014-12-05 01:37:39 Error: [FatalErrorException] Call to undefined function getMonthDays()
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 546, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 05:39:17 Error: Fatal Error (4): syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 549]
+2014-12-05 05:39:17 Error: [FatalErrorException] syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 549)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 549, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 549, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 05:39:18 Error: Fatal Error (4): syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 549]
+2014-12-05 05:39:18 Error: [FatalErrorException] syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 549)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 549, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 549, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 05:57:23 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 559]
+2014-12-05 05:57:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 559)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 559, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 559, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 02:00:28 Error: Fatal Error (1): Call to undefined function conut() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 559]
+2014-12-05 02:00:28 Error: [FatalErrorException] Call to undefined function conut()
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 559)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 559, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 559, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

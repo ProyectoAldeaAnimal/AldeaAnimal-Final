@@ -46,10 +46,11 @@ class TipoMasController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('title_for_layout', 'Agregar Tipo de Mascota');
 		if ($this->request->is('post')) {
 			$this->TipoMa->create();
 			if ($this->TipoMa->save($this->request->data)) {
-				$this->Session->setFlash(__('The tipo ma has been saved.'));
+				$this->Session->setFlash(__('El tipo de mascota ha sido guardado'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The tipo ma could not be saved. Please, try again.'));

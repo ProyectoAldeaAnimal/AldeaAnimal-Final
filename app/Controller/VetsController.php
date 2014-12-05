@@ -511,6 +511,60 @@ class VetsController extends AppController {
 		$this->set(compact('users'));
 
 	}
+
+
+
+
+
+	public function getMonthDays($Month, $Year)
+		{
+		   
+		   if( is_callable("cal_days_in_month"))
+		   {
+		      return cal_days_in_month(CAL_GREGORIAN, $Month, $Year);
+		   }
+		   else
+		   {
+		      
+		      return date("d",mktime(0,0,0,$Month+1,0,$Year));
+		   }
+		}
+
+
+	public function estadisticas(){
+		$usuario = AuthComponent::user(); 
+		$this->loadModel('TipoMa');
+		$tipoMa = $this->TipoMa->find('all');
+	
+		date_default_timezone_set('America/Santiago');
+		$year= date('Y', time());
+		$dias= array();
+		for($i=0;$i<12;$i++){
+
+			$dias[$i] = $this->getMonthDays($i+1,$year);
+		}
+		$estadisticas;
+		for($i=0;$i<12;$i++){
+			$estadisticas[$i+1]=array();
+			if($i+1<10){
+				array_push($estadisticas[$i+1], $year.'-0'.($i+1).'-01');
+				array_push($estadisticas[$i+1], $year.'-0'.($i+1).'-'.$dias[$i] );
+			}
+			else{
+				array_push($estadisticas[$i+1], $year.'-'.($i+1).'-01');
+				array_push($estadisticas[$i+1], $year.'-'.($i+1).'-'.$dias[$i] );
+			}
+		}
+
+		for ($i=0; $i < count($tipoMa); $i++) { 
+			for ($j=0; $j <12 ; $j++) { 
+				$temp = $this->TipoMa->query('CALL `SP_ESTADISTICA_PATOLOGIAS`('.$tipoMa[$i]['TipoMa']['ID_TIPO_MAS'].','.$estadisticas[$j+1][0].','.$estadisticas[$j+1][1].')');
+				debug($temp);
+			}
+
+		}
+
+	}
 /**
  * delete method
  *

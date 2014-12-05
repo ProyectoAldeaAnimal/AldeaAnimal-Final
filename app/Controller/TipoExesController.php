@@ -21,6 +21,7 @@ class TipoExesController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('title_for_layout', 'Tipos de Examen');
 		$this->TipoEx->recursive = 0;
 		$this->set('tipoExes', $this->Paginator->paginate());
 	}
@@ -33,6 +34,7 @@ class TipoExesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('title_for_layout', ' Ver Tipos de Examen');
 		if (!$this->TipoEx->exists($id)) {
 			throw new NotFoundException(__('Invalid tipo ex'));
 		}
@@ -46,6 +48,7 @@ class TipoExesController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('title_for_layout', ' Agregar Tipos de Examen');
 		if ($this->request->is('post')) {
 			$this->TipoEx->create();
 			if ($this->TipoEx->save($this->request->data)) {
@@ -65,6 +68,7 @@ class TipoExesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('title_for_layout', ' Editar Tipos de Examen');
 		if (!$this->TipoEx->exists($id)) {
 			throw new NotFoundException(__('Invalid tipo ex'));
 		}

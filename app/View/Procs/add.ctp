@@ -1,5 +1,11 @@
 <?php
-$this->layout= 'head'
+$this->layout= 'head';
+
+	
+	$atenciones;
+	foreach ($atencions as $key => $atencion) {
+	 	$atenciones = $key;
+	}
 ?>
 
 
@@ -11,7 +17,8 @@ $this->layout= 'head'
 		echo $this->Form->input('ID_ATENCION', array(
 				'label' => 'Atención: <br>',
 				'options' => $atencions,
-				'class'=> 'form-control'
+				'class'=> 'form-control',
+				'selected'=> $atenciones
 			));
 		echo $this->Form->input('OBS_PROC', array(
 				'label' => 'Ingrese sus observaciones: <br>',

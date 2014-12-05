@@ -22,6 +22,29 @@ class TipoMa extends AppModel {
  */
 	public $displayField = 'CLASE';
 
+	public $validate = array(
+		'ESPECIE' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese una especie'
+            ),
+            
+            'login' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Ingrese una especie válido.'
+            )  
+        ),
+        'CLASE' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Ingrese un nombre de clase'
+            ),
+            'login' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Ingrese un nombre de clase válido.'
+            )   
+        )
+     );
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 

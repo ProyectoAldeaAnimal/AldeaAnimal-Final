@@ -36,4 +36,5 @@
                     echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
                   ?>
               </div>
+    <li><?php echo $this->Html->link(__('Agregar Tipo Mascota'), array('controller'=>'tipomas','action' => 'add')); ?></li>
 </div>

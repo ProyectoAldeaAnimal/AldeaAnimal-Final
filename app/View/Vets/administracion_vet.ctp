@@ -21,6 +21,12 @@ $this->layout= 'headVets';
 				<br>
 				<a href="/AldeaAnimal/tipoexes/index"> <button type="button" class="btn btn-sm btn-primary btn-block color13">
 				<h4>Tipos de Examen</h4>Crear, ver, y actualizar</button></a>
+				<br>
+				<a href="/AldeaAnimal/vets/estadisticas"> <button type="button" class="btn btn-sm btn-primary btn-block color13">
+				<h4>Estadísticas de la Clínica</h4></button></a>
+
+
+
 				<br><br><br>
 			</div>
 			<div class="col col-md-5">

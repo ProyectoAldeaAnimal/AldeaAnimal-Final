@@ -52,7 +52,7 @@ $this->layout = 'headVets';
 					<td> &nbsp;</td>
 					<td class="actions">
 						<?php echo $this->Html->link(__('Aceptar'), array('action' => 'aceptar_solicitud', $agenda['Agenda']['ID_AGENDA'])); ?>
-						<?php echo $this->Form->postLink(__('Rechazar'), array('action' => 'delete', $agenda['Agenda']['ID_AGENDA']), array(), __('Are you sure you want to delete # %s?', $agenda['Agenda']['ID_AGENDA'])); ?>
+						<?php echo $this->Form->postLink(__('Rechazar'), array('controller'=>'agendas','action' => 'delete', $agenda['Agenda']['ID_AGENDA']), array(), __('Are you sure you want to delete # %s?', $agenda['Agenda']['ID_AGENDA'])); ?>
 					</td>
 				</tr>
 			<?php endforeach; ?>

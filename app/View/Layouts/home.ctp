@@ -305,7 +305,7 @@ array('controller' => 'users', 'action' => 'login')); ?>
 Clinica Veterinaria Aldea Animal brinda atención profesional y accesible 
 para sus mascotas, en donde contamos con un staff exclusivo de médicos 
 veterinarios y personal calificado, todos apasionados amantes de los animales y su bienestar.
-          </p><!--> arreglado </!-->
+          </p>
           <h3>Contactanos!</h3>
           <div id= "ex4"> <img src="img/huella2.png" alt="huella" class="img-responsive pull-right hidden-xs"></div>
           
