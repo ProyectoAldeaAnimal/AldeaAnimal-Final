@@ -182,6 +182,19 @@ class VetsController extends AppController {
 					$this->set('title_for_layout', 'Home Administrador');
 
 	}
+
+	public function deshabilitado(){
+		$this->set('title_for_layout', 'Deshabilitado');
+		$usuario = AuthComponent::user();
+		$id = $usuario[0]['Vet']['ID_VET'];
+		$this->loadModel('Vet');
+		if (!$this->Vet->exists($id)) {
+			throw new NotFoundException(__('Invalid Vet'));
+		}
+		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+		$this->set('User', $this->Vet->find('first', $options));
+
+	}
 	public function logout() {
 			    return $this->redirect($this->Auth->logout());
 			}

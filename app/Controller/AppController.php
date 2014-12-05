@@ -39,9 +39,14 @@ class AppController extends Controller {
 			$action;
 			if($params['action']) $action= $params['action'];
 
-
-
+			if(key($userId[0])=='User')
+			if(!$userId[0]['User']['HABILITADO_CLI'] && $action!= 'deshabilitado' && key($userId[0])=='User' &&  $action!= 'logout') $this->redirect(array('action' => 'deshabilitado'));
 			//debug('controllers/'.$controller.'/'.$action);
+			if(key($userId[0])=='Vet')
+			if(!$userId[0]['Vet']['HABILITADO'] && $action!= 'deshabilitado' && key($userId[0])=='Vet' &&  $action!= 'logout') $this->redirect(array('action' => 'deshabilitado'));
+
+
+
 			if(key($userId[0])=='Vet'){
 				if($params['action'] && $params['controller']!= 'vets'){
 					$permisoUsuario= $this->Acl->check(array(

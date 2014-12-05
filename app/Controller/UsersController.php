@@ -111,6 +111,7 @@ class UsersController extends AppController{
 			}
 			public function homeCliente(){
 				
+
 			    $aro = $this->Auth->user();
 			    //Si deseamos verificar la acción 'index', hija de 'Productos', a su vez hijo de 'controllers'.
 			    $aco = 'Mas';
@@ -123,6 +124,20 @@ class UsersController extends AppController{
 			   
 
 			}
+
+
+			public function deshabilitado(){
+				$this->set('title_for_layout', 'Deshabilitado');
+				$usuario = AuthComponent::user();
+				$id = $usuario[0]['User']['ID'];	
+				if (!$this->User->exists($id)) {
+					throw new NotFoundException(__('Invalid User'));
+				}
+				$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+				$this->set('User', $this->User->find('first', $options));
+
+			}
+
 			public function misDatos(){
 				$this->set('title_for_layout', 'Mis Datos');
 				$usuario = AuthComponent::user();
