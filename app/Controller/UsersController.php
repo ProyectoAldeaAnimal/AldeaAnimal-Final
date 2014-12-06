@@ -150,13 +150,19 @@ class UsersController extends AppController{
 
 			}
 			public function edit($id = null) {
+				$this->set('title_for_layout', 'Editar Datos');
+				$usuario = AuthComponent::user();
+				if($id != $usuario[0]['User']['ID']) return $this->redirect(array('action' => 'homeCliente'));
+
 				if (!$this->User->exists($id)) {
 					throw new NotFoundException(__('Invalid cli'));
 				}
 				if ($this->request->is(array('post', 'put'))) {
+
+					unset($this->request->data['User']['PASSWORD_CLI']);
 					if ($this->User->save($this->request->data)) {
-						$this->Session->setFlash(__('The User has been saved.'));
-						return $this->redirect(array('action' => 'index'));
+						$this->Session->setFlash(__('Sus Datos han sido actualizados.'));
+						return $this->redirect(array('action' => 'misDatos'));
 					} else {
 						$this->Session->setFlash(__('The User could not be saved. Please, try again.'));
 					}
@@ -217,7 +223,7 @@ class UsersController extends AppController{
 
 				 if ($this->request->is('post')) {
 				 	$data = $this->request->data;
-				 	debug($data);
+				 	
 				 	$this->redirect(array('controller'=>'agendas','action' => 'add', '?'=> array('param'=>$data['TempVet']['ID_VET']),$data));
 				 }
 				
@@ -234,7 +240,48 @@ class UsersController extends AppController{
 			}
 
 
+			public function cambiar_pass($id= null)
+			{
+				$this->set('title_for_layout', 'Cambiar Contraseña');
+				
+				$usuario = AuthComponent::user();	
+				if($id != $usuario[0]['User']['ID']) return $this->redirect(array('action' => 'homeCliente'));
+				
+				if (!$this->User->exists($id)) {
+					throw new NotFoundException(__('Invalid cli'));
+				}
+				if ($this->request->is(array('post', 'put'))) {
+					$data=$this->request->data;
+					if($usuario[0]['User']['PASSWORD_CLI']!=Security::hash($data['User']['PASSWORD_Actual'])){
+						
+						$this->Session->setFlash(__('La contraseña actual no es correcta.'));
+						return $this->redirect(array('action' => 'cambiar_pass',$id));
+					}
+					if($data['User']['PASSWORD_NUEVO']!=$data['User']['password_update']){
+						
+						$this->Session->setFlash(__('La nueva contraseña no coincide con su confirmación.'));
+						return $this->redirect(array('action' => 'cambiar_pass',$id));
+					}
 
+					$nuevaContraseña = $data['User']['PASSWORD_NUEVO'];
+					
+					$usuario[0]['User']['PASSWORD_CLI'] = $nuevaContraseña;
+					
+
+					
+					if ($this->User->save($usuario[0])) {
+						$this->Session->setFlash(__('Sus Datos han sido actualizados.'));
+						return $this->redirect(array('action' => 'misDatos'));
+					} else {
+					  $this->Session->setFlash(__('The User could not be saved. Please, try again.'));
+					}
+				} else {
+					$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
+					$this->request->data = $this->User->find('first', $options);
+				}
+				$groups = $this->User->Group->find('list');
+				$this->set(compact('groups'));
+			}
 
 
 }

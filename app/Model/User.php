@@ -116,8 +116,6 @@ public $validate = array(
     }   
 	public function beforeSave($options = array()) {
 
-            // hash our password
-      
        if (isset($this->data[$this->alias]['PASSWORD_CLI'])) {
             $this->data[$this->alias]['PASSWORD_CLI'] = Security::hash($this->data[$this->alias]['PASSWORD_CLI']);
         }

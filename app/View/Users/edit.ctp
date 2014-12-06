@@ -17,7 +17,7 @@
 		echo $this->Form->input('FECHA_REGISTRO_CLI',array('type'=> 'hidden','class'=>"form-control"));
 		echo $this->Form->input('DIR_CLI',array('label'=> 'Dirección','class'=>"form-control"));
 		echo $this->Form->input('HABILITADO_CLI',array('type'=> 'hidden','class'=>"form-control"));
-		echo $this->Form->input('PASSWORD_CLI',array('label'=> 'Contraseña','class'=>"form-control"));
+		echo $this->Form->input('PASSWORD_CLI',array('label'=> 'Contraseña','class'=>"form-control", 'type'=>'hidden'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Ingresar')); ?>
