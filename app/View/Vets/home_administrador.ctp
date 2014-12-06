@@ -14,8 +14,10 @@
     <FONT COLOR="#000000"> <h3>Administrador: <?php
       $user =AuthComponent::user();
       echo $user[0]['Vet']['name'];?></h3></FONT> 
+ <a href="/AldeaAnimal/vets/misDatos"> <button type="button" class="btn btn-success"> Ver Mis Datos
+    </button></a>
 
-    <br>
+    <br><br>
 
     <div class="row">
       <div class="col-md-9">

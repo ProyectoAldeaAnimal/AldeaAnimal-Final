@@ -7,15 +7,18 @@ $this->layout= 'head';
 		<h3 class="text-center"><?php echo __('Agregar Fármaco'); ?></h3>
 	<?php
 		echo $this->Form->input('NOMBRE_FARMACO', array(
-			'label' => 'Ingrese Nombre: <br>'
+			'label' => 'Ingrese Nombre:',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('LABORATORIO_MEDICAMENTO', array(
-			'label' => 'Ingrese Laboratorio: <br>'
+			'label' => 'Ingrese Laboratorio:',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('NOMBRE_GENERICO', array(
-			'label' => 'Ingrese Nombre Genérico: <br>'
+			'label' => 'Ingrese Nombre Genérico:',
+			'class' => 'form-control'
 			
 			));
 	?>

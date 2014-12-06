@@ -8,7 +8,10 @@ $this->layout= 'head';
 		<h3 class="text-center"><?php echo __('Editar Tipo De Examen'); ?></h3>
 	<?php
 		echo $this->Form->input('ID_TIPO_EX');
-		echo $this->Form->input('NOMBRE_TIPO_EX');
+		echo $this->Form->input('NOMBRE_TIPO_EX', array(
+			'label' => 'Nombre: ',
+			'class' => 'form-control'
+			));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Ingresar')); ?>

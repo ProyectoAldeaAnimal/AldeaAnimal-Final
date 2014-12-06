@@ -1,5 +1,8 @@
 <?php
-	$this->layout= 'head';
+	
+	$usuario = AuthComponent::user();
+	if($usuario[0]['Group']['ID_GRUPO']==2) $this->layout= 'head';
+	else $this->layout= 'heados';
 ?>
 	<div class="vets form">
 	<?php echo $this->Form->create('Vet'); ?>

@@ -11,23 +11,28 @@ $this->layout = 'head';
 			
 			));
 		echo $this->Form->input('NOMBRE_PAT', array(
-			'label' => 'Ingrese Nombre: <br>'
+			'label' => 'Ingrese Nombre: ',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('TIPO_PAT', array(
-			'label' => 'Ingrese la Tipo: <br>'
+			'label' => 'Ingrese la Tipo: ',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('GRAVEDAD_PAT', array(
-			'label' => 'Ingrese la Gravedad: <br>'
+			'label' => 'Ingrese la Gravedad: ',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('Farmaco', array(
-			'label' => 'Farmacos asociados a la patología: <br>'
+			'label' => 'Farmacos asociados a la patología: ',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('TipoMa', array(
-			'label' => 'Tipos de mascota asociados a la patología: <br>'
+			'label' => 'Tipos de mascota asociados a la patología: ',
+			'class' => 'form-control'
 			
 			));
 	?>

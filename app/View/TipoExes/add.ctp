@@ -8,7 +8,8 @@ $this->layout= 'head';
 		<br>
 	<?php
 		echo $this->Form->input('NOMBRE_TIPO_EX', array(
-			'label' => 'Nombre: <br>'
+			'label' => 'Nombre: ',
+			'class' => 'form-control'
 			
 			));
 	?>

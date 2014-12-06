@@ -1,6 +1,7 @@
 <?php
-	$this->layout= 'head';
-?>
+		$usuario = AuthComponent::user();
+	if($usuario[0]['Group']['ID_GRUPO']==2) $this->layout= 'head';
+	else $this->layout= 'heados';?>
 
 
 	
@@ -69,9 +70,9 @@
 			          ?>
 			      </div>
 
-		<h3><?php echo __('Acciones'); ?></h3>
+		<h3><?php if($usuario[0]['Group']['ID_GRUPO']==2) echo __('Acciones'); ?></h3>
 		<ul>
-			<li><?php echo $this->Html->link(__('Editar Mis Datos'), array('action' => 'edit', $vet['Vet']['ID_VET'])); ?> </li>
-			<li><?php echo $this->Html->link(__('Cambiar Contraseña'), array('action' => 'cambiar_pass', $vet['Vet']['ID_VET'])); ?> </li>
+			<li><?php if($usuario[0]['Group']['ID_GRUPO']==2) echo $this->Html->link(__('Editar Mis Datos'), array('action' => 'edit', $vet['Vet']['ID_VET'])); ?> </li>
+			<li><?php if($usuario[0]['Group']['ID_GRUPO']==2) echo $this->Html->link(__('Cambiar Contraseña'), array('action' => 'cambiar_pass', $vet['Vet']['ID_VET'])); ?> </li>
 		</ul>
 	</div>

@@ -8,15 +8,18 @@ $this->layout = 'head';
 	<?php
 		echo $this->Form->input('ID_FAR');
 		echo $this->Form->input('NOMBRE_FARMACO', array(
-			'label' => 'Ingrese Nombre: <br>'
+			'label' => 'Ingrese Nombre: ',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('LABORATORIO_MEDICAMENTO', array(
-			'label' => 'Ingrese Nombre Laboratorio: <br>'
+			'label' => 'Ingrese Nombre Laboratorio: ',
+			'class' => 'form-control'
 			
 			));
 		echo $this->Form->input('NOMBRE_GENERICO', array(
-			'label' => 'Ingrese Nombre Genérico: <br>'
+			'label' => 'Ingrese Nombre Genérico: ',
+			'class' => 'form-control'
 			
 			));
 	?>

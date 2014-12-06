@@ -7,7 +7,8 @@ $this->layout= 'head';
 		<h3 class="text-center"><?php echo __('Agregar Tipo De Intervención'); ?></h3>
 	<?php
 		echo $this->Form->input('NOMBRE_TIPO_INT', array(
-			'label' => 'Nombre: <br>'
+			'label' => 'Nombre: ',
+			'class' => 'form-control'
 			
 			));
 	?>

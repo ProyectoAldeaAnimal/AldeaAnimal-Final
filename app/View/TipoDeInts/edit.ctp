@@ -9,7 +9,8 @@ $this->layout= 'head';
 	<?php
 		echo $this->Form->input('ID_TIPO_INT');
 		echo $this->Form->input('NOMBRE_TIPO_INT', array(
-			'label' => 'Nombre: <br>'
+			'label' => 'Nombre: ',
+			'class' => 'form-control'
 			
 			));
 	?>

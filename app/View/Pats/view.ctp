@@ -91,7 +91,7 @@ $this->layout = 'head';
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php if(isset($pat['Atencion'])<1){ echo 'Esta patología no tiene atenciones relacionadas';}
-	 debug(isset($pat));
+	 
 	?>
 	<?php foreach ($pat['Atencion'] as $atencion): ?>
 		<tr>

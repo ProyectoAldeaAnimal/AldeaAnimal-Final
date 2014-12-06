@@ -56,6 +56,7 @@ class VetsController extends AppController {
 	}
 
 	public function registro_vet() {
+		$this->set('title_for_layout', 'Registro Veterinarios');
 		$this->loadModel('Vet');
 		$this->Vet->recursive = 0;
 		$vets = $this->Paginator->paginate('Vet');
@@ -405,6 +406,9 @@ class VetsController extends AppController {
 	public function view($id = null) {
 		$this->set('title_for_layout', 'Mis Datos');
 		$usuario = AuthComponent::user();
+		if($usuario[0]['Group']['ID_GRUPO']==3){
+			return $this->redirect(array('action' => 'registro_vet'));
+		}
 		$this->loadModel('Vet');
 		if (!$this->Vet->exists($usuario[0]['Vet']['ID_VET'])) {
 			throw new NotFoundException(__('Invalid vet'));
@@ -485,8 +489,9 @@ class VetsController extends AppController {
 			throw new NotFoundException(__('Invalid vet'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+			unset($this->request->data['Vet']['PASSWORD_VET']);
 			if ($this->Vet->save($this->request->data)) {
-				$this->Session->setFlash(__('Tus datos han sido actualizados.'));
+				$this->Session->setFlash(__('Los datos han sido actualizados.'));
 				return $this->redirect(array('action' => 'view'));
 			} else {
 				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));
@@ -638,6 +643,63 @@ class VetsController extends AppController {
 			}
 
 
+
+			public function misDatos(){
+				$this->set('title_for_layout', 'Mis Datos');
+				$usuario = AuthComponent::user();
+				$id = $usuario[0]['Vet']['ID_VET'];
+				$this->loadModel('Vet');
+				if (!$this->Vet->exists($id)) {
+					throw new NotFoundException(__('Invalid Vet'));
+				}
+
+				$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+				$this->set('Vet', $this->Vet->find('first', $options));
+
+			}
+
+			public function cambiar_pass_admin($id=null)
+			{
+				$this->set('title_for_layout', 'Cambiar Contraseña');
+				$this->loadModel('Vet');
+				$usuario = AuthComponent::user();	
+				if($id != $usuario[0]['Vet']['ID_VET']) return $this->redirect(array('action' => 'homeAdministrador'));
+				
+				if (!$this->Vet->exists($id)) {
+					throw new NotFoundException(__('Invalid Vet'));
+				}
+				if ($this->request->is(array('post', 'put'))) {
+					$data=$this->request->data;
+					if($usuario[0]['Vet']['PASSWORD_VET']!=Security::hash($data['Vet']['PASSWORD_Actual'])){
+						
+						$this->Session->setFlash(__('La contraseña actual no es correcta.'));
+						return $this->redirect(array('action' => 'cambiar_pass',$id));
+					}
+					if($data['Vet']['PASSWORD_NUEVO']!=$data['Vet']['password_update']){
+						
+						$this->Session->setFlash(__('La nueva contraseña no coincide con su confirmación.'));
+						return $this->redirect(array('action' => 'cambiar_pass',$id));
+					}
+
+					$nuevaContraseña = $data['Vet']['PASSWORD_NUEVO'];
+					
+					$usuario[0]['Vet']['PASSWORD_VET'] = $nuevaContraseña;
+					
+
+					
+					if ($this->Vet->save($usuario[0])) {
+						
+						return $this->redirect(array('action' => 'view'));
+					} else {
+					  $this->Session->setFlash(__('The User could not be saved. Please, try again.'));
+					}
+				} else {
+					$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+					$this->request->data = $this->Vet->find('first', $options);
+				}
+				$groups = $this->Vet->Group->find('list');
+				$this->set(compact('groups'));
+			}
 /**
  * delete method
  *
