@@ -54,31 +54,26 @@ a:link
                
        
         <!-- Wrapper for Slides -->
+            <img src="img/logo.png" alt="" class= "img-responsive mueveIMG" style="z-index: 1;position: absolute;">
+            <img src="img/horaa.png" alt="" calss="img-responsive reservaHora" style="z-index: 1;position: absolute;padding-top:350px;">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
+                
+                    
                 <div class="fill">
-                        <div>
-                          <img src="img/logo.png" alt="" class= "img-responsive mueveIMG">
-                          <img src="img/horaa.png" alt="" calss="img-responsive reservaHora">
-                        </div>
+                         
+                            
                 </div>
+
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill2">
-                      <div>
-                          <img src="img/logo.png" alt="" class= "img-responsive mueveIMG">
-                          <img src="img/horaa.png" alt="" calss="img-responsive reservaHora">
-                        </div>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill3">
-                      <div>
-                          <img src="img/logo.png" alt="" class= "img-responsive mueveIMG">
-                          <img src="img/horaa.png" alt="" calss="img-responsive reservaHora">
-                      </div>
                 </div>
             </div>
               
@@ -180,7 +175,7 @@ array('controller' => 'users', 'action' => 'login')); ?>
   
 
       </div>
-        <a href="/AldeaAnimal/pres/catalogo"><div class="btn btn-success">CONOCE NUESTROS SERVICIOS  </div></a>
+        <a href="/AldeaAnimal/pres/catalogo"><div class="btn btn-success"><i class="glyphicon glyphicon-folder-open"></i> CONOCE NUESTROS SERVICIOS  </div></a>
         
     </div>
 
