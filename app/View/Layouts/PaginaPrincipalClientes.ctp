@@ -52,7 +52,7 @@ a:link
                   <ul  class ="nav navbar-nav subMenu" >
                       <li><a class= "page-scroll"href="/AldeaAnimal/users/homeCliente"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
                       <li><a class= "page-scroll" href="/AldeaAnimal/users/misDatos"><FONT COLOR="#FFFFFF">Mis Datos</FONT></a></li>
-                      <li><a class= "page-scroll" href="/AldeaAnimal/users/misMascotas"><FONT COLOR="#FFFFFF">Mis Mascotas</FONT></a>
+                      <li><a class= "page-scroll" href="/AldeaAnimal/users/misMascotas"><FONT COLOR="#FFFFFF"><i class="fa fa-paw"></i> Mis Mascotas</FONT></a>
                       
                       <!--li><a href="#features">Features</a></li-->
                       
@@ -83,7 +83,7 @@ array('controller' => 'users', 'action' => 'logout')); ?>
         </div>
     <br>
     
-    <FONT COLOR="#229b0d"> <h3>Dueño: <?php
+    <FONT COLOR="#229b0d"> <h3><i class="glyphicon glyphicon-user"></i> Dueño: <?php
     $usuario = AuthComponent::user();
     echo ($usuario[0]['User']['NOMBRE_CLI']. ' '. $usuario[0]['User']['APELLIDO_PCLI']. ' '. $usuario[0]['User']['APELLIDO_MCLI']);?></h3></FONT>
 

@@ -14,7 +14,7 @@ echo $mascotasCli[0]['mas']['FECHA_DEFUNCION'];
 */
 ?>
 <div class="mas index">
-	<h3><?php echo __('Mis Mascotas'); ?></h3>
+	<h3><i class="fa fa-paw"></i> <?php echo __('Mis Mascotas'); ?></h3>
 	<table cellpadding="0" cellspacing="0" class="table table-striped">
 	<thead>
 	<tr>

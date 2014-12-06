@@ -439,7 +439,7 @@ class VetsController extends AppController {
 			$this->loadModel('Vet');
 			$this->Vet->create();
 			if ($this->Vet->save($this->request->data)) {
-				$this->Session->setFlash(__('El veterinario a sido guardado.'));
+				$this->Session->setFlash(__('El veterinario ha sido guardado.'));
 				return $this->redirect(array('action' => 'add'));
 			} else {
 				$this->Session->setFlash(__('The vet could not be saved. Please, try again.'));

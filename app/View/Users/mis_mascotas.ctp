@@ -10,7 +10,7 @@
         </div>
     <br>
     
-    <FONT COLOR="#229b0d"> <h3>Dueño: <?php
+    <FONT COLOR="#229b0d"> <h3><i class="glyphicon glyphicon-user"></i> Dueño: <?php
     $usuario = AuthComponent::user();
     echo ($usuario[0]['User']['NOMBRE_CLI']. ' '. $usuario[0]['User']['APELLIDO_PCLI']. ' '. $usuario[0]['User']['APELLIDO_MCLI']);?></h3></FONT>
 

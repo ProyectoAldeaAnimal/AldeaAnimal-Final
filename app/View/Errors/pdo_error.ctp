@@ -2,7 +2,11 @@
 
 	$usuario = AuthComponent::user();
 	if(isset($usuario)){
-		if(key($usuario[0])=='Vet') $this->layout= 'head';
+		if(key($usuario[0])=='Vet')
+			{	
+				if($usuario[0]['Group']['ID_GRUPO']==2) $this->layout= 'head';
+				else $this->layout= 'heados';
+			}
 		else 	$this->layout= 'headClientes';
 	}
 	else $this->layout= 'headClientes';

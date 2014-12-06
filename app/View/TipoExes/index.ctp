@@ -3,7 +3,7 @@ $this->layout= 'head';
 
 ?>
 <div class="tipoExes index">
-	<h3 class= "text-center"><?php echo __('Tipo Exes'); ?></h3>
+	<h3 class= "text-center"><?php echo __('Tipos de Examen'); ?></h3>
 	<br>
 	<table cellpadding="0" cellspacing="0">
 	<thead>

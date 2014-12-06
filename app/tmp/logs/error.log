@@ -23483,3 +23483,33 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-06 19:48:17 Error: [MissingActionException] Action VetsController::homeVeta() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'homeVeta',
+)
+Request URL: /AldeaAnimal/vets/homeVeta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-06 19:48:45 Error: [MissingControllerException] Controller class VetsaController could not be found.
+Exception Attributes: array (
+  'class' => 'VetsaController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vetsa/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 19:54:23 Error: Fatal Error (4): syntax error, unexpected 'debug' (T_STRING) in [C:\xampp\htdocs\AldeaAnimal\app\View\Procs\index.ctp, line 4]
+2014-12-06 19:54:23 Error: [FatalErrorException] syntax error, unexpected 'debug' (T_STRING)
+Request URL: /AldeaAnimal/procs/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

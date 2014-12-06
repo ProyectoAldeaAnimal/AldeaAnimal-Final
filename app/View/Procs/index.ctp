@@ -1,9 +1,11 @@
 <?php 
-$this->layout = "headClientes"
+$this->layout = "headClientes";
 ?>
 
 <div class="procs index">
 	<h3 class="text-center"><?php echo __('Procedimientos'); ?></h3>
+	<br>
+	<h4><i class="glyphicon glyphicon-ok"></i> Precione la fecha de anteción para más detalles</h4>
 	<br>
 	<table cellpadding="0" cellspacing="0">
 

@@ -10,7 +10,7 @@ $this->layout = 'headClientes';
         <?php
 
 
-        echo $this->Form->input('ID_VET', array('label' => 'Usted es:', 'class' => 'form-control','options' => $vetes)); 
+        echo $this->Form->input('ID_VET', array('label' => 'Seleccione:', 'class' => 'form-control','options' => $vetes)); 
   
 
 		
