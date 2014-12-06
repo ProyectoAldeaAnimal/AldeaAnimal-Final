@@ -4,7 +4,7 @@
 	<div class="vets form">
 	<?php echo $this->Form->create('Vet'); ?>
 		<fieldset>
-			<h3><?php echo __('Editar Mis Datos'); ?></h3>
+			<h3><?php echo __('Editar Datos'); ?></h3>
 		<?php
 			echo $this->Form->input('ID_VET');
 			echo $this->Form->input('ID_GROUP', array(
@@ -36,7 +36,8 @@
 			'type' => 'hidden'
 			));
 			echo $this->Form->input('PASSWORD_VET', array(
-			'label' => 'Cambie su contraseña: '
+			'label' => 'Cambie su contraseña: ',
+			'type' => 'hidden'
 			));
 		?>
 		</fieldset>

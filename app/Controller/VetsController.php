@@ -462,6 +462,7 @@ class VetsController extends AppController {
 			throw new NotFoundException(__('Invalid vet'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+			unset($this->request->data['Vet']['PASSWORD_VET']);
 			if ($this->Vet->save($this->request->data)) {
 				$this->Session->setFlash(__('Tus datos han sido actualizados.'));
 				return $this->redirect(array('action' => 'view'));
@@ -591,6 +592,52 @@ class VetsController extends AppController {
 		$this->set(compact('mensuales','year'));
 
 	}
+
+
+	public function cambiar_pass($id= null)
+			{
+				$this->set('title_for_layout', 'Cambiar Contraseña');
+				$this->loadModel('Vet');
+				$usuario = AuthComponent::user();	
+				if($id != $usuario[0]['Vet']['ID_VET']) return $this->redirect(array('action' => 'homeVet'));
+				
+				if (!$this->Vet->exists($id)) {
+					throw new NotFoundException(__('Invalid Vet'));
+				}
+				if ($this->request->is(array('post', 'put'))) {
+					$data=$this->request->data;
+					if($usuario[0]['Vet']['PASSWORD_VET']!=Security::hash($data['Vet']['PASSWORD_Actual'])){
+						
+						$this->Session->setFlash(__('La contraseña actual no es correcta.'));
+						return $this->redirect(array('action' => 'cambiar_pass',$id));
+					}
+					if($data['Vet']['PASSWORD_NUEVO']!=$data['Vet']['password_update']){
+						
+						$this->Session->setFlash(__('La nueva contraseña no coincide con su confirmación.'));
+						return $this->redirect(array('action' => 'cambiar_pass',$id));
+					}
+
+					$nuevaContraseña = $data['Vet']['PASSWORD_NUEVO'];
+					
+					$usuario[0]['Vet']['PASSWORD_VET'] = $nuevaContraseña;
+					
+
+					
+					if ($this->Vet->save($usuario[0])) {
+						$this->Session->setFlash(__('Sus Datos han sido actualizados.'));
+						return $this->redirect(array('action' => 'view'));
+					} else {
+					  $this->Session->setFlash(__('The User could not be saved. Please, try again.'));
+					}
+				} else {
+					$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
+					$this->request->data = $this->Vet->find('first', $options);
+				}
+				$groups = $this->Vet->Group->find('list');
+				$this->set(compact('groups'));
+			}
+
+
 /**
  * delete method
  *

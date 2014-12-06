@@ -14,11 +14,12 @@
     
     <FONT COLOR="#229b0d"> <h3><?php
     $usuario = AuthComponent::user();
-    
     echo ("Doctor: ".$usuario[0]['Vet']['name']);?></h3></FONT>
+     <a href="/AldeaAnimal/vets/view"> <button type="button" class="btn btn-success"> Ver Mis Datos
+    </button></a>
 
     <br>
-
+<br>
     <div class="row">
       <div class="col-md-9">
 

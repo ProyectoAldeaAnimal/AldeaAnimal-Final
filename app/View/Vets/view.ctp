@@ -72,5 +72,6 @@
 		<h3><?php echo __('Acciones'); ?></h3>
 		<ul>
 			<li><?php echo $this->Html->link(__('Editar Mis Datos'), array('action' => 'edit', $vet['Vet']['ID_VET'])); ?> </li>
+			<li><?php echo $this->Html->link(__('Cambiar Contraseña'), array('action' => 'cambiar_pass', $vet['Vet']['ID_VET'])); ?> </li>
 		</ul>
 	</div>

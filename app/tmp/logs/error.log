@@ -23012,3 +23012,166 @@ Stack Trace:
 #5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+2014-12-06 06:28:43 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 06:28:55 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 06:41:38 Error: [MissingControllerException] Controller class HomeAdministradorController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeAdministradorController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 06:41:46 Error: [MissingControllerException] Controller class HomeAdministradorController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeAdministradorController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 06:44:32 Error: Fatal Error (64): Cannot redeclare VetsController::view2() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 595]
+2014-12-06 06:44:32 Error: [FatalErrorException] Cannot redeclare VetsController::view2()
+Request URL: /AldeaAnimal/vets/mis_datos
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 06:44:35 Error: Fatal Error (64): Cannot redeclare VetsController::view2() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 595]
+2014-12-06 06:44:35 Error: [FatalErrorException] Cannot redeclare VetsController::view2()
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 06:44:37 Error: Fatal Error (64): Cannot redeclare VetsController::view2() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 595]
+2014-12-06 06:44:37 Error: [FatalErrorException] Cannot redeclare VetsController::view2()
+Request URL: /AldeaAnimal/vets/login
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 06:44:40 Error: Fatal Error (64): Cannot redeclare VetsController::view2() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 595]
+2014-12-06 06:44:40 Error: [FatalErrorException] Cannot redeclare VetsController::view2()
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 06:44:54 Error: Fatal Error (64): Cannot redeclare VetsController::view2() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 595]
+2014-12-06 06:44:54 Error: [FatalErrorException] Cannot redeclare VetsController::view2()
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 06:45:00 Error: Fatal Error (64): Cannot redeclare VetsController::view2() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 595]
+2014-12-06 06:45:00 Error: [FatalErrorException] Cannot redeclare VetsController::view2()
+Request URL: /AldeaAnimal/vets/registro_vet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 595, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 06:45:51 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 06:57:24 Error: [MissingActionException] Action VetsController::cambiar_pass() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'cambiar_pass',
+)
+Request URL: /AldeaAnimal/vets/cambiar_pass/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-06 07:01:53 Error: Fatal Error (1): Call to a member function exists() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 604]
+2014-12-06 07:01:53 Error: [FatalErrorException] Call to a member function exists() on a non-object
+Request URL: /AldeaAnimal/vets/cambiar_pass/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 604)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 604, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 604, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 07:02:23 Error: [MissingLayoutException] Layout file "C:\xampp\htdocs\AldeaAnimal\app\View\Layouts\headVet.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Layouts\\headVet.ctp',
+)
+Request URL: /AldeaAnimal/vets/cambiar_pass/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(510): View->_getLayoutFileName('headVet')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(479): View->renderLayout('', 'headVet')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-12-06 07:02:42 Error: [MissingLayoutException] Layout file "C:\xampp\htdocs\AldeaAnimal\app\View\Layouts\headVet.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\Layouts\\headVet.ctp',
+)
+Request URL: /AldeaAnimal/vets/cambiar_pass/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(510): View->_getLayoutFileName('headVet')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(479): View->renderLayout('', 'headVet')
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-12-06 07:04:13 Error: [MissingActionException] Action VetsController::misDatos() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'misDatos',
+)
+Request URL: /AldeaAnimal/vets/misDatos
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
