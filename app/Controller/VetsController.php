@@ -271,18 +271,36 @@ class VetsController extends AppController {
 	public function aceptar_solicitud($agenda){
 			$this->loadModel('Agenda');
 			$aceptada= $this->Agenda->find('all',array('conditions' => array('Agenda.ID_AGENDA' =>$agenda )));
-			$aceptada[0]['Agenda']['ESTADO_AGENDA'] = 'A';
-			if($this->Agenda->save($aceptada[0]['Agenda']))$this->Session->setFlash(__('La Hora ha sido aceptada.'));
 			$this->loadModel('BloqAgen');
 			$bloques= $this->BloqAgen->find('all',array('conditions' => array('BloqAgen.ID_AGENDA' =>$agenda )));
-			foreach ($bloques as $key => $bloque) {
-				$this->loadModel('OfertaHor');
-				$oferta = $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR'=>$bloque['BloqAgen']['ID_OFERTA_HOR'])));
-				$oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'A';
-				if($this->OfertaHor->save($oferta[0]['OfertaHor']))$this->Session->setFlash(__('La Oferta Horaria ha sido actualizada.'));
+		
+			$this->loadModel('OfertaHor');
+
+			$ocupado = false;
+			for ($i=0; $i <count($bloques); $i++) { 
+				$oferta= $this->OfertaHor->find('all',array('conditions' => 
+					array('OfertaHor.ID_OFERTA_HOR' =>$bloques[$i]['BloqAgen']['ID_OFERTA_HOR'])));
+			
+				if($oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] == 'A'){
+					$ocupado = true;
+
+				}
 			}
 
-			$this->set(compact('aceptada'));
+			if(!$ocupado){
+			
+				$aceptada[0]['Agenda']['ESTADO_AGENDA'] = 'A';
+				if($this->Agenda->save($aceptada[0]['Agenda']))$this->Session->setFlash(__('La Hora ha sido aceptada.'));
+				$this->loadModel('BloqAgen');
+				$bloques= $this->BloqAgen->find('all',array('conditions' => array('BloqAgen.ID_AGENDA' =>$agenda )));
+				foreach ($bloques as $key => $bloque) {
+					$this->loadModel('OfertaHor');
+					$oferta = $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR'=>$bloque['BloqAgen']['ID_OFERTA_HOR'])));
+					$oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'A';
+					if($this->OfertaHor->save($oferta[0]['OfertaHor']))$this->Session->setFlash(__('La Oferta Horaria ha sido actualizada.'));
+				}
+			}
+			$this->set(compact('aceptada','ocupado'));
 			
 	}
 

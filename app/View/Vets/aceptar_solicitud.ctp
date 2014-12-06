@@ -1,11 +1,18 @@
 <?php 
  $this->layout = 'headVets';
+
+
 ?>
 
 <div class="container well">
 
 
-	<FONT COLOR="#229b0d"> <h3 class= "text-center"> <?php echo 'La solicitud de '.$aceptada[0]['Pre']['NOMBRE_PRES']. ' para la mascota '.$aceptada[0]['Ma']['NOMBRE_MAS']. ' ha sido aceptada.'; ?></h3></FONT>
+	<FONT COLOR="#229b0d"> <h3 class= "text-center"> <?php if(!$ocupado)
+    echo 'La solicitud de '.$aceptada[0]['Pre']['NOMBRE_PRES']. ' para la mascota '.$aceptada[0]['Ma']['NOMBRE_MAS']. ' ha sido aceptada.'; ?></h3></FONT>
+
+
+  <fieldset> <legend class="text-center"><?php if($ocupado) echo __('El bloque solicitado se encuentra ocupado. Por favor rechace la solicitud.'); ?></legend></fieldset>
+ 
 
 	<div id="ex5">
 	    <?php

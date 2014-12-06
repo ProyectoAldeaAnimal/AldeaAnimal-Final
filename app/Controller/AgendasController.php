@@ -171,19 +171,16 @@ class AgendasController extends AppController {
 
 		# A la fecha recibida, le restamos el dia de la semana y obtendremos el lunes
 		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day-$diaSemana+1,$year));
-
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
 		# A la fecha recibida, le sumamos el dia de la semana menos siete y obtendremos el domingo
 		//$ultimoDia=date("d-m-Y",mktime(0,0,0,$month,$day+(7-$diaSemana),$year));
 
 		//echo "<br>Semana: ".$semana." - año: ".$year;
 		//echo "<br>Primer día ".$primerDia;
 		//echo "<br>Ultimo día ".$ultimoDia;
-
-
-
 		$this->loadModel('Pre');
 		$pres = $this->Pre->find('list');
-		$options = array('conditions' => array('OfertaHor.ID_VET'=> $params['param'], 'Cal.FECHA_CAL >=' =>  $primerDia));
+		$options = array('conditions' => array('OfertaHor.ID_VET'=> $params['param'], 'Cal.FECHA_CAL >=' =>  $primerDia, 'OfertaHor.ESTADO_AGENDAMIENTO <>'=> 'A'));
 		$ofertaHoras = $this->Agenda->OfertaHor->find('all',$options);
 		$ofertaHors;
 		$i=0;
