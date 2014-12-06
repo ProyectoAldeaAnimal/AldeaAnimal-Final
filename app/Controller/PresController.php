@@ -58,7 +58,7 @@ class PresController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Pre->create();
 			if ($this->Pre->save($this->request->data)) {
-				$this->Session->setFlash(__('The pre has been saved.'));
+	
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The pre could not be saved. Please, try again.'));
@@ -82,7 +82,7 @@ class PresController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Pre->save($this->request->data)) {
-				$this->Session->setFlash(__('The pre has been saved.'));
+	
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The pre could not be saved. Please, try again.'));

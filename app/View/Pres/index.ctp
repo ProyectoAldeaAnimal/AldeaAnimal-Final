@@ -60,6 +60,7 @@ $this->layout = 'headAdmin';
 			  </div>
 		<ul>
 			<li><?php echo $this->Html->link(__('Nueva Prestación'), array('action' => 'add')); ?></li>	
+			<li><?php echo $this->Html->link(__('Tipos de Prestación'), array('controller'=>'tipo_pres','action' => 'index')); ?></li>
 		</ul>
 	</div>
 </div>

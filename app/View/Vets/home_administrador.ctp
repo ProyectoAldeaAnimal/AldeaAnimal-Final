@@ -11,7 +11,7 @@
         </div>
     <br>
     
-    <FONT COLOR="#000000"> <h3>Administrador: <?php
+    <FONT COLOR="#000000"><h3><i class="glyphicon glyphicon-briefcase"></i> Administrador: <?php
       $user =AuthComponent::user();
       echo $user[0]['Vet']['name'];?></h3></FONT> 
  <a href="/AldeaAnimal/vets/misDatos"> <button type="button" class="btn btn-success"> Ver Mis Datos

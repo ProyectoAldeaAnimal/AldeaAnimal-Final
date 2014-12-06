@@ -23513,3 +23513,124 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-06 20:26:07 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 21:15:17 Error: [PDOException] SQLSTATE[45000]: <<Unknown error>>: 1644 Esa fila no se puede modificar
+Request URL: /AldeaAnimal/tipodeints/edit/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `aldeaan...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `aldeaan...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1838): Mysql->update(Object(TipoDeInt), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\TipoDeIntsController.php(76): Model->save(Array)
+#5 [internal function]: TipoDeIntsController->edit('1')
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TipoDeIntsController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoDeIntsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-06 21:40:47 Error: [NotFoundException] Invalid Tipo Pre
+Request URL: /AldeaAnimal/tipo_pres/view/0
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(386): Scaffold->_scaffoldView(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(TipoPresController), Object(CakeRequest))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-12-06 21:41:39 Error: [NotFoundException] Invalid Tipo Pre
+Request URL: /AldeaAnimal/tipo_pres/edit/0
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(394): Scaffold->_scaffoldSave(Object(CakeRequest), 'edit')
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(TipoPresController), Object(CakeRequest))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-12-06 21:41:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`aldeaanimal`.`pres`, CONSTRAINT `FK_PUEDE_SER16` FOREIGN KEY (`ID_TIPO_PRES`) REFERENCES `tipo_pres` (`ID_TIPO_PRES`))
+Request URL: /AldeaAnimal/tipo_pres/delete/1
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('DELETE `TipoPre...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\Database\Mysql.php(454): DboSource->execute('DELETE `TipoPre...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(2634): Mysql->delete(Object(TipoPre), Array)
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(304): Model->delete()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(397): Scaffold->_scaffoldDelete(Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Scaffold.php(150): Scaffold->_scaffold(Object(CakeRequest))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(TipoPresController), Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#11 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-12-06 21:42:40 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\TipoPres\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\TipoPres\\index.ctp',
+)
+Request URL: /AldeaAnimal/tipo_pres
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-06 21:42:47 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\TipoPres\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\TipoPres\\index.ctp',
+)
+Request URL: /AldeaAnimal/tipo_pres
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-06 21:42:50 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\TipoPres\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\TipoPres\\index.ctp',
+)
+Request URL: /AldeaAnimal/tipo_pres
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-06 21:43:01 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\TipoPres\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\TipoPres\\add.ctp',
+)
+Request URL: /AldeaAnimal/tipo_pres/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-12-06 21:43:12 Error: [MissingViewException] View file "C:\xampp\htdocs\AldeaAnimal\app\View\TipoPres\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\AldeaAnimal\\app\\View\\TipoPres\\index.ctp',
+)
+Request URL: /AldeaAnimal/tipo_pres
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(TipoPresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
