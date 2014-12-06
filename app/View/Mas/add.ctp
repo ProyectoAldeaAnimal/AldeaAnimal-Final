@@ -28,7 +28,7 @@
 		echo $this->Form->input('FECHA_DEFUNCION',array('type'=>'hidden'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Ingresar')); ?>
 </div>
 <div class="actions">
     <div id="ex5">

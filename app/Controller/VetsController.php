@@ -95,12 +95,23 @@ class VetsController extends AppController {
 					
 				    if ($this->request->is('post')) {
 
+
     						$this->loadModel('Vet');
 							$vet= $this->Vet->find('all',array(
 									'conditions' => array(
 											'VET.RUT_VET' => $this->request->data['Vet']['RUT_VET'])
 										)
 								);
+
+							if(count($vet)<1){
+								$this->Session->setFlash(
+						                __('Rut o contraseña incorrecta'),
+						                'default',
+						                array(),
+						                'auth'
+						            );
+								return $this->redirect(array('action'=>'login'));
+							}
 
 							if($this->request->data['Vet']['rol']== 'Administrador' && $vet[0]['Vet']['ID_GROUP'] ==3){
 
@@ -532,6 +543,7 @@ class VetsController extends AppController {
 
 
 	public function estadisticas(){
+		$this->set('title_for_layout', 'Estadísticas Anuales');
 		$usuario = AuthComponent::user(); 
 		$this->loadModel('TipoMa');
 		$tipoMa = $this->TipoMa->find('all');
@@ -556,13 +568,27 @@ class VetsController extends AppController {
 			}
 		}
 
-		for ($i=0; $i < count($tipoMa); $i++) { 
-			for ($j=0; $j <12 ; $j++) { 
-				$temp = $this->TipoMa->query('CALL `SP_ESTADISTICA_PATOLOGIAS`('.$tipoMa[$i]['TipoMa']['ID_TIPO_MAS'].','.$estadisticas[$j+1][0].','.$estadisticas[$j+1][1].')');
-				debug($temp);
-			}
 
+		$mensuales=array();
+		for ($j=0; $j <12 ; $j++) { 
+		
+			$temp=array();
+			for ($i=0; $i < count($tipoMa); $i++) { 
+				$temp = $this->TipoMa->query('CALL `SP_ESTADISTICA_PATOLOGIAS`(\''.$tipoMa[$i]['TipoMa']['ID_TIPO_MAS'].'\',\''.$estadisticas[$j+1][0].'\',\''.$estadisticas[$j+1][1].'\')');
+				//debug('CALL `SP_ESTADISTICA_PATOLOGIAS`(\''.$tipoMa[$i]['TipoMa']['ID_TIPO_MAS'].'\',\''.$estadisticas[$j+1][0].'\',\''.$estadisticas[$j+1][1].'\')');
+
+				if(count($temp)!=0){
+					array_push($temp,$j);
+
+					array_push($mensuales,$temp);
+				} 
+				
+		
+			}
+			
 		}
+
+		$this->set(compact('mensuales','year'));
 
 	}
 /**

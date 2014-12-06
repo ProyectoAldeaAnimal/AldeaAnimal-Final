@@ -48,7 +48,7 @@ class AppController extends Controller {
 
 
 			if(key($userId[0])=='Vet'){
-				if($params['action'] && $params['controller']!= 'vets'){
+				if($params['action']){
 					$permisoUsuario= $this->Acl->check(array(
 						    'model' => 'Group',
 							    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
@@ -57,7 +57,7 @@ class AppController extends Controller {
 				}
 				else{
 
-						if($params['action']=='homeAdministrador' && $userId[0]['Vet']['ID_GROUP']==2){
+					/*	if($params['action']=='homeAdministrador' && $userId[0]['Vet']['ID_GROUP']==2){
 							$permisoUsuario= $this->Acl->check(array(
 						    'model' => 'Group',
 							    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
@@ -68,13 +68,13 @@ class AppController extends Controller {
 						    'model' => 'Group',
 							    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
 							), 'controllers/'.$controller.'/'.$action);
-						}
-						else{
+						}*/
+					//	else{
 							$permisoUsuario= $this->Acl->check(array(
 							    'model' => 'Group',
 								    'foreign_key' => $userId[0]['Vet']['ID_GROUP']
 								), 'controllers/'.$controller);
-						}	
+					//	}	
 						
 					}
 				}

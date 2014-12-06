@@ -22156,3 +22156,786 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-05 18:42:18 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-05 21:59:53 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-05 22:00:11 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(UsersController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-05 22:00:14 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/users/misDatos
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(UsersController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-05 22:00:17 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/users/misDato
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(UsersController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-05 22:00:22 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-05 22:00:27 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-05 23:22:02 Error: Fatal Error (4): syntax error, unexpected 'for' (T_FOR) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 577]
+2014-12-05 23:22:02 Error: [FatalErrorException] syntax error, unexpected 'for' (T_FOR)
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 577)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 577, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 577, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 21:50:42 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\xampp\htdocs\AldeaAnimal\app\View\Vets\estadisticas.ctp, line 25]
+2014-12-05 21:50:42 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 01:53:45 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\VetsController.php, line 581]
+2014-12-06 01:53:45 Error: [FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 581)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 581, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 581, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 02:02:13 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-05 22:08:21 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\xampp\htdocs\AldeaAnimal\app\View\Vets\estadisticas.ctp, line 91]
+2014-12-05 22:08:21 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 22:11:27 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\xampp\htdocs\AldeaAnimal\app\View\Vets\estadisticas.ctp, line 93]
+2014-12-05 22:11:27 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 93, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-05 22:36:28 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\xampp\htdocs\AldeaAnimal\app\View\Vets\estadisticas.ctp, line 134]
+2014-12-05 22:36:28 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /AldeaAnimal/vets/estadisticas
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 134)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 134, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 134, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-06 02:46:46 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 02:49:38 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 02:50:24 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 02:57:09 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 02:57:38 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 02:57:47 Error: [MissingControllerException] Controller class HomeVetController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeVetController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:08:04 Error: [MissingControllerException] Controller class HomeVetController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeVetController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:08:09 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:08:18 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:08:44 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:09:06 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:09:50 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:09:57 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:10:00 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:14:22 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:14:27 Error: [MissingActionException] Action VetsController::home_administrador() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'home_administrador',
+)
+Request URL: /AldeaAnimal/vets/home_administrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-06 03:14:37 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:15:10 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:15:18 Error: [MissingActionException] Action VetsController::home_administrador() could not be found.
+Exception Attributes: array (
+  'controller' => 'VetsController',
+  'action' => 'home_administrador',
+)
+Request URL: /AldeaAnimal/vets/home_administrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-06 03:16:01 Error: [MissingControllerException] Controller class VestsController could not be found.
+Exception Attributes: array (
+  'class' => 'VestsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vests/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:16:03 Error: [MissingControllerException] Controller class VestsController could not be found.
+Exception Attributes: array (
+  'class' => 'VestsController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vests/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:16:16 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:16:23 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:16:30 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:16:42 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:17:05 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:17:09 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:17:58 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:18:05 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:19:51 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:21:21 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:21:29 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:24:06 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:24:15 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:24:27 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:25:01 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:26:28 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:26:37 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:27:01 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:28:26 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:29:42 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:30:00 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:30:26 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:31:02 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:31:35 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:32:20 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:33:23 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:33:44 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:33:46 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:34:01 Error: [MissingControllerException] Controller class HomeAdministradorController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeAdministradorController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:34:17 Error: [MissingControllerException] Controller class VetController could not be found.
+Exception Attributes: array (
+  'class' => 'VetController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/vet/homeAdministrador
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:03 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:21 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:30 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:35 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:42 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:46 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-12-06 03:35:53 Error: [MissingControllerException] Controller class AldeaAnimalController could not be found.
+Exception Attributes: array (
+  'class' => 'AldeaAnimalController',
+  'plugin' => NULL,
+)
+Request URL: /AldeaAnimal/AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
