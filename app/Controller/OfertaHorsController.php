@@ -132,14 +132,16 @@ class OfertaHorsController extends AppController {
 						}
 						//debug($datos);
 						$this->OfertaHor->create();
-
-						if ($this->OfertaHor->save($datos)) {
-							$next=1;
-							
-						} else {
-							$next=0;
-							$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
-						}	
+						if($fecha[0]['Cal']['DIA_TRABAJADO']==1){
+							if ($this->OfertaHor->save($datos)) {
+								$next=1;
+								
+							} else {
+								$next=0;
+								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							}
+						}
+						else $next=1;
 					}
 					
 				}
@@ -180,15 +182,18 @@ class OfertaHorsController extends AppController {
 							//debug($datos);
 							$this->OfertaHor->create();
 
-							if ($this->OfertaHor->save($datos)) {
-								$next=1;
-								
-							} else {
-								$next=0;
-								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							if($fecha[0]['Cal']['DIA_TRABAJADO']==1){
+								if ($this->OfertaHor->save($datos)) {
+									$next=1;
+									
+								} else {
+									$next=0;
+									$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+								}
 							}
-						}
-						
+							else $next=1;
+							}
+							
 					}
 					
 				}
@@ -227,15 +232,18 @@ class OfertaHorsController extends AppController {
 							//debug($datos);
 							$this->OfertaHor->create();
 
-							if ($this->OfertaHor->save($datos)) {
-								$next=1;
-								
-							} else {
-								$next=0;
-								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							if($fecha[0]['Cal']['DIA_TRABAJADO']==1){
+								if ($this->OfertaHor->save($datos)) {
+									$next=1;
+									
+								} else {
+									$next=0;
+									$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+								}
 							}
-						}
-						
+							else $next=1;
+							}
+							
 					}
 					
 				}
@@ -275,14 +283,17 @@ class OfertaHorsController extends AppController {
 							//debug($datos);
 							$this->OfertaHor->create();
 
-							if ($this->OfertaHor->save($datos)) {
-								$next=1;
-								
-							} else {
-								$next=0;
-								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							if($fecha[0]['Cal']['DIA_TRABAJADO']==1){
+								if ($this->OfertaHor->save($datos)) {
+									$next=1;
+									
+								} else {
+									$next=0;
+									$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+								}
 							}
-						}
+							else $next=1;
+							}
 						
 					}
 					
@@ -322,14 +333,17 @@ class OfertaHorsController extends AppController {
 							//debug($datos);
 							$this->OfertaHor->create();
 
-							if ($this->OfertaHor->save($datos)) {
-								$next=1;
-								
-							} else {
-								$next=0;
-								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							if($fecha[0]['Cal']['DIA_TRABAJADO']==1){
+								if ($this->OfertaHor->save($datos)) {
+									$next=1;
+									
+								} else {
+									$next=0;
+									$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+								}
 							}
-						}
+							else $next=1;
+							}
 						
 					}
 					
@@ -370,13 +384,16 @@ class OfertaHorsController extends AppController {
 							//debug($datos);
 							$this->OfertaHor->create();
 
-							if ($this->OfertaHor->save($datos)) {
-								$next=1;
-								
-							} else {
-								$next=0;
-								$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+							if($fecha[0]['Cal']['DIA_TRABAJADO']==1){
+								if ($this->OfertaHor->save($datos)) {
+									$next=1;
+									
+								} else {
+									$next=0;
+									$this->Session->setFlash(__('Hay un problema con una de las ofertas horarias'));
+								}
 							}
+							else $next=1;
 						}
 						
 					}

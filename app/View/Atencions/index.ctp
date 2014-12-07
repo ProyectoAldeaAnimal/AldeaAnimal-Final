@@ -1,5 +1,6 @@
 <?php 
-$this->layout = 'headVets'
+$this->layout = 'headVets';
+  $atencions = Set::sort($atencions, '{n}.Atencion.FECHA_ATENCION', 'asc');
 ?>
 <div class="container well">
 	<div class="">

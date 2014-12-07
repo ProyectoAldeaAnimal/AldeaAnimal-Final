@@ -6,6 +6,8 @@ $this->layout = 'headClientes';
 	<div class="recMeds index">
 		<legend><FONT COLOR="#229b0d"><h3><?php echo __('Recetas Generadas');?></h3></FONT></legend>
 		<br>
+		<h4><i class="glyphicon glyphicon-ok"></i> Precione la fecha de anteción para más detalles</h4>
+		<br>
 		<table cellpadding="0" cellspacing="0">
 		<thead>
 		<tr>

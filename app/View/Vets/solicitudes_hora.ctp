@@ -65,19 +65,11 @@ $this->layout = 'headVets';
 
   </div>
 <br>
-    <div class="lineFinal">
+     <div id="footer" class= "lineFinal footer">
       <div class="container">
-        <div class="row downLine">
-          <div class="col-md-6 text-left copy">
+             <div class="row downLine">
+              <div >
             <p>Copyright &copy; 2014 Aldea Animal.</p>
-          </div>
-          <div class="col-md-6 text-right dm">
-            <ul id="downMenu">
-              <li class="active"><a href="#home">Principal</a></li>
-              <li><a href="#servicios">Mis Datos</a></li>
-              <li><a href="#about">Mis Mascotas</a></li>
-
-            </ul>
           </div>
         </div>
       </div>

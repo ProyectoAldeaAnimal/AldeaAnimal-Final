@@ -60,7 +60,10 @@ class AgendasController extends AppController {
 		$ofertaHors;
 		$this->loadModel('OfertaHor');
 		$this->loadModel('Cal');
-
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
 		$j=0;
     	if($bloques)	
 		foreach ($blocks as $block) {
@@ -69,22 +72,25 @@ class AgendasController extends AppController {
 
 			$idCal= $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR'])));
 			$cals=$this->Cal->find('all', array(
-			'conditions' => array('Cal.ID_CAL' => $idCal[0]['Cal']['ID_CAL'])
+			'conditions' => array('Cal.ID_CAL' => $idCal[0]['Cal']['ID_CAL']  , 'CAL.FECHA_CAL >=' => $primerDia)
 			));
 			$i= (int)$block['ID_AGENDA'];
 			$j= (int)$block['ID_OFERTA_HOR'];
-
-			if($cals[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
-			if($cals[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
-			if($cals[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
-			if($cals[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
-			if($cals[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
-			if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
-			$ofertaHor['OfertaHor']['name'] = $dia." : ".$cals[0]['Cal']['FECHA_CAL'] . " Bloque Horario:  ".$ofertaHors[$i][$j]; 
-			$ofertaHors[$block['ID_AGENDA']] =$ofertaHor['OfertaHor']['name'];
+			if(count($cals)>0){
+				if($cals[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+				$ofertaHor['OfertaHor']['name'] = $dia." : ".$cals[0]['Cal']['FECHA_CAL'] . " Bloque Horario:  ".$ofertaHors[$i][$j]; 
+				$ofertaHors[$block['ID_AGENDA']] =$ofertaHor['OfertaHor']['name'];
+			}
+			else $ofertaHors=array();
+			
 		}
 		else $this->Session->setFlash(__('Usted no tiene solicitudes de hora.'));
-
+		
 		$this->set(compact('agendas','ofertaHors'));
 	}
 

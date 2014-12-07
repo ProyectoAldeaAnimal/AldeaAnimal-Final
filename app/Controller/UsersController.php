@@ -215,7 +215,8 @@ class UsersController extends AppController{
 			public function pre_solicitar_hora(){
 				$this->set('title_for_layout', 'Solicitar Hora');
 				$this->loadModel('Vet');
-				$vets= $this->Vet->find('all');
+				$order = "Vet.name";
+				$vets= $this->Vet->find('all',array('order' => array('Vet.name' => 'ASC')));
 				$vetes;
 				foreach ($vets as $key => $vet) {
 					$vetes[$vet['Vet']['ID_VET']] = $vet['Vet']['name'];

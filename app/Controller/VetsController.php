@@ -289,7 +289,7 @@ class VetsController extends AppController {
 				$oferta= $this->OfertaHor->find('all',array('conditions' => 
 					array('OfertaHor.ID_OFERTA_HOR' =>$bloques[$i]['BloqAgen']['ID_OFERTA_HOR'])));
 			
-				if($oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] == 'A'){
+				if($oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] == 'A' OR $oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] == 'R'){
 					$ocupado = true;
 
 				}
@@ -328,6 +328,7 @@ class VetsController extends AppController {
 		$this->loadModel('Agenda');
 		$options = array('conditions' => array('Agenda.ID_VET' => $usuario[0]['Vet']['ID_VET'], 'Agenda.ESTADO_AGENDA' => 'A'));
 		$agendas =$this->Agenda->find('all',$options);
+	
 		if(count($agendas)<1) $tienePeteciones= false;
 
 		$this->loadModel('User');
@@ -343,27 +344,35 @@ class VetsController extends AppController {
 		$this->loadModel('OfertaHor');
 		$bloques =$this->BloqAgen->find('all');
 		$horarios;
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
 		if ($tienePeteciones)
 		foreach ($bloques as $key => $bloque) {
 			
 				$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET'],
-				'OfertaHor.ID_OFERTA_HOR' => $bloque['BloqAgen']['ID_OFERTA_HOR']
+				'OfertaHor.ID_OFERTA_HOR' => $bloque['BloqAgen']['ID_OFERTA_HOR'], 'CAL.FECHA_CAL >=' => $primerDia
 				));
 				$OfertaHors =$this->OfertaHor->find('all',$options);
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+				if(count($OfertaHors)>0){
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+				
+				
 			
 				$OfertaHors[0]['OfertaHor']['name'] = $dia.' '.$OfertaHors[0]['Cal']['FECHA_CAL'].': '. $OfertaHors[0]['OfertaHor']['name'];
 				if(!isset($horarios[$bloque['BloqAgen']['ID_AGENDA']]))
 					$horarios[$bloque['BloqAgen']['ID_AGENDA']] = $OfertaHors[0]['OfertaHor']['name'];
+
+			}
 		}
 
-		
-		
+
 		$this->set(compact('agendas','usuarios','horarios'));
 
 	}
@@ -559,7 +568,7 @@ class VetsController extends AppController {
 				));
 		}
 		$this->loadModel('User');
-		$users=$this->User->find('list');
+		$users=$this->User->find('list',array('order' => array('User.name' => 'ASC')));
 		$this->set(compact('users'));
 
 	}

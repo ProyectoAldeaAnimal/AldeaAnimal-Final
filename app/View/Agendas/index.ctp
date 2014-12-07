@@ -1,5 +1,6 @@
 <?php 
   $this->layout = 'headClientes';
+
 ?>
 <div class="agendas index">
 	<h3><?php echo __('Mis Solicitudes de Hora'); 
@@ -18,7 +19,8 @@
 	</tr>
 	</thead>
 	<tbody>
-	<?php foreach ($agendas as $agenda): ?>
+	<?php foreach ($agendas as $agenda): 
+			if(isset($ofertaHors[$agenda['Agenda']['ID_AGENDA']])):?>
 	<tr>
 		
 		<td>
@@ -47,7 +49,9 @@
 			<?php if ($agenda['Agenda']['ESTADO_AGENDA']!='A')echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $agenda['Agenda']['ID_AGENDA']), array(), __('Are you sure you want to delete # %s?', $agenda['Agenda']['ID_AGENDA'])); ?>
 		</td>
 	</tr>
-<?php endforeach; ?>
+<?php 
+	endif;
+	endforeach; ?>
 	</tbody>
 	</table>
 </div>
