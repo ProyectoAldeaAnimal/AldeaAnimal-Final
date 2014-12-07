@@ -251,4 +251,30 @@ class AgendasController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+
+	public function rechazar($id = null) {
+		$options = array('conditions' => array('Agenda.' . $this->Agenda->primaryKey => $id));
+		$ag=$this->Agenda->find('all',$options);
+		//debug($ag);
+
+		if (!isset($ag)) {
+			throw new NotFoundException(__('Invalid agenda'));
+		}
+		if($ag[0]['Agenda']['ESTADO_AGENDA']=='P') {
+			$ag[0]['Agenda']['ESTADO_AGENDA']='R';
+			if($this->Agenda->save($ag[0]))$this->Session->setFlash(__('Una hora ha sido rechazada.'));
+			else $this->Session->setFlash(__('Ha ocurrido un problema'));
+			return $this->redirect(array('controller'=>'vets','action' => 'solicitudesHora'));
+		}
+		else{
+			$this->Session->setFlash(__('Usted no puede hacer esto.'));
+			return $this->redirect(array('controller'=>'vets','action' => 'solicitudesHora'));
+		}
+		//if ($this->Agenda->delete()) {
+		//	$this->Session->setFlash(__('La agenda ha sido eliminada.'));
+		//} else {
+		//	$this->Session->setFlash(__('The agenda could not be deleted. Please, try again.'));
+	//	}
+	//	return $this->redirect(array('action' => 'index'));
+	}
 }
