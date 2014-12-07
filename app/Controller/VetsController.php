@@ -273,7 +273,15 @@ class VetsController extends AppController {
 			$aceptada= $this->Agenda->find('all',array('conditions' => array('Agenda.ID_AGENDA' =>$agenda )));
 			$this->loadModel('BloqAgen');
 			$bloques= $this->BloqAgen->find('all',array('conditions' => array('BloqAgen.ID_AGENDA' =>$agenda )));
-		
+			
+
+			$this->loadModel('User');
+			$cliente = $this->User->find('all',array(
+			'conditions' => array('User.ID'=> $aceptada[0]['Ma']['ID'])
+			));
+
+
+
 			$this->loadModel('OfertaHor');
 
 			$ocupado = false;
@@ -298,6 +306,15 @@ class VetsController extends AppController {
 					$oferta = $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR'=>$bloque['BloqAgen']['ID_OFERTA_HOR'])));
 					$oferta[0]['OfertaHor']['ESTADO_AGENDAMIENTO'] = 'A';
 					if($this->OfertaHor->save($oferta[0]['OfertaHor']))$this->Session->setFlash(__('La Oferta Horaria ha sido actualizada.'));
+					$Email = new CakeEmail('gmail');
+					$Email->to($cliente[0]['User']['MAIL_CLI']);
+					$Email->subject('Información de Solicitud de Hora');
+					$Email->send("Estimado/a ".$cliente[0]['User']['NOMBRE_CLI'].":
+						Le informamos que su solicitud de hora para la atención ".$aceptada[0]['Pre']['NOMBRE_PRES']." con su
+						mascota ".$aceptada[0]['Ma']['NOMBRE_MAS']." ha sido aceptada. Por favor le solicitamos puntualidad y
+						que asista a nuestra clínica en la fecha estipulada.
+						Clínica Aldea Animal");
+				
 				}
 			}
 			$this->set(compact('aceptada','ocupado'));

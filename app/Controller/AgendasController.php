@@ -255,7 +255,10 @@ class AgendasController extends AppController {
 	public function rechazar($id = null) {
 		$options = array('conditions' => array('Agenda.' . $this->Agenda->primaryKey => $id));
 		$ag=$this->Agenda->find('all',$options);
-		//debug($ag);
+		$this->loadModel('User');
+		$cliente = $this->User->find('all',array(
+			'conditions' => array('User.ID'=> $ag[0]['Ma']['ID'])
+			));
 
 		if (!isset($ag)) {
 			throw new NotFoundException(__('Invalid agenda'));
@@ -264,6 +267,15 @@ class AgendasController extends AppController {
 			$ag[0]['Agenda']['ESTADO_AGENDA']='R';
 			if($this->Agenda->save($ag[0]))$this->Session->setFlash(__('Una hora ha sido rechazada.'));
 			else $this->Session->setFlash(__('Ha ocurrido un problema'));
+			$Email = new CakeEmail('gmail');
+			$Email->to($cliente[0]['User']['MAIL_CLI']);
+			$Email->subject('Información de Solicitud de Hora');
+			$Email->send("Estimado/a ".$cliente[0]['User']['NOMBRE_CLI'].":
+				Le informamos que su solicitud de hora para la atención ".$ag[0]['Pre']['NOMBRE_PRES']." con su
+				mascota ".$ag[0]['Ma']['NOMBRE_MAS']." ha sido rechazada. Por favor solicite otra Hora.
+				Atentamente
+				Clínica Aldea Animal");
+				
 			return $this->redirect(array('controller'=>'vets','action' => 'solicitudesHora'));
 		}
 		else{

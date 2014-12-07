@@ -28,12 +28,18 @@
  */
 class EmailConfig {
 
-	public $default = array(
-		'transport' => 'Mail',
-		'from' => 'you@localhost',
-		//'charset' => 'utf-8',
-		//'headerCharset' => 'utf-8',
-	);
+	
+
+	public $gmail = array(
+		 'transport' => 'Smtp',		
+		 'from' => "proyecto.aldeaanimal@gmail.com",	
+		 'host' => 'ssl://smtp.gmail.com',	
+		 'port' => 465,	
+		 'username' => 'proyecto.aldeaanimal@gmail.com',
+		 'password' => 'proyectoaldeaanimal2014'
+			
+		 );
+
 
 	public $smtp = array(
 		'transport' => 'Smtp',
