@@ -16,15 +16,15 @@ $this->layout = 'headClientes';
 		</legend>
 		<legend>
 			<div class="row">
-				<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Tipo de Prestación:'); ?></button></div>
+				<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Prestación:'); ?></button></div>
 				<div class="col col-md-6"><?php echo $this->Html->link($atencion['Pre']['NOMBRE_PRES'], array('controller' => 'pres', 'action' => 'view', $atencion['Pre']['ID_PRES'])); ?></div>
 			</div>	
 		</legend>
 		<legend>
 			<div class="row">
 
-				<div class="col col-md-6"><?php echo $this->Html->div('btn btn-default', 'Prestación:');?></div>
-				<div class="col col-md-6"><?php echo $atencion['TipoPre']['NOMBRE_TIPO_PRES'];; ?></div>
+				<div class="col col-md-6"><?php echo $this->Html->div('btn btn-default', 'Veterinario a cargo:');?></div>
+				<div class="col col-md-6"><?php echo $atencion['Vet']['name'];; ?></div>
 			</div>	
 		</legend>
 		<legend>

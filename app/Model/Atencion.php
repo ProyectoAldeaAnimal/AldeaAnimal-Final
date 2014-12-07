@@ -76,9 +76,9 @@ class Atencion extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'TipoPre' => array(
-			'className' => 'TipoPre',
-			'foreignKey' => 'ID_TIPO_PRES',
+		'Vet' => array(
+			'className' => 'Vet',
+			'foreignKey' => 'ID_vET',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

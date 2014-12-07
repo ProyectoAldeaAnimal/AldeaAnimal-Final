@@ -12,7 +12,7 @@ $this->layout = 'headVets';
 				<th><?php echo $this->Paginator->sort('Número de Atención'); ?></th>
 				<th><?php echo $this->Paginator->sort('Prestación'); ?></th>
 				<th><?php echo $this->Paginator->sort('Mascota'); ?></th>
-				<th><?php echo $this->Paginator->sort('Tipo de Prestación'); ?></th>
+				<th><?php echo $this->Paginator->sort('Veterinario a cargo:'); ?></th>
 				<th><?php echo $this->Paginator->sort('Fecha'); ?></th>
 				<th><?php echo $this->Paginator->sort('Peso'); ?></th>
 				<th><?php echo $this->Paginator->sort('Temperatura'); ?></th>
@@ -33,7 +33,7 @@ $this->layout = 'headVets';
 				<?php echo $this->Html->link($atencion['Ma']['NOMBRE_MAS'], array('controller' => 'mas', 'action' => 'view', $atencion['Ma']['ID_MAS'])); ?>
 			</td>
 			<td>
-				<?php echo $this->Html->link($atencion['TipoPre']['NOMBRE_TIPO_PRES'], array('controller' => 'tipo_pres', 'action' => 'view', $atencion['TipoPre']['ID_TIPO_PRES'])); ?>
+				<?php echo $this->Html->link($atencion['Vet']['name'], array('controller' => 'tipo_pres', 'action' => 'view', $atencion['Vet']['ID_VET'])); ?>
 			</td>
 			<td><?php echo h($atencion['Atencion']['FECHA_ATENCION']); ?>&nbsp;</td>
 			<td><?php echo h($atencion['Atencion']['PESO']); ?>&nbsp;</td>

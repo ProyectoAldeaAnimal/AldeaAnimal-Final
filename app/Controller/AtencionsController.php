@@ -60,13 +60,12 @@ class AtencionsController extends AppController {
 	public function add($id = null) {
 		$this->set('title_for_layout', 'Generar Atención');
 
+		$usuario = AuthComponent::user();
+
 		date_default_timezone_set('America/Santiago');
 
 		if ($this->request->is('post')) {
-			$data= $this->request->data;
-			$options = array('conditions' => array('Pre.ID_PRES' =>$data['Atencion']['ID_PRES']));
-			$prestacion = $this->Atencion->Pre->find('all',$options);
-			$data['Atencion']['ID_TIPO_PRES'] = $prestacion[0]['TipoPre']['ID_TIPO_PRES'];
+			$data= $this->request->data;	
 			$this->Atencion->create();
 			if ($datos= $this->Atencion->save($data)) {
 				$this->Session->setFlash(__('Se ha generado la atención'));
@@ -76,7 +75,7 @@ class AtencionsController extends AppController {
 			}
 		}
 		$pres = $this->Atencion->Pre->find('list');
-		$tipoPres = $this->Atencion->TipoPre->find('list');
+		//$tipoPres = $this->Atencion->TipoPre->find('list');
 		$options = array('conditions' => array('Ma.ID'	=> $id));
 		$mas = $this->Atencion->Ma->find('list',$options);
 		if(count($mas)<1){
@@ -84,8 +83,11 @@ class AtencionsController extends AppController {
 			$this->Session->setFlash(__('El cliente no tiene mascotas registradas'));
 			return $this->redirect(array('controller'=>'vets','action' => 'seleccion_cliente'));
 		} 
+		//debug($tipoPres);
+		$options = array('conditions' => array('Vet.ID_VET'	=> $usuario[0]['Vet']['ID_VET']));
+		$vets = $this->Atencion->Vet->find('list', $options);
 		$pats = $this->Atencion->Pat->find('list');
-		$this->set(compact('pres', 'tipoPres', 'mas', 'pats'));
+		$this->set(compact('pres', 'mas', 'pats','vets'));
 	}
 
 /**

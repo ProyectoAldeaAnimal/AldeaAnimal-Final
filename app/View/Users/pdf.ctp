@@ -32,9 +32,9 @@ $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Nicola Asuni');
-$pdf->SetTitle('TCPDF Example 003');
-$pdf->SetSubject('TCPDF Tutorial');
+$pdf->SetAuthor('Aldea Animal');
+$pdf->SetTitle('Receta de tratamiento');
+$pdf->SetSubject('Receta para mascota específica');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data

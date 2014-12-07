@@ -14,27 +14,30 @@
 			));
 		echo $this->Form->input('ID_PRES', array(
 			'label' => 'Seleccione el servicio a realizar: <br>',
+			'class'=> 'form-control',
 			'options' => $pres
 			));
 		echo $this->Form->input('ID_MAS', array(
 			'label' => 'Seleccione seleccione la mascota a atender: <br>',
+			'class'=> 'form-control',
 			'options' => $mas
 			));
-		echo $this->Form->input('ID_TIPO_PRES', array(
-			'type' => 'hidden',
-			'options' => $tipoPres
+		echo $this->Form->input('ID_VET', array(
+			'label' => 'Usted es:',
+			'class'=> 'form-control',
+			'options' => $vets
 			));
 		echo $this->Form->input('FECHA_ATENCION', array(
 			'label' => 'Ingrese la fecha: <br>'
 			
 			));
 		echo $this->Form->input('PESO', array(
-			'label' => 'Ingrese el peso de la mascota en Kg:',
+			'label' => 'Ingrese el peso de la mascota en Kg en decimales (Ej: 1,00):',
 			'class'=> 'form-control'
 			
 			));
 		echo $this->Form->input('TEMPERATURA', array(
-			'label' => 'Ingrese la temperatura de la mascota C°:',
+			'label' => 'Ingrese la temperatura de la mascota C° en decimales (Ej: 1,00)::',
 			'class'=> 'form-control'
 			
 			));
