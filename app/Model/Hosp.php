@@ -30,6 +30,17 @@ class Hosp extends AppModel {
 	public $displayField = 'FECHA_INGRESO_HOSP';
 
 
+	public $validate = array(
+	    'CANIL' => array(
+	    	  'age' => array(
+		        'rule' => array('comparison', '>=', 0),
+		        'message' => 'El canil debe ser un número positivo.'
+		    ),'
+	    	  cars' => array(
+	        'rule' => 'numeric',
+	        'message' => 'Por favor indique el número de canil.'
+    )
+	));
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

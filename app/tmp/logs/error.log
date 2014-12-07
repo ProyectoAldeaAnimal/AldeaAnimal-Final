@@ -25171,3 +25171,75 @@ Stack Trace:
 #3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-12-07 23:53:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`inter`, CONSTRAINT `FK_PUEDE_GENERAR` FOREIGN KEY (`ID_ORDEN_INT`) REFERENCES `orden_int` (`ID_ORDEN_INT`))
+Request URL: /AldeaAnimal/inters/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Inter), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\IntersController.php(52): Model->save(Array)
+#5 [internal function]: IntersController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(IntersController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(IntersController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-08 00:12:37 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\RecMedsController.php, line 108]
+2014-12-08 00:12:37 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/recmeds/add?param=4
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-08 00:12:40 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\RecMedsController.php, line 108]
+2014-12-08 00:12:40 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/recmeds/add?param=4
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-08 00:13:24 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\RecMedsController.php, line 108]
+2014-12-08 00:13:24 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /AldeaAnimal/recmeds/add?param=4
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 108, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-08 00:36:30 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`hosp`, CONSTRAINT `FK_PUEDE_GENERAR2` FOREIGN KEY (`ID_ORDEN_HOSP`) REFERENCES `orden_hosp` (`ID_ORDEN_HOSP`))
+Request URL: /AldeaAnimal/hosps/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Hosp), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\HospsController.php(52): Model->save(Array)
+#5 [internal function]: HospsController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(HospsController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(HospsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-08 00:37:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`hosp`, CONSTRAINT `FK_PUEDE_GENERAR2` FOREIGN KEY (`ID_ORDEN_HOSP`) REFERENCES `orden_hosp` (`ID_ORDEN_HOSP`))
+Request URL: /AldeaAnimal/hosps/add
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Hosp), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\HospsController.php(52): Model->save(Array)
+#5 [internal function]: HospsController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(HospsController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(HospsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

@@ -9,12 +9,14 @@
 	<?php
 		echo $this->Form->input('ID_ORDEN_HOSP', array(
 			'label' => 'Seleccione la orden Hospitalización: <br>',
-			'options' => $ordenHosps
+			'options' => $ordenHosps,
+			'class' => 'form-control'
 			));
 
 		echo $this->Form->input('ID_VET', array(
 			'label' => 'Seleccione el veterinario a cargo de la Hospitalización: <br>',
-			'options' => $vets
+			'options' => $vets,
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('FECHA_INGRESO_HOSP', array(
 			'label' => 'Ingrese la fecha de ingeso: <br>'
@@ -23,7 +25,8 @@
 			'label' => 'Ingrese la fecha de alta estimada: <br>'
 			));
 		echo $this->Form->input('CANIL', array(
-			'label' => 'Ingrese número del canil de la mascota: <br>'
+			'label' => 'Ingrese número del canil de la mascota:',
+			'class' => 'form-control'
 			));
 	?>
 	</fieldset>

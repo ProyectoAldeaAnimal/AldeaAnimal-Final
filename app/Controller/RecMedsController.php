@@ -100,7 +100,28 @@ class RecmedsController extends AppController {
 	public function add() {
 		$this->set('title_for_layout', 'Receta o Medicación');
 		$params = $this->params['url'];
+		if(count($params)==0) return $this->redirect(array('action' => 'select_meds'));
+
 		if ($this->request->is('post')) {
+			$repetido = false;
+			$rdata=$this->request->data;
+			for ($i=0; $i < $params['param'] ; $i++) {
+				$actual =  $rdata['RecMed']['Farmaco '.$i];
+				for ($j=0; $j < $params['param']; $j++) { 
+					if($actual == $rdata['RecMed']['Farmaco '.$j] && $i!=$j){
+						$repetido = true;
+						break;
+					}
+				}
+
+			}
+			if($repetido){
+				$this->Session->setFlash(__('No pueden haber medicamentos repetidos en la receta.'));
+				return $this->redirect(array('action' => 'select_meds'));
+			}
+
+
+
 
 			$data = $this->request->data;
 			$receta['ID_ATENCION'] = $data['RecMed']['ID_ATENCION'];

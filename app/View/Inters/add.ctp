@@ -8,11 +8,13 @@
 	<?php
 		echo $this->Form->input('ID_ORDEN_INT', array(
 			'label' => 'Seleccione la orden de intervención correspondiente: <br>',
-			'options' => $ordenInts
+			'options' => $ordenInts,
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('ID_VET', array(
 			'label' => 'Seleccione el veterinario a cargo: <br>',
-			'options' => $vets
+			'options' => $vets,
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('FECHA_INGRESO_INT', array(
 			'label' => 'Ingrese fecha y hora de ingreso a interveción: <br>'
@@ -21,7 +23,8 @@
 			'label' => 'Ingrese fecha y hora de término de la intervención: <br>'
 			));
 		echo $this->Form->input('OBS_INT', array(
-			'label' => 'Observaciones: <br>'
+			'label' => 'Observaciones: <br>',
+			'class' => 'form-control'
 			));
 	?>
 	</fieldset>

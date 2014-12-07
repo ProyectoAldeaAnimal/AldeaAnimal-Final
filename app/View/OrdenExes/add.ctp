@@ -9,23 +9,28 @@
 	<?php
 		echo $this->Form->input('ID_TIPO_EX', array(
 			'label' => 'Seleccione el tipo de examen a realizar : <br>',
+			'class' => 'form-control',
 			'options' => $tipoExes
 			));
 		echo $this->Form->input('ID_ATENCION', array(
 			'label' => 'Seleccione la atención a la que corresponde este examen : <br>',
+			'class' => 'form-control',
 			'options' => $atencions
 			));
 		echo $this->Form->input('FECHA_ORDEN_EX', array(
 			'label' => 'Seleccione fecha en la que se emitió la orden: <br>'
 			));
 		echo $this->Form->input('MOTIVO_EX', array(
-			'label' => 'Indique el motivo del examen: <br>'
+			'label' => 'Indique el motivo del examen: <br>',
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('PLAZO_SUGERIDO', array(
-			'label' => 'Indique el plazo sugerido para toma el examen: <br>'
+			'label' => 'Indique el plazo sugerido para toma el examen: <br>',
+			'class' => 'form-control'
 			));
 		echo $this->Form->input('OBS_ORDEN_EX', array(
-			'label' => 'Observacinoes adicionales que estime pertinentes: <br>'
+			'label' => 'Observacinoes adicionales que estime pertinentes: <br>',
+			'class' => 'form-control'
 			));
 	?>
 	</fieldset>
