@@ -11,9 +11,9 @@ $this->layout= 'headVets';
         </div>
     <br>
     
-    <FONT COLOR="#229b0d"> <h3><?php
+   <FONT COLOR="#229b0d"> <h3><i class="glyphicon glyphicon-plus-sign"></i><?php
     $usuario = AuthComponent::user();
-    echo ("Doctor: ".$usuario[0]['Vet']['name']);?></h3></FONT>
+    echo (" Doctor: ".$usuario[0]['Vet']['name']);?></h3></FONT>
 
     <br>
 

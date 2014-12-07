@@ -41,6 +41,10 @@ $this->layout = 'headClientes';
 				<div class="col col-md-6"><?php echo h($recmed['Recmed']['OBS_RECETA']); ?></div>
 			</div>	
 		</legend>
+			<a href=<?php echo "/AldeaAnimal/users/pdf/".$recmed['Recmed']['ID_RECETA']?>><button type="button" class="btn btn-danger center-block"> <h3>Generar PDF de Receta</h3>
+              Manténgase informado sobre los remedios de su mascota
+             </button></a>
+
 	</div>
 	<div class="actions">
 		<h3><?php echo __('Acciones'); ?></h3>
@@ -51,6 +55,7 @@ $this->layout = 'headClientes';
 			</div>
 		<ul>
 			<li><?php echo $this->Html->link(__('Volver'), array('action' => 'recetas_mas')); ?> </li>
+
 		</ul>
 	</div>
 	<br>

@@ -284,6 +284,24 @@ class UsersController extends AppController{
 				$this->set(compact('groups'));
 			}
 
+			public function pdf($id = null) 
+		    { 
+
+//		        debug($id);
+		        $this->loadModel('RecMed');
+		        $options = array('conditions' => array('RecMed.' . $this->RecMed->primaryKey => $id));
+		        $receta= $this->RecMed->find('all',$options);
+		
+		        $this->loadModel('Ma');
+		        $options = array('conditions' => array('Ma.' . $this->Ma->primaryKey => $receta[0]['Atencion']['ID_MAS']));
+		        $pet= $this->Ma->find('list',$options);
+		    
+		        $this->layout = 'pdf'; //this will use the pdf.ctp layout 
+		        $this->set(compact('receta','pet'));
+		       	$this->render(); 
+		    } 
+
+
 
 }
 ?>
