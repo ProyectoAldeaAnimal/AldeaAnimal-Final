@@ -25037,3 +25037,97 @@ Request URL: /AldeaAnimal/AldeaAnimal/users/homeCliente
 Stack Trace:
 #0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-12-07 20:51:12 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 70]
+2014-12-07 20:51:12 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 20:52:13 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 70]
+2014-12-07 20:52:13 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 20:54:39 Error: Fatal Error (4): syntax error, unexpected '$nextfecha' (T_VARIABLE) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 77]
+2014-12-07 20:54:39 Error: [FatalErrorException] syntax error, unexpected '$nextfecha' (T_VARIABLE)
+Request URL: /AldeaAnimal/oferta_hors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 77, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 77, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 20:59:11 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\String.php, line 240]
+2014-12-07 20:59:11 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 240)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 240, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 240, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 20:59:19 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\Hash.php, line 677]
+2014-12-07 20:59:19 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 677)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 677, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 677, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 21:00:31 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\Debugger.php, line 812]
+2014-12-07 21:00:31 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /AldeaAnimal/ofertahors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 812)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 812, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 812, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 21:02:47 Error: [UnauthorizedException] Unauthorized
+Request URL: /AldeaAnimal/vets/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(349): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AuthComponent.php(305): AuthComponent->_unauthenticated(Object(VetsController))
+#2 [internal function]: AuthComponent->startup(Object(VetsController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(VetsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-07 21:06:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\String.php, line 240]
+2014-12-07 21:06:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /AldeaAnimal/oferta_hors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 240)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 240, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 240, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-07 21:08:03 Error: Fatal Error (1): Call to undefined function deubg() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\OfertaHorsController.php, line 81]
+2014-12-07 21:08:03 Error: [FatalErrorException] Call to undefined function deubg()
+Request URL: /AldeaAnimal/oferta_hors/agregarOfertaHoraria
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 81, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

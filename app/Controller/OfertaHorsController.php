@@ -64,7 +64,7 @@ class OfertaHorsController extends AppController {
 
 	public function agregarOfertaHoraria() {
 		$this->set('title_for_layout', 'Oferta Horaria');
-		
+
 		if ($this->request->is('post')) {
 				// Se obtiene los datos del formulario
 
@@ -81,14 +81,25 @@ class OfertaHorsController extends AppController {
 				$this->Session->setFlash(__('Tiene '.$count. ' campo/s de horario inválido/s, la hora "De:" no puede ser superior a la hora "Hasta:"'));
 	 			return $this->redirect(array('action' => 'agregarOfertaHoraria'));
 	 		}
+			
 			$usuario = AuthComponent::user();
 			$options = array('conditions' => array('OfertaHor.ID_VET' => $usuario[0]['Vet']['ID_VET']));
 			$ofertas = $this->OfertaHor->find('all',$options);
 
-
+			$date =$this->request->data['OfertaHor']['varDate'];
 			$ofertaRepetida = false;
 			foreach ($ofertas as $key => $oferta) {
 				if($oferta['Cal']['FECHA_CAL']== $this->request->data['OfertaHor']['varDate']) $ofertaRepetida = true;
+				$nextfecha=$date;
+				for ($i=0; $i < 5 ; $i++) { 
+					$nextfecha=  date("d", strtotime($nextfecha));
+					$tempfecha=(string)($nextfecha +1);
+					$nextfecha=  date("Y-m", strtotime($date));
+					$nextfecha=  date("Y-m-d", strtotime($nextfecha."-".$tempfecha));
+					if($oferta['Cal']['FECHA_CAL']== $nextfecha) $ofertaRepetida = true;
+			
+				}
+
 			}
 			if(!$ofertaRepetida){
 				$requesData = $this->request->data;
