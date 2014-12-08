@@ -20,6 +20,8 @@ $this->layout = "headClientes";
 	</thead>
 	<tbody>
 	<?php foreach ($procs as $proc): ?>
+	<?php 	foreach ($mas as $ma): ?>
+			<?php if($proc['Atencion']['ID_MAS']==$ma['Ma']['ID_MAS']):	?>
 	<tr>
 		<td><?php echo h($proc['Proc']['ID_PROC']); ?>&nbsp;</td>
 		<td>
@@ -33,6 +35,8 @@ $this->layout = "headClientes";
 		
 		</td>
 	</tr>
+		<?php endif; ?>
+	<?php endforeach; ?>
 <?php endforeach; ?>
 	</tbody>
 	</table>

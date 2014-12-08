@@ -23,6 +23,11 @@ class ProcsController extends AppController {
 	public function index() {
 		$this->set('title_for_layout', 'Procedimientos');
 		$this->Proc->recursive = 0;
+		$usuario = AuthComponent::user();
+		$this->loadModel('Ma');
+		$options = array('conditions' => array('Ma.ID'  => $usuario[0]['User']['ID']));
+		$mas = $this->Ma->find('all',$options);
+		$this->set(compact('mas'));
 		$this->set('procs', $this->Paginator->paginate());
 	}
 
