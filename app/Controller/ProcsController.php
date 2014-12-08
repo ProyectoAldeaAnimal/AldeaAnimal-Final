@@ -49,7 +49,15 @@ class ProcsController extends AppController {
  */
 	public function add() {
 		$this->set('title_for_layout', 'Crear Procedimiento');
+
 		if ($this->request->is('post')) {
+			$rdata = $this->request->data;
+			$options = array('conditions' => array('Proc.ID_ATENCION' => $rdata['Proc']['ID_ATENCION']));
+			$procs =$this->Proc->find('list',$options);
+			if(count($procs)>0){
+				$this->Session->setFlash(__('Ya se ha generado un procedimiento para esta atención.'));
+				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
+			}
 			$this->Proc->create();
 			if ($this->Proc->save($this->request->data)) {
 				$this->Session->setFlash(__('Se ha creado el nuevo procedimiento.'));

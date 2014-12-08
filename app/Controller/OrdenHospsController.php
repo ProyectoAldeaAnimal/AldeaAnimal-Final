@@ -46,7 +46,17 @@ class OrdenHospsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('title_for_layout', 'Generar Orden de Hospitalización');
+
 		if ($this->request->is('post')) {
+			$data = $this->request->data;
+
+			$options = array('conditions' => array('OrdenHosp.ID_ATENCION' => $data['OrdenHosp']['ID_ATENCION']));
+			$odens =$this->OrdenHosp->find('list',$options);
+			if(count($odens)>0){
+				$this->Session->setFlash(__('Ya se ha generado una orden de Hospitalización para esta atención.'));
+				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
+			}
 			$this->OrdenHosp->create();
 			if ($this->OrdenHosp->save($this->request->data)) {
 		

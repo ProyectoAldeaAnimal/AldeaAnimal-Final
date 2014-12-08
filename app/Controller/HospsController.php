@@ -47,7 +47,15 @@ class HospsController extends AppController {
  */
 	public function add() {
 		$this->set('title_for_layout', 'Generar Hospitalización');
+
 		if ($this->request->is('post')) {
+			$rdata = $this->request->data;
+			$options = array('conditions' => array('Hosp.ID_ORDEN_HOSP' => $rdata['Hosp']['ID_ORDEN_HOSP']));
+			$hosps =$this->Hosp->find('list',$options);
+			if(count($hosps)>0){
+				$this->Session->setFlash(__('Ya se ha generado una Hospitalización para esta orden.'));
+				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
+			}
 			$this->Hosp->create();
 			if ($this->Hosp->save($this->request->data)) {
 				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
@@ -57,6 +65,10 @@ class HospsController extends AppController {
 		}
 		$vets = $this->Hosp->Vet->find('list');
 		$ordenHosps = $this->Hosp->OrdenHosp->find('list');
+		if(count($ordenHosps)==0){
+			$this->Session->setFlash(__('Debe tener alguna orden de Hospitalización para realizar esto.'));
+			return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
+		}
 		$this->set(compact('vets', 'ordenHosps'));
 	}
 

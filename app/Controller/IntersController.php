@@ -47,7 +47,15 @@ class IntersController extends AppController {
  */
 	public function add() {
 		$this->set('title_for_layout', 'Generar Intervención');
+		
 		if ($this->request->is('post')) {
+			$rdata = $this->request->data;
+			$options = array('conditions' => array('Inter.ID_ORDEN_INT' => $rdata['Inter']['ID_ORDEN_INT']));
+			$ints =$this->Inter->find('list',$options);
+			if(count($ints)>0){
+				$this->Session->setFlash(__('Ya se ha generado una Intervención para esta orden.'));
+				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
+			}
 			$this->Inter->create();
 			if ($this->Inter->save($this->request->data)) {
 				return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
@@ -57,6 +65,10 @@ class IntersController extends AppController {
 		}
 		$vets = $this->Inter->Vet->find('list');
 		$ordenInts = $this->Inter->OrdenInt->find('list');
+		if(count($ordenInts)==0){
+			$this->Session->setFlash(__('Debe tener alguna orden de intervención para realizar esto.'));
+			return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));
+		}
 		$this->set(compact('vets', 'ordenInts'));
 	}
 
