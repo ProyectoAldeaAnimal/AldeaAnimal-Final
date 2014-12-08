@@ -216,7 +216,8 @@ class UsersController extends AppController{
 				$this->set('title_for_layout', 'Solicitar Hora');
 				$this->loadModel('Vet');
 				$order = "Vet.name";
-				$vets= $this->Vet->find('all',array('order' => array('Vet.name' => 'ASC')));
+				$vets= $this->Vet->find('all',array('order' => array('Vet.name' => 'ASC'), 
+					'conditions' => array('VET.HABILITADO <>'=> '0')));
 				$vetes;
 				foreach ($vets as $key => $vet) {
 					$vetes[$vet['Vet']['ID_VET']] = $vet['Vet']['name'];

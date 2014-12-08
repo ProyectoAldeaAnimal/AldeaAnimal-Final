@@ -244,6 +244,7 @@ class VetsController extends AppController {
 		$this->loadModel('OfertaHor');
 		$bloques =$this->BloqAgen->find('all');
 		$horarios;
+
 		if ($tienePeteciones)
 		foreach ($bloques as $key => $bloque) {
 			
@@ -251,16 +252,20 @@ class VetsController extends AppController {
 				'OfertaHor.ID_OFERTA_HOR' => $bloque['BloqAgen']['ID_OFERTA_HOR']
 				));
 				$OfertaHors =$this->OfertaHor->find('all',$options);
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
-				if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
-			
-				$OfertaHors[0]['OfertaHor']['name'] = $dia.' '.$OfertaHors[0]['Cal']['FECHA_CAL'].': '. $OfertaHors[0]['OfertaHor']['name'];
-				if(!isset($horarios[$bloque['BloqAgen']['ID_AGENDA']]))
+				if(count($OfertaHors)>0){
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+					if($OfertaHors[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+					$OfertaHors[0]['OfertaHor']['name'] = $dia.' '.$OfertaHors[0]['Cal']['FECHA_CAL'].': '. $OfertaHors[0]['OfertaHor']['name'];
+					if(!isset($horarios[$bloque['BloqAgen']['ID_AGENDA']]))
 					$horarios[$bloque['BloqAgen']['ID_AGENDA']] = $OfertaHors[0]['OfertaHor']['name'];
+				}
+				
+			
+				
 		}
 
 		
@@ -567,7 +572,8 @@ class VetsController extends AppController {
 				));
 		}
 		$this->loadModel('User');
-		$users=$this->User->find('list',array('order' => array('User.name' => 'ASC')));
+		$users=$this->User->find('list',array('order' => array('User.name' => 'ASC'), 
+					'conditions' => array('USER.HABILITADO_CLI <>'=> '0')));
 		$this->set(compact('users'));
 
 	}
