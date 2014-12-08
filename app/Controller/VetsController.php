@@ -379,13 +379,12 @@ class VetsController extends AppController {
 
 
 
-	public function atencion_medica(){
+	public function atencion_medica($id = null){
 		$this->set('title_for_layout', 'Atención Médica');
-		$params = $this->params['url'];
-		$options = array('conditions' => array('Atencion.ID_ATENCION' => $params));
+		$options = array('conditions' => array('Atencion.ID_ATENCION' => $id));
 		$this->loadModel('Atencion');
 		$atencion = $this->Atencion->find('all',$options);
-		$this->set(compact('params','atencion'));
+		$this->set(compact('id','atencion'));
 		
 
 	}
@@ -743,6 +742,12 @@ class VetsController extends AppController {
 				}
 				$groups = $this->Vet->Group->find('list');
 				$this->set(compact('groups'));
+			}
+
+
+			public function atencion($value='')
+			{
+				$this->set('title_for_layout', 'Seleccione una Opción');
 			}
 /**
  * delete method

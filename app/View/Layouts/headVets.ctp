@@ -56,7 +56,7 @@
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/homeVet"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">Home Veterinario</FONT></a></li> 
 
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/miAgenda"><FONT COLOR="#FFFFFF">  Mi Agenda</FONT></a></li> 
-                      <li><a class= "page-scroll"href="/AldeaAnimal/vets/seleccion_cliente"><FONT COLOR="#FFFFFF">  Generar Atención </FONT></a></li> 
+                      <li><a class= "page-scroll"href="/AldeaAnimal/vets/atencion"><FONT COLOR="#FFFFFF">  Generar Atención </FONT></a></li> 
                       <li><a class= "page-scroll"href="/AldeaAnimal/users/add"><FONT COLOR="#FFFFFF">  Registrar Cliente</FONT></a></li>
                       <li><a class= "page-scroll"href="/AldeaAnimal/mas/add"><FONT COLOR="#FFFFFF">  Registrar Mascota</FONT></a></li>
                       <li><a class= "page-scroll"href="/AldeaAnimal/vets/administracion_vet"><FONT COLOR="#FFFFFF">  Administración</FONT></a></li>                                             

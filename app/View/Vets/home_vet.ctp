@@ -28,7 +28,7 @@
                </button></a>
             
                 <br>
-                <a href="/AldeaAnimal/vets/seleccion_cliente"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Generar Atención</h3>
+                <a href="/AldeaAnimal/vets/atencion"> <button type="button" class="btn btn-lg btn-primary btn-block color13"> <h3>Generar Atención</h3>
                </button></a>
                <br>
   

@@ -83,5 +83,5 @@
 		<li><?php echo $this->Html->link(__('Nuevo Parámetro'), array('action' => 'add')); ?></li>
 
 	</ul>
-	<p><?php echo $this->Html->div('alert alert-danger', 'De momemnto no se pueden modificar parámetros');?></p>
+	<p><?php echo $this->Html->div('alert alert-danger', 'De momento no se pueden modificar parámetros');?></p>
 </div>
