@@ -1,5 +1,9 @@
 <?php 
 	$this->layout= 'head';
+	$ordenInters;
+	foreach ($ordenInts as $key => $ordenInt) {
+	 	$ordenInters = $key;
+	}
 ?>
 <div class="inters form">
 <?php echo $this->Form->create('Inter'); ?>
@@ -9,7 +13,9 @@
 		echo $this->Form->input('ID_ORDEN_INT', array(
 			'label' => 'Seleccione la orden de intervención correspondiente: <br>',
 			'options' => $ordenInts,
-			'class' => 'form-control'
+			'class' => 'form-control',
+			'selected'=> $ordenInters
+			
 			));
 		echo $this->Form->input('ID_VET', array(
 			'label' => 'Seleccione el veterinario a cargo: <br>',

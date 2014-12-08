@@ -1,5 +1,9 @@
 <?php 
 	$this->layout= 'head';
+	$atenciones;
+	foreach ($atencions as $key => $atencion) {
+	 	$atenciones = $key;
+	}
 ?>
 <div class="ordenExes form">
 <?php echo $this->Form->create('OrdenEx'); ?>
@@ -15,7 +19,8 @@
 		echo $this->Form->input('ID_ATENCION', array(
 			'label' => 'Seleccione la atención a la que corresponde este examen : <br>',
 			'class' => 'form-control',
-			'options' => $atencions
+			'options' => $atencions,
+			'selected'=> $atenciones
 			));
 		echo $this->Form->input('FECHA_ORDEN_EX', array(
 			'label' => 'Seleccione fecha en la que se emitió la orden: <br>'

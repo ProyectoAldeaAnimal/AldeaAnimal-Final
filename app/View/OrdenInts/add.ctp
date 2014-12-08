@@ -1,5 +1,9 @@
 <?php 
 	$this->layout= 'head';
+	$atenciones;
+	foreach ($atencions as $key => $atencion) {
+	 	$atenciones = $key;
+	}
 ?>
 <div class="ordenInts form">
 <?php echo $this->Form->create('OrdenInt'); ?>
@@ -10,7 +14,8 @@
 		echo $this->Form->input('ID_ATENCION', array(
 			'label' => 'Seleccione la atención a la que corresponde esta Intervención: <br>',
 			'options' => $atencions,
-			'class' => 'form-control'
+			'class' => 'form-control',
+			'selected'=> $atenciones
 			));
 		echo $this->Form->input('ID_TIPO_INT', array(
 			'label' => 'Seleccione el tipo de Intervención a realizar: <br>',

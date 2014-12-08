@@ -1,5 +1,9 @@
 <?php 
 $this->layout = 'head';
+	$atenciones;
+	foreach ($atencions as $key => $atencion) {
+	 	$atenciones = $key;
+	}
 ?>
 <div class="ordenHosps form">
 <?php echo $this->Form->create('OrdenHosp'); ?>
@@ -10,7 +14,8 @@ $this->layout = 'head';
 		echo $this->Form->input('ID_ATENCION', array(
 			'label' => 'Seleccione la atención a la que corresponde esta Hospitalización: <br>',
 			'options' => $atencions,
-			'class' => 'form-control'
+			'class' => 'form-control',
+			'selected'=> $atenciones
 			));
 		echo $this->Form->input('FECHA_ORDEN_HOSP', array(
 			'label' => 'Indique el la fehca de emisión de la orden: <br>'

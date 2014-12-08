@@ -1,5 +1,9 @@
 <?php 
 	$this->layout= 'head';
+	$ordenes;
+	foreach ($ordenHosps as $key => $ordenHosp) {
+	 	$ordenes = $key;
+	}
 ?>
 <div class="hosps form">
 <?php echo $this->Form->create('Hosp'); ?>
@@ -10,7 +14,8 @@
 		echo $this->Form->input('ID_ORDEN_HOSP', array(
 			'label' => 'Seleccione la orden Hospitalización: <br>',
 			'options' => $ordenHosps,
-			'class' => 'form-control'
+			'class' => 'form-control',
+			'selected'=> $ordenes
 			));
 
 		echo $this->Form->input('ID_VET', array(
