@@ -71,7 +71,15 @@ class ProcsController extends AppController {
 				$this->Session->setFlash(__('The proc could not be saved. Please, try again.'));
 			}
 		}
-		$atencions = $this->Proc->Atencion->find('list');
+		date_default_timezone_set('America/Santiago');
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
+		
+
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
+		$options = array('conditions' => array('Atencion.FECHA_ATENCION >=' => $primerDia));
+		$atencions = $this->Proc->Atencion->find('list',$options);
 		$this->set(compact('atencions'));
 	}
 

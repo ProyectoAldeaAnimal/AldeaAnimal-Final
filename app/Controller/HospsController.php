@@ -64,7 +64,15 @@ class HospsController extends AppController {
 			}
 		}
 		$vets = $this->Hosp->Vet->find('list');
-		$ordenHosps = $this->Hosp->OrdenHosp->find('list');
+		date_default_timezone_set('America/Santiago');
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
+		
+
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
+		$options = array('conditions' => array('OrdenHosp.FECHA_ORDEN_HOSP >=' => $primerDia));
+		$ordenHosps = $this->Hosp->OrdenHosp->find('list',$options);
 		if(count($ordenHosps)==0){
 			$this->Session->setFlash(__('Debe tener alguna orden de Hospitalización para realizar esto.'));
 			return $this->redirect(array('controller'=>'vets','action' => 'atencion_medica'));

@@ -157,8 +157,15 @@ class RecmedsController extends AppController {
 				$this->Session->setFlash(__('The recmed could not be saved. Please, try again.'));
 			}
 		}
+		date_default_timezone_set('America/Santiago');
+		$year= date('Y', time());
+		$month= date('m', time());
+		$day= date('d', time());
 		
-		$atencions = $this->Recmed->Atencion->find('list');
+
+		$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
+		$options = array('conditions' => array('Atencion.FECHA_ATENCION >=' => $primerDia));
+		$atencions = $this->Recmed->Atencion->find('list',$options);
 		$farmacos = $this->Recmed->Farmaco->find('list');
 		$this->set(compact('atencions', 'farmacos','params'));
 	}
