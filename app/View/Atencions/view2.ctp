@@ -134,7 +134,7 @@ $this->layout = 'headClientes';
 		<h3><?php echo __('Actions'); ?></h3>
 		<ul>
 
-			<li><?php echo $this->Html->link(__('Atrás'), array('controller'=>'recmeds','action' => 'recetas_mas')); ?> </li>
+			<li><?php echo $this->Html->link(__('Recetas'), array('controller'=>'recmeds','action' => 'recetas_mas')); ?> </li>
 
 		</ul>
 	</div>

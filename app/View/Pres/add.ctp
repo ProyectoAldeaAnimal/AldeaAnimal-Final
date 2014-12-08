@@ -10,16 +10,20 @@ $this->layout="headAdmin";
 		<?php
 			echo $this->Form->input('ID_TIPO_PRES', array(
 					'label' => 'Tipo de Prestación:',
-					'options' => $tipoPres
+					'options' => $tipoPres,
+					'class' => 'form-control'
 					));
 			echo $this->Form->input('NOMBRE_PRES', array(
-					'label' => 'Nombre:'
+					'label' => 'Nombre:',
+					'class' => 'form-control'
 					));
 			echo $this->Form->input('NUMERO_BLOQUES', array(
-					'label' => 'Numero Bloques:'
+					'label' => 'Numero Bloques:',
+					'class' => 'form-control'
 					));
 			echo $this->Form->input('PRECIO', array(
-					'label' => 'Precio:'
+					'label' => 'Precio:',
+					'class' => 'form-control'
 					));
 		?>
 		</fieldset>

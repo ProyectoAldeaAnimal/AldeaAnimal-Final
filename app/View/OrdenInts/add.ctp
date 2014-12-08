@@ -30,7 +30,7 @@
 			'class' => 'form-control'
 			));
 		echo $this->Form->input('FECHA_ORDEN_INT', array(
-			'label' => 'Indique el la fehca de emisión de la orden: <br>'
+			'label' => 'Indique el la fecha de emisión de la orden: <br>'
 			));
 		echo $this->Form->input('DURACION_ESTIMADA_INT', array(
 			'label' => 'Indique la duración estimada de la Intervención: <br>',
