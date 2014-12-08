@@ -204,7 +204,7 @@ class VetsController extends AppController {
 			throw new NotFoundException(__('Invalid Vet'));
 		}
 		$options = array('conditions' => array('Vet.' . $this->Vet->primaryKey => $id));
-		$this->set('User', $this->Vet->find('first', $options));
+		$this->set('Vet', $this->Vet->find('first', $options));
 
 	}
 	public function logout() {

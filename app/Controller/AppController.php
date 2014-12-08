@@ -40,10 +40,10 @@ class AppController extends Controller {
 			if($params['action']) $action= $params['action'];
 
 			if(key($userId[0])=='User')
-			if(!$userId[0]['User']['HABILITADO_CLI'] && $action!= 'deshabilitado' && key($userId[0])=='User' &&  $action!= 'logout') $this->redirect(array('action' => 'deshabilitado'));
+			if(!$userId[0]['User']['HABILITADO_CLI'] && $action!= 'deshabilitado' && key($userId[0])=='User' &&  $action!= 'logout') $this->redirect(array('controller'=>'user','action' => 'deshabilitado'));
 			//debug('controllers/'.$controller.'/'.$action);
 			if(key($userId[0])=='Vet')
-			if(!$userId[0]['Vet']['HABILITADO'] && $action!= 'deshabilitado' && key($userId[0])=='Vet' &&  $action!= 'logout') $this->redirect(array('action' => 'deshabilitado'));
+			if(!$userId[0]['Vet']['HABILITADO'] && $action!= 'deshabilitado' && key($userId[0])=='Vet' &&  $action!= 'logout') $this->redirect(array('controller'=>'vets','action' => 'deshabilitado'));
 
 
 

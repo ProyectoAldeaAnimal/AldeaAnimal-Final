@@ -43,25 +43,25 @@
 	<legend>
 		<div class="row">
 			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su rut es:'); ?></button></div>
-			<div class="col col-md-6"><?php echo h($User['Vet']['RUT_VET']); ?></div>
+			<div class="col col-md-6"><?php echo h($Vet['Vet']['RUT_VET']); ?></div>
 		</div>	
 	</legend>
 	<legend>
 		<div class="row">
 			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su nombre Completo es:'); ?></button></div>
-			<div class="col col-md-6"><?php echo h($User['Vet']['NOMBRE_VET']); ?> <?php echo h($User['Vet']['APELLIDO_PVET']); ?> <?php echo h($User['Vet']['APELLIDO_MVET']); ?></div>
+			<div class="col col-md-6"><?php echo h($Vet['Vet']['NOMBRE_VET']); ?> <?php echo h($Vet['Vet']['APELLIDO_PVET']); ?> <?php echo h($Vet['Vet']['APELLIDO_MVET']); ?></div>
 		</div>
 	</legend>
 	<legend>
 		<div class="row">
 			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su E-mail es:'); ?></button></div>
-			<div class="col col-md-6"><?php echo h($User['Vet']['MAIL_VET']); ?></div>
+			<div class="col col-md-6"><?php echo h($Vet['Vet']['MAIL_VET']); ?></div>
 		</div>
 	</legend>
 	<legend>
 		<div class="row">
 			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su teléfono es:'); ?></button></div>
-			<div class="col col-md-6"><?php echo h($User['Vet']['TEL_VET']); ?></div>
+			<div class="col col-md-6"><?php echo h($Vet['Vet']['TEL_VET']); ?></div>
 		</div>
 		
 		
@@ -70,7 +70,7 @@
 	<legend>
 		<div class="row">
 			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Usted fue registrado el día:'); ?></button></div>
-			<div class="col col-md-6"><?php echo h($User['Vet']['FECHA_REGISTRO_VET']); ?></div>
+			<div class="col col-md-6"><?php echo h($Vet['Vet']['FECHA_REGISTRO_VET']); ?></div>
 		</div>
 		
 		
@@ -79,13 +79,13 @@
 	<legend>
 		<div class="row">
 			<div class="col col-md-6"><button class='btn btn-default'><?php echo __('Su dirección es:'); ?></button></div>
-			<div class="col col-md-6"><?php echo h($User['Vet']['DIR_VET']); ?></div>
+			<div class="col col-md-6"><?php echo h($Vet['Vet']['DIR_VET']); ?></div>
 		</div>
 	</legend>
 	<legend>
 		
 		<?php 
-		if($User['Vet']['HABILITADO'])
+		if($Vet['Vet']['HABILITADO'])
 		echo $this->Html->div('alert alert-success', 'Usted se encuentra habilitado para usar el sistema');
 		
 		else echo $this->Html->div('alert alert-danger', 'Usted no se encuentra habilitado para usar el sistema');?>
