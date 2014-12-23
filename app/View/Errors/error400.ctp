@@ -22,7 +22,7 @@
 <?php 
 
 
-	echo $this->Html->div('alert alert-danger', '<h3 class="text-center">Ops! ERROR IRRECUPERABLE, POR FAVOR ACCEDA A OTRA SECCIÓN O COMPRUEBA QUE ESTE BIEN ESCRITA LA DIRECCIÓN</h3>'); 
+	echo $this->Html->div('alert alert-danger', '<h3 class="text-center">Ups! ERROR IRRECUPERABLE, POR FAVOR ACCEDA A OTRA SECCIÓN O COMPRUEBA QUE ESTE BIEN ESCRITA LA DIRECCIÓN</h3>'); 
 
 
 ?>

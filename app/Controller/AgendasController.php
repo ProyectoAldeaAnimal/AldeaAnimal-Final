@@ -14,7 +14,7 @@ class AgendasController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
-
+	public $helpers = array('Js','Html', 'Form'); 
 /**
  * index method
  *
@@ -117,8 +117,11 @@ class AgendasController extends AppController {
 	public function add(){
 		$params = $this->params['url'];
 		if(count($params)==0) $this->redirect(array('controller'=>'users','action' => 'pre_solicitar_hora'));
+		
+
+		debug($this->request->data);
 		$usuario = AuthComponent::user();
-		if ($this->request->is('post')) {
+		if ($this->request->is('posta')) {
 				$data =$this->request->data;
 				$this->loadModel('Pres');
 				$options = array('conditions' => array('Pres.ID_PRES' => $data['Agenda']['ID_PRES']));
@@ -196,10 +199,24 @@ class AgendasController extends AppController {
     			'conditions' => array('Cal.ID_CAL' => $ofertaHor['OfertaHor']['ID_CAL'])
     			));
     			
-    			$ofertaHor['OfertaHor']['name'] = $cals[0]['Cal']['NOMBRE_DIA']. " .".$ofertaHor['OfertaHor']['name'].'- Fecha:  ' . $ofertaHor['Cal']['FECHA_CAL']; 
+				if(count($cals)>0){
+				if($cals[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+				if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+				$ofertaHor['OfertaHor']['name'] = $dia. " .".$ofertaHor['OfertaHor']['name'].' - Fecha:  ' . $ofertaHor['Cal']['FECHA_CAL']; 
     			$ofertaHoras[$i]['OfertaHor']['name'] = $ofertaHor['OfertaHor']['name'];
-    			$ofertaHors[$ofertaHoras[$i]['OfertaHor']['ID_OFERTA_HOR']] =$ofertaHor['OfertaHor']['name'];
+    			
+				}
+				$ofertaHors[$ofertaHoras[$i]['OfertaHor']['ID_OFERTA_HOR']] =$ofertaHor['OfertaHor']['name'];
     			$i++;
+
+
+
+
+    			
 		endforeach;
 		if(!$ofertaHoras){
 			$ofertaHors = 'El veterinario no tiene oferta Horaria';

@@ -52,18 +52,30 @@ a:link
                   <ul  class ="nav navbar-nav subMenu" >
                       <li><a class= "page-scroll"href="/AldeaAnimal/users/homeCliente"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
                       <li><a class= "page-scroll" href="/AldeaAnimal/users/misDatos"><FONT COLOR="#FFFFFF">Mis Datos</FONT></a></li>
-                      <li><a class= "page-scroll" href="/AldeaAnimal/users/misMascotas"><FONT COLOR="#FFFFFF"><i class="fa fa-paw"></i> Mis Mascotas</FONT></a>
+
+                  <li class="dropdown">
+                      <a class= "page-scroll dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" href="#"><FONT COLOR="#FFFFFF"><i class="fa fa-paw"></i> Mis Mascotas</FONT><span class="caret"></span>  </a>
                       
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/users/misMascotas">Menú Principal</a></li>
+                         <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/users/verDatosMascotas">Ver Datos</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/agendas/index">Mis Solicitudes de Hora</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/users/pre_solicitar_hora">Solicitar Hora</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/recmeds/recetas_mas">Recetas</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/procs/index">Fechas de Control</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Historial Mascota</a></li>
+                      </ul>
                       <!--li><a href="#features">Features</a></li-->
                       
                   </ul>
 
-                  <ul class="nav navbar-nav navbar-right">
+                     <ul class="nav navbar-nav navbar-right" style="padding-top: 10px;"> 
 
-                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Usuario",
-array('controller' => 'users', 'action' => 'logout')); ?>
-  </FONT></li>
-
+                    
+                                      <a href="/AldeaAnimal/users/logout"> 
+                                      <button type="button" class="btn btn-primary" ><i class="fa fa-users"></i> Logout Usuario</button></a>
+                                 
 
                        </ul> 
                             </div>
@@ -125,4 +137,5 @@ array('controller' => 'users', 'action' => 'logout')); ?>
 
 	<?//php echo $this->element('sql_dump'); ?>
 </body>
+
 </html>

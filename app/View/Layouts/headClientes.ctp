@@ -13,18 +13,23 @@
         echo $this->Html -> css(array("cake.generic.css"));
         echo $this->Html -> css(array("bootstrap.css"));
         echo $this->Html -> css(array("font-awesome.css"));
+        echo $this->Html -> css(array("datepicker3.css"));
         echo $this->Html -> css(array("main.css"));
         echo $this->Html -> css(array("style.css"));
         echo $this->Html -> css(array("style2.css"));
         echo $this->Html -> css(array("signin.css"));
-        
-        
+        echo $this->Html -> css(array("sweet-alert.css"));
+       
         echo $this->Html-> script(array("jquery-1.8.3.min.js"));
+        echo $this->Html-> script(array("jquery-1.11.1.min.js"));
+        echo $this->Html-> script(array("bootstrap-datepicker.js"));
+        echo $this->Html-> script(array("bootstrap-datepicker.es.js"));
         echo $this->Html-> script(array("ie-emulation-modes-warning.js"));
         echo $this->Html-> script(array("jquery.Rut.js"));
-        echo $this->Html-> script(array("bootstrap.min.js"));
+         echo $this->Html-> script(array("bootstrap.min.js"));
         echo $this->Html-> script(array("ie10-viewport-bug-workaround.js"));
-        echo $this->Html -> css(array("sweet-alert.css"));
+        
+     
         echo $this->Html-> script(array("sweet-alert.js"));
         echo $this->fetch('meta');
         echo $this->fetch('css');
@@ -117,18 +122,35 @@
                   <ul  class ="nav navbar-nav subMenu" >
                       <li><a class= "page-scroll"href="/AldeaAnimal/users/homeCliente"><i class="glyphicon glyphicon-home" ></i> <FONT COLOR="#FFFFFF">  Principal</FONT></a></li>                    
                       <li><a class= "page-scroll" href="/AldeaAnimal/users/misDatos"><FONT COLOR="#FFFFFF">Mis Datos</FONT></a></li>
-                      <li><a class= "page-scroll" href="/AldeaAnimal/users/misMascotas"><FONT COLOR="#FFFFFF"><i class="fa fa-paw"></i> Mis Mascotas</FONT></a>
+                      
+
+                      <li class="dropdown">
+                      <a class= "page-scroll dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" href="#"><FONT COLOR="#FFFFFF"><i class="fa fa-paw"></i> Mis Mascotas</FONT><span class="caret"></span>  </a>
+                      
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/users/misMascotas">Menú Principal</a></li>
+                         <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/users/verDatosMascotas">Ver Datos</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/agendas/index">Mis Solicitudes de Hora</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/users/pre_solicitar_hora">Solicitar Hora</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/recmeds/recetas_mas">Recetas</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/AldeaAnimal/procs/index">Fechas de Control</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Historial Mascota</a></li>
+                      </ul>
+                      <!--li><a href="#features">Features</a></li-->
+                      
+                      </ul>
                       
                       <!--li><a href="#features">Features</a></li-->
                       
                   </ul>
 
-                  <ul class="nav navbar-nav navbar-right">
+                  <ul class="nav navbar-nav navbar-right" style="padding-top: 10px;"> 
 
-                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Logout Usuario",
-array('controller' => 'users', 'action' => 'logout')); ?>
-  </FONT></li>
-
+                    
+                                      <a href="/AldeaAnimal/users/logout"> 
+                                      <button type="button" class="btn btn-primary" ><i class="fa fa-users"></i> Logout Usuario</button></a>
+                                 
 
                        </ul> 
                             </div>

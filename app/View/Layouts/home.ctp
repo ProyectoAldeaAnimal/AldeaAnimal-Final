@@ -28,7 +28,8 @@
     <style type="text/css">   
 a:link   
 {   
- text-decoration:none;   
+ text-decoration:none; 
+
 }   
 </style>
 </head>
@@ -106,12 +107,8 @@ a:link
                       <!--li><a href="#features">Features</a></li-->
                       
                   </ul>
-                  <ul class="nav navbar-nav navbar-right">
-
-                          <li style="padding-top: 15px;"><FONT COLOR="#FFFFFF"><i class="fa fa-users"></i> <?php echo $this->Html->link("Login Usuario",
-array('controller' => 'users', 'action' => 'login')); ?>
-  </FONT></li>
-
+                  <ul class="nav navbar-nav navbar-right"> 
+                   
                           <li>
                             <div style="padding-top: 15px;">
                               <button id="playButton" type="button" class="btn btn-alert btn-xs" style="background:#229b0d;">
@@ -121,8 +118,12 @@ array('controller' => 'users', 'action' => 'login')); ?>
                             <span class="glyphicon glyphicon-pause"></span>
                             </button>
                             </div>
-                          
-                  </li>
+                            
+                           </li>
+                            <li>
+
+    <div style="padding-top: 10px;" ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-users"></i> Login Usuario</button></div>
+                    </li>
 
          
 
@@ -182,7 +183,44 @@ array('controller' => 'users', 'action' => 'login')); ?>
   </div>
 </div>
     
+
+
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h3 class="modal-title text-center" id="exampleModalLabel">Requisitos de Ingreso al Sistema</h3>
+                </div>
+                <div class="modal-body">
+                  <p>Para ingersar al sistema usted debe haber sido atendid@ alguna vez en la clínica y uno de nuestros
+                    profesionales debe haber creado su cuenta de acceso con aterioridad</p>
+                </div>
+                <div class="row">
+                  <div id="ex5" class="col col-md-6">
+                    <?php
+                        echo $this->Html->image('perrito.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+                      ?>
+                  </div>
+                  <div id="ex5" class="col col-md-6">
+                    <?php
+                        echo $this->Html->image('logo.png', array('alt' => 'logo', 'class'=>"img-responsive"));
+                      ?>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary"> <?php echo $this->Html->link("Tengo Cuenta",
+array('controller' => 'users', 'action' => 'login')); ?></button>
+                </div>
+              </div>
+            </div>
+          </div>
     <!--about start-->    
+
     
     <div id="about">
       <div class="lineAbout">
@@ -378,6 +416,15 @@ veterinarios y personal calificado, todos apasionados amantes de los animales y 
     });
 
 
+    $('#exampleModal').on('show.bs.modal', function (event) {
+ /* var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)*/
+    });
 
     </script>
 
