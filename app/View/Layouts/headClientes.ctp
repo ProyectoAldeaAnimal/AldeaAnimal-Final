@@ -26,9 +26,9 @@
         echo $this->Html-> script(array("bootstrap-datepicker.es.js"));
         echo $this->Html-> script(array("ie-emulation-modes-warning.js"));
         echo $this->Html-> script(array("jquery.Rut.js"));
-         echo $this->Html-> script(array("bootstrap.min.js"));
+        echo $this->Html-> script(array("bootstrap.min.js"));
         echo $this->Html-> script(array("ie10-viewport-bug-workaround.js"));
-        
+        echo $this->Html->script('jquery'); 
      
         echo $this->Html-> script(array("sweet-alert.js"));
         echo $this->fetch('meta');
@@ -184,5 +184,6 @@
 
 
   </body>
+  <?php echo $this->Js->writeBuffer(); ?>
 </html>
 

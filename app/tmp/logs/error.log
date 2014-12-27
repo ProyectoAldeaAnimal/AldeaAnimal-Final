@@ -25979,3 +25979,666 @@ Request URL: /AldeaAnimal/js/%20jquery-1.11.1.min.js
 Stack Trace:
 #0 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-12-23 19:04:06 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-24 23:02:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-24 23:52:18 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-24 23:52:36 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-24 23:52:42 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(PagesController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-24 23:52:54 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+',
+  'enabled' => true,
+)
+Request URL: /AldeaAnimal/users/homeCliente
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3524): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1136): Model->setDataSource('default')
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3551): Model->setSource('aros_acos')
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(3353): Model->getDataSource()
+#6 C:\xampp\htdocs\AldeaAnimal\app\Model\AppModel.php(30): Model->query('SET NAMES 'utf8...')
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Permission.php(63): AppModel->__construct()
+#8 [internal function]: Permission->__construct(Array)
+#9 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Utility\ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\Acl\DbAcl.php(48): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(88): DbAcl->__construct()
+#12 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Component\AclComponent.php(70): AclComponent->adapter('DbAcl')
+#13 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
+#14 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
+#15 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(UsersController))
+#16 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#17 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-12-24 20:47:35 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\AldeaAnimal\app\View\Agendas\add.ctp, line 48]
+2014-12-24 20:47:35 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-24 20:47:43 Error: Fatal Error (4): syntax error, unexpected 's' (T_STRING), expecting ',' or ';' in [C:\xampp\htdocs\AldeaAnimal\app\View\Agendas\add.ctp, line 48]
+2014-12-24 20:47:43 Error: [FatalErrorException] syntax error, unexpected 's' (T_STRING), expecting ',' or ';'
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 48, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-26 17:58:21 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+Exception Attributes: array (
+  'class' => 'JavascriptHelper',
+  'plugin' => false,
+)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(886): HelperCollection->load('Javascript', Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(354): View->loadHelpers()
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(1241): View->__construct(Object(AgendasController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(940): Controller->_getViewObject()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-12-26 21:59:01 Error: Fatal Error (4): syntax error, unexpected 'var' (T_VAR), expecting variable (T_VARIABLE) in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 17]
+2014-12-26 21:59:01 Error: [FatalErrorException] syntax error, unexpected 'var' (T_VAR), expecting variable (T_VARIABLE)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 17, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 17, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-26 17:59:11 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+Exception Attributes: array (
+  'class' => 'JavascriptHelper',
+  'plugin' => false,
+)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(886): HelperCollection->load('Javascript', Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(354): View->loadHelpers()
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(1241): View->__construct(Object(AgendasController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(940): Controller->_getViewObject()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-12-26 18:01:16 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+Exception Attributes: array (
+  'class' => 'JavascriptHelper',
+  'plugin' => false,
+)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(886): HelperCollection->load('Javascript', Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(354): View->loadHelpers()
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(1241): View->__construct(Object(AgendasController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(940): Controller->_getViewObject()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-12-26 18:01:55 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+Exception Attributes: array (
+  'class' => 'JavascriptHelper',
+  'plugin' => false,
+)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(886): HelperCollection->load('Javascript', Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\View\View.php(354): View->loadHelpers()
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(1241): View->__construct(Object(AgendasController))
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(940): Controller->_getViewObject()
+#4 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#5 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#6 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-12-26 22:14:48 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:14:51 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:14:56 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:05 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:07 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:08 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:13 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:13 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:14 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:43 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:45 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:52 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:53 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:53 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:53 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:53 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:53 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 22:15:53 Error: [MissingActionException] Action AgendasController::actualizarOferta() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'actualizarOferta',
+)
+Request URL: /AldeaAnimal/agendas/actualizarOferta
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 18:19:56 Error: Fatal Error (1): Call to a member function remoteFunction() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\View\Agendas\add.ctp, line 57]
+2014-12-26 18:19:56 Error: [FatalErrorException] Call to a member function remoteFunction() on a non-object
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-26 18:20:21 Error: Fatal Error (1): Call to a member function remoteFunction() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\View\Agendas\add.ctp, line 57]
+2014-12-26 18:20:21 Error: [FatalErrorException] Call to a member function remoteFunction() on a non-object
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-26 18:20:36 Error: Fatal Error (1): Call to a member function remoteFunction() on a non-object in [C:\xampp\htdocs\AldeaAnimal\app\View\Agendas\add.ctp, line 57]
+2014-12-26 18:20:36 Error: [FatalErrorException] Call to a member function remoteFunction() on a non-object
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 57, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-26 22:55:35 Error: [MissingActionException] Action AgendasController::homeVet() could not be found.
+Exception Attributes: array (
+  'controller' => 'AgendasController',
+  'action' => 'homeVet',
+)
+Request URL: /AldeaAnimal/agendas/homeVet
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-12-26 23:57:06 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`bloq_agen`, CONSTRAINT `FK_CONTIENE` FOREIGN KEY (`ID_OFERTA_HOR`) REFERENCES `oferta_hor` (`ID_OFERTA_HOR`) ON UPDATE CASCADE)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(BloqAgen), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php(144): Model->save(Array)
+#5 [internal function]: AgendasController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AgendasController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-26 23:58:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`bloq_agen`, CONSTRAINT `FK_CONTIENE` FOREIGN KEY (`ID_OFERTA_HOR`) REFERENCES `oferta_hor` (`ID_OFERTA_HOR`) ON UPDATE CASCADE)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(BloqAgen), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php(143): Model->save(Array)
+#5 [internal function]: AgendasController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AgendasController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-27 00:03:14 Error: Fatal Error (1): Call to undefined function debig() in [C:\xampp\htdocs\AldeaAnimal\app\View\Agendas\index.ctp, line 3]
+2014-12-27 00:03:14 Error: [FatalErrorException] Call to undefined function debig()
+Request URL: /AldeaAnimal/agendas/index
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 00:12:11 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`bloq_agen`, CONSTRAINT `FK_CONTIENE` FOREIGN KEY (`ID_OFERTA_HOR`) REFERENCES `oferta_hor` (`ID_OFERTA_HOR`) ON UPDATE CASCADE)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(BloqAgen), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php(143): Model->save(Array)
+#5 [internal function]: AgendasController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AgendasController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-27 00:13:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`bloq_agen`, CONSTRAINT `FK_CONTIENE` FOREIGN KEY (`ID_OFERTA_HOR`) REFERENCES `oferta_hor` (`ID_OFERTA_HOR`) ON UPDATE CASCADE)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(BloqAgen), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php(143): Model->save(Array)
+#5 [internal function]: AgendasController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AgendasController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-27 00:15:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`aldeaanimal`.`bloq_agen`, CONSTRAINT `FK_CONTIENE` FOREIGN KEY (`ID_OFERTA_HOR`) REFERENCES `oferta_hor` (`ID_OFERTA_HOR`) ON UPDATE CASCADE)
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `al...', Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `al...')
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Model\Model.php(1854): DboSource->create(Object(BloqAgen), Array, Array)
+#4 C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php(143): Model->save(Array)
+#5 [internal function]: AgendasController->add()
+#6 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AgendasController), Array)
+#7 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AgendasController), Object(CakeRequest))
+#9 C:\xampp\htdocs\AldeaAnimal\app\webroot\index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-12-27 04:20:21 Error: Fatal Error (1): Call to undefined function debuf() in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 131]
+2014-12-27 04:20:21 Error: [FatalErrorException] Call to undefined function debuf()
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 131)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 131, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 131, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:19 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:19 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/actualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:19 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:19 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/actualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:20 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:20 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/actualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:22 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:22 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/actualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:23 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/actualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:29 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:29 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/actualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-12-27 04:41:38 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\AldeaAnimal\app\Controller\AgendasController.php, line 156]
+2014-12-27 04:41:38 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /AldeaAnimal/agendas/add?param=5
+Stack Trace:
+#0 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#2 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 156, Array)
+#3 C:\xampp\htdocs\AldeaAnimal\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

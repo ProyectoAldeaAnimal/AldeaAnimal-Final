@@ -11,11 +11,12 @@ class AgendasController extends AppController {
 /**
  * Components
  *
- * @var array
+ * @var array var $components = array('RequestHandler');
  */
-	public $components = array('Paginator');
-	public $helpers = array('Js','Html', 'Form'); 
-/**
+	public $components = array('Paginator','RequestHandler');
+	public $helpers = array('Js' => array('Jquery'),'Html', 'Form'); 
+
+/** 
  * index method
  *
  * @return void
@@ -70,10 +71,11 @@ class AgendasController extends AppController {
 			$options = array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR']));
 			$ofertaHors[$block['ID_AGENDA']]= $this->OfertaHor->find('list',$options);
 
-			$idCal= $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR'])));
+			$idCal= $this->OfertaHor->find('all',array('conditions' => array('OfertaHor.ID_OFERTA_HOR' => $block['ID_OFERTA_HOR'])));	
 			$cals=$this->Cal->find('all', array(
 			'conditions' => array('Cal.ID_CAL' => $idCal[0]['Cal']['ID_CAL']  , 'CAL.FECHA_CAL >=' => $primerDia)
 			));
+			
 			$i= (int)$block['ID_AGENDA'];
 			$j= (int)$block['ID_OFERTA_HOR'];
 			if(count($cals)>0){
@@ -85,12 +87,12 @@ class AgendasController extends AppController {
 				if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
 				$ofertaHor['OfertaHor']['name'] = $dia." : ".$cals[0]['Cal']['FECHA_CAL'] . " Bloque Horario:  ".$ofertaHors[$i][$j]; 
 				$ofertaHors[$block['ID_AGENDA']] =$ofertaHor['OfertaHor']['name'];
+
 			}
 			else $ofertaHors=array();
 			
 		}
 		else $this->Session->setFlash(__('Usted no tiene solicitudes de hora.'));
-		
 		$this->set(compact('agendas','ofertaHors'));
 	}
 
@@ -117,11 +119,41 @@ class AgendasController extends AppController {
 	public function add(){
 		$params = $this->params['url'];
 		if(count($params)==0) $this->redirect(array('controller'=>'users','action' => 'pre_solicitar_hora'));
-		
-
-		debug($this->request->data);
 		$usuario = AuthComponent::user();
-		if ($this->request->is('posta')) {
+		$postValido = false;
+		if ($this->request->is('post')) {
+			$data =$this->request->data;
+			$this->loadModel('Pres');
+			$options = array('conditions' => array('Pres.ID_PRES' => $data['Agenda']['ID_PRES']));
+			$prestacion = $this->Pres->find('all',$options);
+			$numBloq = $prestacion[0]['Pres']['NUMERO_BLOQUES'];
+			$data['Agenda']['ESTADO_AGENDA'] = 'P';
+			$fecha = $data['Agenda']['Cal'];
+			if($numBloq>1){
+				$options = array('conditions' => array('OfertaHor.ID_VET'=> $params, 'Cal.FECHA_CAL' =>  $fecha, 'OfertaHor.ESTADO_AGENDAMIENTO <>'=> 'A'));
+				$ofertaHoras = $this->Agenda->OfertaHor->find('all',$options);
+				
+				$n = count($ofertaHoras);
+				$posicion=0;
+			
+				for ($i=0; $i <$n ; $i++) {
+				 	if($data['OfertaHor']== $ofertaHoras[$i]['OfertaHor']['ID_OFERTA_HOR']){
+				 			$posicion = $i +1;
+				 	}
+				}
+				$resto = $n - $posicion +1;
+			
+				if($resto<$numBloq){
+					$this->Session->setFlash(__('La prestación solicitada necesita '.$numBloq.' bloques. Seleccione bloques más tempranos para poder solicitar la hora.'));
+				}
+				else{
+					$postValido = true;
+				}
+			}
+			else $postValido = true;
+		}
+	
+		if ($this->request->is('post') && $postValido == true) {
 				$data =$this->request->data;
 				$this->loadModel('Pres');
 				$options = array('conditions' => array('Pres.ID_PRES' => $data['Agenda']['ID_PRES']));
@@ -129,19 +161,20 @@ class AgendasController extends AppController {
 				$numBloq = $prestacion[0]['Pres']['NUMERO_BLOQUES'];
 				$data['Agenda']['ESTADO_AGENDA'] = 'P';
 			$data2=false;
-			if(isset($data['OfertaHor']['OfertaHor'])){
+			if(isset($data['OfertaHor'])){
 				$data2= $this->Agenda->save($data['Agenda']);
 				}
 			if ($data2) {
+
 				$this->loadModel('BloqAgen');
 				for ($i=0; $i <(int)$numBloq; $i++) { 
 					$this->BloqAgen->save( 
 				    array(
-				        'ID_OFERTA_HOR' => $data['OfertaHor']['OfertaHor'],
+				        'ID_OFERTA_HOR' => $data['OfertaHor'],
 				        'ID_AGENDA' => $data2['Agenda']['ID_AGENDA']
 				    )
 					);
-					$data['OfertaHor']['OfertaHor'] = $data['OfertaHor']['OfertaHor'] +1;
+					$data['OfertaHor'] = $data['OfertaHor'] +1;
 				}
 				
 				$this->Session->setFlash(__('Su hora ha sido agendada.'));
@@ -311,5 +344,66 @@ class AgendasController extends AppController {
 		//	$this->Session->setFlash(__('The agenda could not be deleted. Please, try again.'));
 	//	}
 	//	return $this->redirect(array('action' => 'index'));
+	}
+
+	public function actualizar(){
+		$this->layout = 'ajax';
+		$params = $this->params['pass'][0];
+		$fecha = $this->request->data['Agenda']['Cal'];
+	    if($this->RequestHandler->isAjax()){
+
+			//if(count($params)==0) $this->redirect(array('controller'=>'users','action' => 'pre_solicitar_hora'));
+	    	date_default_timezone_set('America/Santiago');
+			$year= date('Y', time());
+			$month= date('m', time());
+			$day= date('d', time());
+			# Obtenemos el numero de la semana
+			$semana=date("W",mktime(0,0,0,$month,$day,$year));
+
+			# Obtenemos el día de la semana de la fecha dada
+			$diaSemana=date("w",mktime(0,0,0,$month,$day,$year));
+
+			# el 0 equivale al domingo...
+			if($diaSemana==0)
+			    $diaSemana=7;
+
+			# A la fecha recibida, le restamos el dia de la semana y obtendremos el lunes
+			$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day-$diaSemana+1,$year));
+			$primerDia=date("Y-m-d",mktime(0,0,0,$month,$day,$year));
+	    	$options = array('conditions' => array('OfertaHor.ID_VET'=> $params, 'Cal.FECHA_CAL' =>  $fecha, 'OfertaHor.ESTADO_AGENDAMIENTO <>'=> 'A'));
+			$ofertaHoras = $this->Agenda->OfertaHor->find('all',$options);
+			$ofertaHors;
+			$i=0;
+			foreach ($ofertaHoras as $ofertaHor):			
+					$this->loadModel('Cal');
+					$cals=$this->Cal->find('all', array(
+	    			'conditions' => array('Cal.ID_CAL' => $ofertaHor['OfertaHor']['ID_CAL'])
+	    			));
+	    			
+					if(count($cals)>0){
+					if($cals[0]['Cal']['NOMBRE_DIA']=='LU') $dia = 'Lunes';
+					if($cals[0]['Cal']['NOMBRE_DIA']=='MA') $dia = 'Martes';
+					if($cals[0]['Cal']['NOMBRE_DIA']=='MI') $dia = 'Miercoles';
+					if($cals[0]['Cal']['NOMBRE_DIA']=='JU') $dia = 'Jueves';
+					if($cals[0]['Cal']['NOMBRE_DIA']=='VI') $dia = 'Viernes';
+					if($cals[0]['Cal']['NOMBRE_DIA']=='SA') $dia = 'Sábado';
+					$ofertaHor['OfertaHor']['name'] = $dia. " .".$ofertaHor['OfertaHor']['name'].' - Fecha:  ' . $ofertaHor['Cal']['FECHA_CAL']; 
+	    			$ofertaHoras[$i]['OfertaHor']['name'] = $ofertaHor['OfertaHor']['name'];
+	    			
+					}
+					$ofertaHors[$ofertaHoras[$i]['OfertaHor']['ID_OFERTA_HOR']] =$ofertaHor['OfertaHor']['name'];
+	    			$i++;
+
+
+
+
+	    			
+			endforeach;
+			if(!$ofertaHoras){
+				$ofertaHors = 'El veterinario no tiene oferta Horaria';
+			} 
+			$this->set(compact('ofertaHors'));
+	         $this->render('actualizar', 'ajax'); //ajax tells the layout it should use
+	    }
 	}
 }

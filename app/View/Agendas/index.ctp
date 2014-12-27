@@ -1,6 +1,5 @@
 <?php 
   $this->layout = 'headClientes';
-
 ?>
 <div class="agendas index">
 	<h3><?php echo __('Mis Solicitudes de Hora'); 
